@@ -15,7 +15,8 @@ Proyecto final
     - Formulario de login
  
  2.1  A- Pagina web para alquiler de vehiculos POR CERCANIA EN CABA.
-      B- Turistas de vacaciones en CABA y residentes de caba que no tienen auto y deciden usarlo por corto tiempo a retirar en CABA 
+      
+ B- Turistas de vacaciones en CABA y residentes de caba que no tienen auto y deciden usarlo por corto tiempo a retirar en CABA 
       Alquiler de corta estadia km libres zona de uso limitada a AMBA.
       C- Paginas de Referencia:		Links:	
       Ebes	https://ebes.com.ar/		
