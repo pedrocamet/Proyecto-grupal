@@ -12,7 +12,7 @@ Proyecto final
     - Detalle de un producto
     - Carrito de compras
     - Formulario de registro
-    - Formulario de login
+    - Formulario de loginn
  
  2.1  A- Pagina web para alquiler de vehiculos POR CERCANIA EN CABA.
       
