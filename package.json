@@ -1,0 +1,22 @@
+{
+  "name": "proyecto",
+  "version": "1.0.0",
+  "description": "Proyecto final\r 1. Crear repositorio remoto publico de grupo y enviar el link del mismo al cuerpo docente.\r 2. El archivo README.md del repositorio del grupo debe contener:\r     - Temática y descripción del sitio\r     - Publico objetivo\r     - Listado de 5 páginas referentes en las que se basa su proyecto\r     - Listado del grupo con una breve descripción de cada uno\r     - Link del tablero de trabajo en donde se encuentran trabajando\r 3. Debe entregarse un Wireframe por cada una de las siguientes páginas:\r     - Home o Página de inicio\r     - Detalle de un producto\r     - Carrito de compras\r     - Formulario de registro\r     - Formulario de login",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedrocamet/Proyecto.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pedrocamet/Proyecto/issues"
+  },
+  "homepage": "https://github.com/pedrocamet/Proyecto#readme",
+  "dependencies": {
+    "expres": "0.0.5"
+  }
+}
