@@ -59,7 +59,7 @@ main{
   padding-left:5px;
 }
 
-/* MAIN DEL HOME */
+/* MAIN + FOOTER DEL HOME */
 
 .foto-entrada{
   background-image: url(/img/FPSPLRS3U7MKJL6G6UI24DPANU.jpg);
@@ -195,6 +195,135 @@ main{
 #facebook, #twitter, #instagram{
   font-size: 30px;
 }
+
+
+/* DESCRIPCIÓN PRODUCTO */
+
+.recuadro-total{
+  display:flex;
+  width:90%;
+  margin:auto;
+  padding-top:15px;
+  padding-bottom:15px;
+}
+
+.recuadro-datos{
+  display:flex;
+  flex-direction:column;
+  flex-grow:1;
+}
+
+.recuadro-auto{
+  display:flex;
+  flex-grow:1;
+  flex-direction: column;
+  box-shadow: 0px 0px 10px rgb(100,100,100);
+  border: solid 3px black;
+}
+
+#stars{
+  color:gold;
+}
+
+.descripcion{
+  display:flex;
+  flex-direction: column;
+}
+
+.foto-producto-2{
+  width: 30vw;
+  height: 20vw;
+  display:block;
+  margin:auto;
+  box-shadow: 0px 0px 10px rgb(100,100,100);
+  margin-top: 15px;
+}
+
+.caja-fecha{
+  margin:auto;
+}
+
+.input-entrega{
+  margin:10px;
+}
+
+.boton-enviar{
+  margin:auto;
+}
+
+h4{
+  font-size: 24px;
+  border-bottom: solid 2px grey;
+  margin:15px;
+  padding-bottom:5px;
+}
+
+.fuente-p{
+  font-size: 20px;
+}
+
+.datos-resumen{
+  text-align:left;
+  padding-left: 15px;
+}
+
+.datos-resumen-2{
+  text-align:right;
+  padding-right: 15px;
+}
+
+.total-resumen{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+@media (max-width:650px){
+
+  .recuadro-total{
+      display:flex;
+      flex-direction: column;
+  }
+
+  .recuadro-datos{
+      padding-top:30px;
+  }
+}
+
+@media (max-width:590px){
+
+  .datos-footer{
+      display:flex;
+      flex-direction: column;
+      margin:auto;
+  }
+
+  .foto-logo2{
+      display:none;
+  }
+}
+
+@media (max-width:530px){
+
+  .elegir-entrega{
+      display:flex;
+  }
+
+  .foto-logo{
+      width:70px;
+  }
+
+}
+
+@media (max-width:390px){
+
+  .items-header{
+      font-size:12px;
+  }
+}
+
+
 
 
 /* aca van a ir los styles de carrito */
