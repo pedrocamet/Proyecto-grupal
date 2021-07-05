@@ -10,6 +10,7 @@ app.listen(3005, () => {
   console.log ("Servidor corriendo en el puerto 3005");
   });
 
+  
 app.get("/", (req, res)=>{
     res.sendFile(path.resolve(__dirname, "./views/home.html"));
   }); 
