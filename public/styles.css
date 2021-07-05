@@ -22,3 +22,87 @@
 .titulo-1-carrito {
   font-size: 50px;
 }
+
+/* inicio Styles de Log In */
+
+.navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: .5rem 1rem;
+  box-sizing: border-box;
+}
+
+.navbar-brand {
+  display: inline-block;
+  padding-top: .3125rem;
+  padding-bottom: .3125rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+}
+.mt-3, .my-3 {
+  margin-top: 1rem !important;
+}
+
+.foto-fondo {
+  background-image: url(/img/paisaje.jpeg);
+  background-position: top;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  box-sizing: border-box;
+}
+
+.texto-alineado {
+  text-align: center;
+  color: white;
+
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + .75rem + 2px);
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+}
+
+/* Fin Styles de Log In */
