@@ -1,21 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>  
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="stylesheet" href="normalize.css" />
-  <link rel="stylesheet" href="./styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<script src="https://kit.fontawesome.com/78eee2c548.js" crossorigin="anonymous"></script>
-<!--esta de acaba abajo es la tipografía y  cuando haya que usarla se llama asi ("font-family: 'Nunito Sans', sans-serif;")-->
-<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alquila tu auto por hora ! </title >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primer documento en HTML</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+rel="stylesheet" />
 </head>
+<body>
+    <header>
+        <img src="/img/Iso sin fondo.png" alt="logo auto" class="foto-logo">
+            <section class="items-header">
+                <div class="header1">Conoce más</div>
+                <i class="fas fa-angle-down" id="desplegar"></i>
+                <div class="header2">Ingresar</div>
+                <div class="header3">Registrarme</div>
+            </section>
+    </header>
+
+    <main>
+    
+        <div class="foto-entrada">
+            <p class="letra"> Una nueva manera de alquilar autos </p>
+
+            <form class="cajas-entrada">
+                    <div class="caja1">
+                        <label> <i class="fas fa-map-marker-alt" id="icono"></i> </label>
+                        <input type="text" placeholder="Ubicación">
+                    </div>
+                    <div class="caja2">
+                <label> <i class="far fa-calendar-alt" id="icono"></i> </label>
+                <input type="text" placeholder="Desde">
+                    </div>
+                    <div class="caja3">
+                <label> <i class="fas fa-calendar-alt" id="icono"></i> </label>
+                <input type="text" placeholder="Hasta">
+                    </div>
+                    <div class="caja4">
+                    <i class="fas fa-search" id="icono"></i>
+                    </div>
+            </form>
+        </div>
+
+        <p class="texto-2"> Nuevos modelos este mes </p>
+
+
+
+        <section class="flex-container">
+                <div>
+                    <img src="/img/toyotasienna.jpg" class="foto-producto">
+                        <article class="recuadro">
+                                 <div class="precio-descuento"> 
+                                    <p class="precio">$6.770</p>
+                                    <p class="descuento">40% off</p>
+                                 </div>
+                             <div> Toyota Sienna</div>
+                        </article>
+                </div>        
+                <div>
+                    <img src="/img/toyotacorolla.jpg" class="foto-producto">
+                        <article class="recuadro">
+                                 <div class="precio-descuento"> 
+                                    <p class="precio">$6.770</p>
+                                    <p class="descuento">40% off</p>
+                                 </div>
+                             <div> Toyota Corolla </div>
+                        </article>
+                </div>    
+                <div>
+                    <img src="/img/fiatchronos.jpg" class="foto-producto">
+                        <article class="recuadro">
+                                 <div class="precio-descuento"> 
+                                    <p class="precio">$6.770</p>
+                                    <p class="descuento">40% off</p>
+                                 </div>
+                             <div> Fiat Cronos</div>
+                        </article>
+                </div>  
+        </section>
+
+
+        <p class="texto-2"> ¿No estás usando tu auto? ¡Registrate y ganá plata alquilándolo! </p>
+
+    <form class="cajas-entrada2">
+        <div>
+            <label>  </label>
+                <input type="text" placeholder="Marca">
+        </div>
+        <div>
+            <label>  </label>
+                <input type="text" placeholder="Modelo/Versión">
+        </div>
+        <div>
+            <label> </label>
+                <input type="text" placeholder="Año">
+        </div>
+
+        <button> Calcular </button>
+    </form>
+
+    </main>
+
+    <footer> 
+        <section class="datos-footer">
+            <div><img src="/img/Iso sin fondo.png" alt="logo auto" class="foto-logo2"></div> 
+            <div class="app-google"> 
+                <h4 class="texto-nosotros"> Apps </h4>
+                <img src="/img/app-store.png" class="foto-google"> 
+                <img src="/img/google-play.png" class="foto-google">
+            </div>
+            
+                    <div>
+                      <h4 class="texto-nosotros"> Contacto </h4>  
+                            <p> (ARG) 0800-111-1111 </p>
+                            <p> (Whatsapp) +541111111111 </p>
+                            <p> info@prueba.com.ar </p>
+                            <p> Buenos Aires / Argentina </p>
+                            <div class="botones-redes">
+                            <p><i class="fab fa-facebook-square" id="facebook"></i></p>
+                            <p><i class="fab fa-twitter-square" id="twitter"></i></p>
+                            <p><i class="fab fa-instagram-square" id="instagram"></i></p>
+                            </div>
+                    </div>  
+                    
+            </section>
+        </section>
+
+        <div class="footer-bottom"></div>
+    </footer>
+    
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!-- 
 <body>  
   <a href="carrito.html">Carrito </a>
+<<<<<<< HEAD
   
   <p></p>
 </body>
 </html> 
+=======
+  <p class=" titulo-1 ">ACA TENDRÍA QUE  IR EL HOME </p>
+</body> -->
+ 
+>>>>>>> 3afdb7a9adb16aedc6b7e34c8049e820981972ac
