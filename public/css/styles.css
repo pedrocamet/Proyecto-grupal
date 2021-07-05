@@ -412,12 +412,12 @@ h4{
   align-items: stretch;
   width: 100%;
 }
-body header {
+.bodyheader5 {
   display: flex;
   justify-content: space-around;
   background-color: #F8F9F9;
  }
-body{
+.body5{
   background-color: #F8F9F9;  
 }
 .reservaspendientes {
@@ -426,10 +426,7 @@ body{
   border-top: solid 3px #047AC2;
   text-align: center;
   background-color: #F8F9F9;
-}
-.h2{
-  background-color: #F8F9F9;
-  align-items: center;
+    align-items: center;
   font-family: 'Nunito sans';
   margin-top: 30px;
   margin-bottom: 30px;
@@ -449,7 +446,7 @@ padding-left: 5px;
 padding-right: 5px;
 }
 .imagenproducto{
-    display: flex;
+  display: flex;
   order: 3;
   padding-left: 5px;
   padding-right: 5px;
@@ -465,26 +462,26 @@ padding-right: 5px;
   justify-content: flex-end;  
 }
 
-body header i {
+#bodyheaderi5 {
   display: block;
   font-size: 10vw;
   color: #CAD203 ;
   align-self: center;
   background-color: #F8F9F9;
   }
-  .nombrecompleto{
+.nombrecompleto{
     align-self: center;
   }
 
 .reservaspendientes {
   color: #575556 ;  
 }
-body main {
+.bodymain5 {
  padding-left: 3vw;
  padding-right: 2vw;
  background-color: #F8F9F9;
 }
-body header img{
+.bodyheaderimg5{
    width: 25vw;
    max-width: 25vw;
    margin-top: 3vh;
@@ -520,11 +517,11 @@ margin: 2vw 4vw;
   padding: 0px;
   } 
 
-header i {
+#bodyheaderi5 {
   font: 40px;
 } 
 
-footer{
+.footer5{
   background-color: #F8F9F9;
 }
 .imagenproducto img {

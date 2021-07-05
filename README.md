@@ -1,10 +1,5 @@
 # Alquiler de autos
 
-verde claro : #CAD203  
-verde oscuro: #54A635
-color azul: #047AC2 
-celeste: #0AB7ED
-el gris del autito es #575556
 Proyecto final
 1. Crear repositorio remoto publico de grupo y enviar el link del mismo al cuerpo docente.
 2. El archivo README.md del repositorio del grupo debe contener:
