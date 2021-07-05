@@ -1,4 +1,6 @@
-* {
+*{
+  margin: 0px;
+  padding: 0px;
   box-sizing: border-box;
 }
 
@@ -6,16 +8,193 @@
   font-size: 50px;
 }
 
+/* HOME */
+
+header{
+  font-family: 'Roboto', sans-serif;
+  background-color: white; 
+  width: 100%;
+  display: flex;
+}
+
+main{
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  background-color: #ebebeb;
+}
+
+/* HEADER  DEL HOME */
+
+.foto-logo {
+  width: 10vw;
+  height: 10vh;
+  padding-top: 15px;
+}
+
+.items-header{
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  align-items: center;
+}
+
+.header1{
+  flex-grow:0.7;
+  text-align: right;
+}
+
+.header2{
+  flex-grow:0.2;
+  text-align: right;
+}
+
+.header3{
+  flex-grow:0.1;
+  text-align: center;
+}
+
+#desplegar{
+  padding-left:5px;
+}
+
+/* MAIN DEL HOME */
+
+.foto-entrada{
+  background-image: url(/img/FPSPLRS3U7MKJL6G6UI24DPANU.jpg);
+  height: 120vh;
+  width: 100%;
+  background-position: top right;
+}
 
 
+.cajas-entrada {
+  display: flex;
+  width: 100%;
+  align-items: baseline;
+  justify-content: center;
+  padding-top:50px;
+}
+
+.letra{
+  color: white;
+  text-align:center;
+  padding-top:400px;
+  font-size: 30px;
+}   
+
+#icono{
+  color:white;
+}
+
+.caja1{
+  border: 30px solid lightskyblue;
+  background: lightskyblue;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+}
+
+.caja2{
+  border: 30px solid lightskyblue;
+  background: lightskyblue;
+  
+}
+
+.caja3{
+  border: 30px solid lightskyblue;
+  background: lightskyblue;
+
+}
+
+.caja4{
+  border: 30px solid yellowgreen;
+  background: yellowgreen;
+  padding-top:2px;
+  padding-bottom:2px;
+  border-bottom-right-radius: 7px;
+  border-top-right-radius: 7px;
+}
 
 
+.texto-2{
+  font-size: 40px;
+  padding-top:30px;
+  padding-bottom:10px;
+}
 
+.foto-producto{
+  width: 30vw;
+  height: 20vw;
+  box-shadow : 0px 0px 10px rgb(100,100,100 );
+}
 
+.recuadro{
+  border-top: solid 1px black;
+  box-shadow : 0px 0px 10px rgb(100,100,100 );
 
+}
 
+.flex-container{
+  box-shadow : 0px 0px 10px rgb(100,100,100);
+  border: solid 1px powderblue;
+  display:flex;
+  justify-content: space-around;
+}
 
+.cajas-entrada2 {
+  display: flex;
+  width: 100%;
+  align-items: baseline;
+  justify-content: space-around;
+  padding-top:50px;
+  padding-bottom:50px;
+}
 
+.foto-logo2 {
+  width: 15vw;
+  height: 15vh;
+  padding-top:20px;
+}
+
+.datos-footer{
+  display:flex;
+  width:80%;
+  justify-content: space-between;
+  margin-left: 80px;
+  padding-top: 20px;
+}
+
+.texto-nosotros{
+  display:flex;
+  text-align: right;
+}
+
+.footer-bottom {
+  padding: 15px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.botones-redes{
+  display:flex;
+  justify-content: flex-start;
+}
+
+.app-google{
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.foto-google{
+  width: 170px;
+  margin-left: 5px;
+}
+
+#facebook, #twitter, #instagram{
+  font-size: 30px;
+}
 
 
 /* aca van a ir los styles de carrito */
