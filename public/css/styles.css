@@ -1,8 +1,10 @@
+
 *{
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
 }
+
 
 .titulo1 {
   font-size: 50px;
@@ -329,9 +331,9 @@ h4{
   font-size: 50px;
 }
 
-/* inicio Styles de Log In */
+/* inicio Styles de Log In y registro */
 
-.navbar {
+.navbar-P {
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -341,7 +343,7 @@ h4{
   box-sizing: border-box;
 }
 
-.navbar-brand {
+.navbar-brand-P {
   display: inline-block;
   padding-top: .3125rem;
   padding-bottom: .3125rem;
@@ -352,24 +354,34 @@ h4{
   box-sizing: border-box;
 }
 
-.container {
+.container-P {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
+  margin-bottom: 1rem;
   margin-right: auto;
   margin-left: auto;
   box-sizing: border-box;
 }
-.mt-3, .my-3 {
+.mt-3-P, .my-3-P {
   margin-top: 1rem !important;
 }
 
-.foto-fondo {
+.foto-fondo-P {
+  height: 120vh;
+  width: 100%;
   background-image: url(/img/paisaje.jpeg);
   background-position: top;
 }
 
-.row {
+.foto-fondo-registro-P {
+  height: 133vh;
+  width: 100%;
+  background-image: url(/img/paisaje-registro.jpeg);
+  background-size: contain;
+}
+
+.row-P {
   display: flex;
   flex-wrap: wrap;
   margin-right: -15px;
@@ -377,15 +389,15 @@ h4{
   box-sizing: border-box;
 }
 
-.texto-alineado {
+.texto-alineado-P {
   text-align: center;
   color: white;
 
 }
 
-.form-control {
+.form-control-P {
   display: block;
-  width: 100%;
+  width: 40%;
   height: calc(1.5em + .75rem + 2px);
   padding: .375rem .75rem;
   font-size: 1rem;
@@ -394,22 +406,38 @@ h4{
   color: #495057;
   background-color: #fff;
   background-clip: padding-box;
+  margin: auto;
   border: 1px solid #ced4da;
   border-radius: .25rem;
   transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+  justify-content: center;
+  text-align: center;
 }
 
-.form-group {
+
+.form-group-P {
   margin-bottom: 1rem;
 }
 
-.input-group {
+.input-group-P {
   position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
   width: 100%;
 }
+
+.footer-P {
+  padding-top: 50px;
+}
+
+.boton-crear-cuenta-P {
+
+}
+
+/* Fin Styles de Log In y de registro */ 
+
+
 .bodyheader5 {
   display: flex;
   justify-content: space-around;
@@ -543,4 +571,3 @@ display: flex;
 }
 }
 
-/* Fin Styles de Log In */
