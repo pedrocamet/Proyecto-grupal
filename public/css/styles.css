@@ -516,12 +516,12 @@ h4{
   align-items: stretch;
   width: 100%;
 }
-.bodyheader5 {
+.bodyheaderf {
   display: flex;
   justify-content: space-around;
   background-color: #F8F9F9;
  }
-.body5{
+.bodyf{
   background-color: #F8F9F9;  
 }
 .reservaspendientes {
@@ -544,10 +544,12 @@ h4{
   justify-content: space-around;
   }
 .descripcion-producto {
-font-size: 3vw;
+font-size: 2vw;
 order: 1;
 padding-left: 5px;
 padding-right: 5px;
+justify-content: flex-start;
+text-align: left;
 }
 .imagenproducto{
   display: flex;
@@ -566,7 +568,7 @@ padding-right: 5px;
   justify-content: flex-end;  
 }
 
-#bodyheaderi5 {
+#bodyheaderif {
   display: block;
   font-size: 10vw;
   color: #CAD203 ;
@@ -580,12 +582,12 @@ padding-right: 5px;
 .reservaspendientes {
   color: #575556 ;  
 }
-.bodymain5 {
+.bodymainf {
  padding-left: 3vw;
  padding-right: 2vw;
  background-color: #F8F9F9;
 }
-.bodyheaderimg5{
+.bodyheaderimgf{
    width: 25vw;
    max-width: 25vw;
    margin-top: 3vh;
@@ -621,21 +623,29 @@ margin: 2vw 4vw;
   padding: 0px;
   } 
 
-#bodyheaderi5 {
+#bodyheaderif {
   font: 40px;
 } 
 
-.footer5{
+.footerf{
   background-color: #F8F9F9;
 }
 .imagenproducto img {
   box-shadow: 0px 0px 10px rgb(40, 70, 80);
 
 }
-.boton-confirmar{
+.botonconfirmarf{
   font-weight: 900;
+  font-size: 2vw;
   border-radius: 5px;
   color: #047AC2;
+  height: auto;
+  width: auto;
+}
+.botoncancelarf{
+  border-radius: 3px;
+  font-weight: 600;
+  color: #C52D07 ;
 }
 
 
