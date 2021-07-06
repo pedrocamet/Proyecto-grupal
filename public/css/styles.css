@@ -69,21 +69,23 @@
 
 .cajas-entrada {
   display: flex;
-  width: 100%;
+  width: 80%;
   align-items: baseline;
   justify-content: center;
   padding-top:50px;
+  margin:auto;
 }
 
 .letra{
   color: white;
   text-align:center;
-  padding-top:400px;
+  padding-top:300px;
   font-size: 30px;
 }   
 
 #icono{
   color:white;
+  padding-right:10px;
 }
 
 .caja1{
@@ -193,6 +195,106 @@
 #facebook, #twitter, #instagram{
   font-size: 30px;
 }
+
+
+@media (max-width:680px){
+
+  .letra{
+    font-size: 24px;
+  }
+
+
+  .texto-2{
+    font-size:24px;
+  }
+
+  .cajas-entrada2{
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 15px;
+  }
+
+  .input-text-t1{
+    padding:10px;
+    border: 10px solid lightskyblue;
+    background: lightskyblue;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+  }
+
+  .input-text-t2{
+    padding:10px;
+    border: 10px solid lightskyblue;
+    background: lightskyblue;
+  }
+  
+  .input-text-t3{
+    padding:10px;
+    border: 10px solid lightskyblue;
+    background: lightskyblue;
+  }
+
+  .input-text-t4{
+    padding-right:80px;
+    padding-left:80px;
+    border: 10px solid yellowgreen;
+    background: yellowgreen;
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+  }
+
+  }
+
+  @media (max-width:1177px){
+
+    .cajas-entrada{
+      display:flex;
+      flex-direction: column;
+      width: 40%;
+      align-items:unset;
+    }
+
+    .letra{
+      padding-top:150px;
+    }
+
+    .input-text-principal-1{
+      width:60%;
+    }
+
+    .caja1 {
+      border: 20px solid lightskyblue;
+      background: lightskyblue;
+      border-top-left-radius: 7px;
+      border-top-right-radius: 7px;
+      border-bottom-left-radius: 0px;
+      padding-right: 2px;
+    }
+
+    .caja2 {
+      border: 20px solid lightskyblue;
+      background: lightskyblue;
+    }
+
+    .caja3 {
+      border: 20px solid lightskyblue;
+      background: lightskyblue;
+    }
+
+    .caja4 {
+      border: 10px solid yellowgreen;
+      background: yellowgreen;
+      padding-top:2px;
+      padding-bottom:2px;
+      border-bottom-right-radius: 7px;
+      border-bottom-left-radius: 7px;
+      border-top-right-radius: 0px;
+    }
+}
+
+
+
 
 
 /* DESCRIPCIÓN PRODUCTO */
@@ -320,6 +422,10 @@ h4{
       font-size:12px;
   }
 }
+
+
+
+
 
 
 
