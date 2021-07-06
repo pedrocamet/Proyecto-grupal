@@ -412,5 +412,137 @@ h4{
   align-items: stretch;
   width: 100%;
 }
+.bodyheader5 {
+  display: flex;
+  justify-content: space-around;
+  background-color: #F8F9F9;
+ }
+.body5{
+  background-color: #F8F9F9;  
+}
+.reservaspendientes {
+  font-size: 5vw;
+  border-bottom: solid 3px #047AC2; 
+  border-top: solid 3px #047AC2;
+  text-align: center;
+  background-color: #F8F9F9;
+    align-items: center;
+  font-family: 'Nunito sans';
+  margin-top: 30px;
+  margin-bottom: 30px;
+  }
+.precioyboton{
+  font-size: 3vw;
+  order: 1;
+  }
+.producto-reservado{
+  display: flex;
+  justify-content: space-around;
+  }
+.descripcion-producto {
+font-size: 3vw;
+order: 1;
+padding-left: 5px;
+padding-right: 5px;
+}
+.imagenproducto{
+  display: flex;
+  order: 3;
+  padding-left: 5px;
+  padding-right: 5px;
+  align-items: flex-start;
+  justify-content: flex-end;
+  margin-top: 25px;
+}
+.imagenproducto img{
+  display: flex;
+  width: 30vw;
+  max-width: 50vw;
+  order: 3;
+  justify-content: flex-end;  
+}
+
+#bodyheaderi5 {
+  display: block;
+  font-size: 10vw;
+  color: #CAD203 ;
+  align-self: center;
+  background-color: #F8F9F9;
+  }
+.nombrecompleto{
+    align-self: center;
+  }
+
+.reservaspendientes {
+  color: #575556 ;  
+}
+.bodymain5 {
+ padding-left: 3vw;
+ padding-right: 2vw;
+ background-color: #F8F9F9;
+}
+.bodyheaderimg5{
+   width: 25vw;
+   max-width: 25vw;
+   margin-top: 3vh;
+   align-self: center;
+   } 
+.finalcarrito{
+ display: flex;
+ justify-content: flex-end;
+ 
+}
+.aclaracion{
+color: #C52D07;
+display: flex;
+font-weight: 600;
+align-items: center;
+border: #C52D07 solid 1px;
+background-color: #DEFCE9;
+margin: 2vw 4vw;
+}
+.notaaclaratoria{
+  display: flex;
+  width: 80%;
+  text-align: justify;
+  margin: 0px;
+  padding: 0px;
+  font-weight: 600;
+  
+  }
+.tildeaclaracion{
+  display: flex;
+  width: 20%;
+  margin: 0px;
+  padding: 0px;
+  } 
+
+#bodyheaderi5 {
+  font: 40px;
+} 
+
+.footer5{
+  background-color: #F8F9F9;
+}
+.imagenproducto img {
+  box-shadow: 0px 0px 10px rgb(40, 70, 80);
+
+}
+.boton-confirmar{
+  font-weight: 900;
+  border-radius: 5px;
+  color: #047AC2;
+}
+
+
+@media (min-width: 768px){
+.producto-reservado{
+display: flex;
+}
+.precioyboton{
+  font-size: 3vw;
+  order: 5;
+}
+}
 
 /* Fin Styles de Log In */
