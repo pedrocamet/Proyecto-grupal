@@ -132,6 +132,7 @@
 .recuadro{
   border-top: solid 1px black;
   box-shadow : 0px 0px 10px rgb(100,100,100 );
+  background-color: yellowgreen;
 
 }
 
