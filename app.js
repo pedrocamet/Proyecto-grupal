@@ -15,3 +15,18 @@ app.get("/", (req, res)=>{
     res.sendFile(path.resolve(__dirname, "./views/home.html"));
   }); 
   
+  app.get("/", (req, res)=>{
+    res.sendFile(path.resolve(__dirname, "./views/carrito.html"));
+  }); 
+
+  app.get("/", (req, res)=>{
+    res.sendFile(path.resolve(__dirname, "./views/logIn.html"));
+  }); 
+
+  app.get("/", (req, res)=>{
+    res.sendFile(path.resolve(__dirname, "./views/producto.html"));
+  }); 
+
+  app.get("/", (req, res)=>{
+    res.sendFile(path.resolve(__dirname, "./views/registro.html"));
+  }); 
