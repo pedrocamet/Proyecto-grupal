@@ -71,21 +71,23 @@
 
 .cajas-entrada {
   display: flex;
-  width: 100%;
+  width: 80%;
   align-items: baseline;
   justify-content: center;
   padding-top:50px;
+  margin:auto;
 }
 
 .letra{
   color: white;
   text-align:center;
-  padding-top:400px;
+  padding-top:300px;
   font-size: 30px;
 }   
 
 #icono{
   color:white;
+  padding-right:10px;
 }
 
 .caja1{
@@ -132,6 +134,7 @@
 .recuadro{
   border-top: solid 1px black;
   box-shadow : 0px 0px 10px rgb(100,100,100 );
+  background-color: yellowgreen;
 
 }
 
@@ -195,6 +198,106 @@
 #facebook, #twitter, #instagram{
   font-size: 30px;
 }
+
+
+@media (max-width:680px){
+
+  .letra{
+    font-size: 24px;
+  }
+
+
+  .texto-2{
+    font-size:24px;
+  }
+
+  .cajas-entrada2{
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 15px;
+  }
+
+  .input-text-t1{
+    padding:10px;
+    border: 10px solid lightskyblue;
+    background: lightskyblue;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+  }
+
+  .input-text-t2{
+    padding:10px;
+    border: 10px solid lightskyblue;
+    background: lightskyblue;
+  }
+  
+  .input-text-t3{
+    padding:10px;
+    border: 10px solid lightskyblue;
+    background: lightskyblue;
+  }
+
+  .input-text-t4{
+    padding-right:80px;
+    padding-left:80px;
+    border: 10px solid yellowgreen;
+    background: yellowgreen;
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+  }
+
+  }
+
+  @media (max-width:1177px){
+
+    .cajas-entrada{
+      display:flex;
+      flex-direction: column;
+      width: 40%;
+      align-items:unset;
+    }
+
+    .letra{
+      padding-top:150px;
+    }
+
+    .input-text-principal-1{
+      width:60%;
+    }
+
+    .caja1 {
+      border: 20px solid lightskyblue;
+      background: lightskyblue;
+      border-top-left-radius: 7px;
+      border-top-right-radius: 7px;
+      border-bottom-left-radius: 0px;
+      padding-right: 2px;
+    }
+
+    .caja2 {
+      border: 20px solid lightskyblue;
+      background: lightskyblue;
+    }
+
+    .caja3 {
+      border: 20px solid lightskyblue;
+      background: lightskyblue;
+    }
+
+    .caja4 {
+      border: 10px solid yellowgreen;
+      background: yellowgreen;
+      padding-top:2px;
+      padding-bottom:2px;
+      border-bottom-right-radius: 7px;
+      border-bottom-left-radius: 7px;
+      border-top-right-radius: 0px;
+    }
+}
+
+
+
 
 
 /* DESCRIPCIÓN PRODUCTO */
@@ -326,6 +429,10 @@ h4{
 
 
 
+
+
+
+
 /* aca van a ir los styles de carrito */
 .titulo-1-carrito {
   font-size: 50px;
@@ -439,7 +546,7 @@ h4{
   justify-content: space-around;
   background-color: #F8F9F9;
  }
-.body5{
+.bodyf{
   background-color: #F8F9F9;  
 }
 .reservaspendientes {
@@ -462,10 +569,12 @@ h4{
   justify-content: space-around;
   }
 .descripcion-producto {
-font-size: 3vw;
+font-size: 2vw;
 order: 1;
 padding-left: 5px;
 padding-right: 5px;
+justify-content: flex-start;
+text-align: left;
 }
 .imagenproducto{
   display: flex;
@@ -484,7 +593,7 @@ padding-right: 5px;
   justify-content: flex-end;  
 }
 
-#bodyheaderi5 {
+#bodyheaderif {
   display: block;
   font-size: 10vw;
   color: #CAD203 ;
@@ -498,12 +607,12 @@ padding-right: 5px;
 .reservaspendientes {
   color: #575556 ;  
 }
-.bodymain5 {
+.bodymainf {
  padding-left: 3vw;
  padding-right: 2vw;
  background-color: #F8F9F9;
 }
-.bodyheaderimg5{
+.bodyheaderimgf{
    width: 25vw;
    max-width: 25vw;
    margin-top: 3vh;
@@ -539,21 +648,29 @@ margin: 2vw 4vw;
   padding: 0px;
   } 
 
-#bodyheaderi5 {
+#bodyheaderif {
   font: 40px;
 } 
 
-.footer5{
+.footerf{
   background-color: #F8F9F9;
 }
 .imagenproducto img {
   box-shadow: 0px 0px 10px rgb(40, 70, 80);
 
 }
-.boton-confirmar{
+.botonconfirmarf{
   font-weight: 900;
+  font-size: 2vw;
   border-radius: 5px;
   color: #047AC2;
+  height: auto;
+  width: auto;
+}
+.botoncancelarf{
+  border-radius: 3px;
+  font-weight: 600;
+  color: #C52D07 ;
 }
 
 
