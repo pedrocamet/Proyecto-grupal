@@ -14,21 +14,21 @@ app.listen(process.env.PORT || 3005, () => {
 
   
 app.get("/", (req, res)=>{
-    res.sendFile(path.resolve(__dirname, "./views/home.html"));
+    res.sendFile(path.resolve(__dirname, "./views/home.ejs"));
   }); 
   
   app.get("/", (req, res)=>{
-    res.sendFile(path.resolve(__dirname, "./views/carrito.html"));
+    res.sendFile(path.resolve(__dirname, "./views/carrito.ejs"));
   }); 
 
   app.get("/", (req, res)=>{
-    res.sendFile(path.resolve(__dirname, "./views/logIn.html"));
+    res.sendFile(path.resolve(__dirname, "./views/logIn.ejs"));
   }); 
 
   app.get("/", (req, res)=>{
-    res.sendFile(path.resolve(__dirname, "./views/producto.html"));
+    res.sendFile(path.resolve(__dirname, "./views/producto.ejs"));
   }); 
 
   app.get("/", (req, res)=>{
-    res.sendFile(path.resolve(__dirname, "./views/registro.html"));
+    res.sendFile(path.resolve(__dirname, "./views/registro.ejs"));
   }); 
