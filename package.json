@@ -18,8 +18,12 @@
   },
   "homepage": "https://github.com/pedrocamet/Proyecto#readme",
   "dependencies": {
+    "ejs": "^3.1.6",
     "expres": "0.0.5",
     "express": "^4.17.1"
+  },
+  "engines": {
+    "node": "8.9.3"
   },
   "devDependencies": {},
   "keywords": []
