@@ -4,6 +4,7 @@ const app = express ();
 app.set ("view engine", "ejs");
 
 const autosRoutes = require("./routes/autosRoutes");
+
 app.use("/", autosRoutes);
 
 const publicPath = path.resolve(__dirname, './public');  
@@ -15,18 +16,4 @@ app.listen(process.env.PORT || 3005, () => {
   console.log ("Servidor corriendo en el puerto 3005");
   });
 
-  app.get("/", (req, res)=>{
-    res.sendFile(path.resolve(__dirname, "./views/carrito.html"));
-  }); 
-
-  app.get("/", (req, res)=>{
-    res.sendFile(path.resolve(__dirname, "./views/logIn.html"));
-  }); 
-
-  app.get("/", (req, res)=>{
-    res.sendFile(path.resolve(__dirname, "./views/producto.html"));
-  }); 
-
-  app.get("/", (req, res)=>{
-    res.sendFile(path.resolve(__dirname, "./views/registro.html"));
-  }); 
+  
