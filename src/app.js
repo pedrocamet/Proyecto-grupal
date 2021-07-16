@@ -3,6 +3,9 @@ const path = require ("path");
 const app = express ();
 app.set ("view engine", "ejs");
 
+const autosRoutes = require("./routes/autosRoutes");
+app.use("/", autosRoutes);
+
 const publicPath = path.resolve(__dirname, './public');  
 app.use(express.static(publicPath));
 const publicPath2 = path.resolve(__dirname, './views');  
@@ -12,23 +15,18 @@ app.listen(process.env.PORT || 3005, () => {
   console.log ("Servidor corriendo en el puerto 3005");
   });
 
-  
-app.get("/", (req, res)=>{
-    res.sendFile(path.resolve(__dirname, "./views/home.ejs"));
-  }); 
-  
   app.get("/", (req, res)=>{
-    res.sendFile(path.resolve(__dirname, "./views/carrito.ejs"));
+    res.sendFile(path.resolve(__dirname, "./src/views/carrito.ejs"));
   }); 
 
   app.get("/", (req, res)=>{
-    res.sendFile(path.resolve(__dirname, "./views/logIn.ejs"));
+    res.sendFile(path.resolve(__dirname, "./src/views/users/logIn.ejs"));
   }); 
 
   app.get("/", (req, res)=>{
-    res.sendFile(path.resolve(__dirname, "./views/producto.ejs"));
+    res.sendFile(path.resolve(__dirname, "./src/views/producto.ejs"));
   }); 
 
   app.get("/", (req, res)=>{
-    res.sendFile(path.resolve(__dirname, "./views/registro.ejs"));
+    res.sendFile(path.resolve(__dirname, "./src/views/users/registro.ejs"));
   }); 
