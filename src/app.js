@@ -7,7 +7,6 @@ const autosRoutes = require("./routes/autosRoutes");
 
 app.use("/", autosRoutes);
 
-
 const publicPath = path.resolve(__dirname, '../public');  
 app.use(express.static(publicPath));
 
