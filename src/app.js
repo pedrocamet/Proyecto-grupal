@@ -15,5 +15,10 @@ app.use(express.static(publicPath2));
 app.listen(process.env.PORT || 3005, () => {
   console.log ("Servidor corriendo en el puerto 3005");
   });
+<<<<<<< HEAD
  
   
+=======
+
+  
+>>>>>>> f86792b3d461d118ceff98ad6f3b64aa6feba383

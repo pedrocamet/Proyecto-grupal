@@ -5,7 +5,7 @@ const controlador =
     },
 
     login: (req, res) => {
-        res.render ("/users/login");
+        res.render ("login");
     },
 
     carrito: (req, res) => {
