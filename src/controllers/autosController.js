@@ -14,7 +14,7 @@ const controlador =
 
     registro: (req, res) => {
         res.render ("registro");
-    },
+    },  
 
     producto: (req, res) => {
         res.render ("producto");
