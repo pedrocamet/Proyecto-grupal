@@ -13,9 +13,12 @@ const controlador =
     },
 
     registro: (req, res) => {
-        res.render ("./users/registro");
+        res.render ("./users/registro");    
     },  
-    
+
+    creacionProducto: (req, res) => {
+        res.render ("./products/creacion-producto.ejs");
+    },  
 
     producto: (req, res) => {
         res.render ("producto");

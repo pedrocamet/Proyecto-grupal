@@ -8,6 +8,7 @@ router.get("/login", autosController.login);
 router.get("/carrito", autosController.carrito);
 router.get("/registro", autosController.registro);
 router.get("/producto", autosController.producto); 
+router.get("/creacion-producto", autosController.creacionProducto); 
 
 
 module.exports = router;

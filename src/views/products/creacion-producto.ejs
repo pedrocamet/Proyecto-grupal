@@ -3,43 +3,51 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title> Log In </title>
+        <title>Creación producto </title>
         <link href="/css/styles.css" rel="stylesheet">
         <link href="https://fontawesome.com/" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/public/css/normalize.css">
 
     </head>
-    <body>
-      <header>
-       
+    <body class="todocargarprod">
+      
+      <header class="bodyheaderf">
+          
+          <p class="nombrecompleto">
+              Nombre Completo 
+          </p>
+          <img src="./img/Iso sin fondo.png" alt="logo" class="bodyheaderimgf">
       </header>
-      <main>
-        <form action="">
-        <h2>Cargar nuevo producto </h2>
-
-        <div class="modelo">
-          <label> Elija el modelo del nuevo vehículo</label>
-          <select name="claseDeVehiculo" id="">
+      <div class="reservaspendientesdiv">
+        <h2 class="reservaspendientes">Cargar nuevo Producto:</h2>
+     </div>
+      <main class="cuerpocargarprodf">
+        <form action="" method="POST">
+         <div class="modelovehiculof">
+          <label class="modelovehiculofl"> Elija el modelo del nuevo vehículo:</label>
+          <select name="claseDeVehiculo" class="selectmodelovehiculof">
               <option value="autoPequeño">Auto Pequeño</option>
               <option value="autoMediano"> Auto Mediano</option>
           </select>
         </div>
-        <div class="nombremodelo">
+        <div class="nombremodelof">
           <label>Marca y modelo  </label>
           <input type="text">
           <input type="text">
         </div>
-        <div class="añodelvehiculof">
+        <div class="anodelvehiculof">
           <label> Año del vehículo</label>
           <input type="number" name="" id="">
         </div>
         <div class="imagenvehiculof">
+          <label>Elija una imagen del vehículo</label>
           <input type="file"> 
         </div>
-        <div class="fechadisponible">
+        <div class="fechadisponiblef">
           <label > Fecha de disponibilidad</label>
           <div class="calendarios">
             <label> Desde</label>
@@ -61,8 +69,9 @@
       </form>
       </main>
 
-
+      
     </body>
-
+    <%- include ('../partials/footer.ejs')%>
 
 </html>
+ 
