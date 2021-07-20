@@ -13,8 +13,9 @@ const controlador =
     },
 
     registro: (req, res) => {
-        res.render ("registro");
+        res.render ("./users/registro");
     },  
+    
 
     producto: (req, res) => {
         res.render ("producto");
