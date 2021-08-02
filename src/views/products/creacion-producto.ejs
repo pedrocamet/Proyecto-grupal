@@ -26,9 +26,9 @@
         <h2 class="reservaspendientes">Cargar nuevo Producto:</h2>
      </div>
       <main class="cuerpocargarprodf">
-        <form action="" method="POST">
+        <form action="/autosRoutes/creacion-producto" method="POST" enctype="multipart/form-data">
          <div class="modelovehiculof">
-          <label class="modelovehiculofl"> Elija el modelo del nuevo vehículo:</label>
+          <label class="modelovehiculofl"> Elija categoría del nuevo vehículo:</label>
           <select name="claseDeVehiculo" class="selectmodelovehiculof">
               <option value="autoPequeño">Auto Pequeño</option>
               <option value="autoMediano"> Auto Mediano</option>
@@ -36,12 +36,12 @@
         </div>
         <div class="nombremodelof">
           <label>Marca y modelo  </label>
-          <input type="text">
-          <input type="text">
+          <input type="text" name="marca">
+          <input type="text" name="modelo">
         </div>
         <div class="anodelvehiculof">
           <label> Año del vehículo</label>
-          <input type="number" name="" id="">
+          <input type="number" name="ano" id="">
         </div>
         <div class="imagenvehiculof">
           <label>Elija una imagen del vehículo</label>
@@ -58,13 +58,14 @@
         </div>
         <div class="preciopordiainiciof">
           <label> Precio por día</label>
-          <input type="text">
+          <input type="number" name="precioPorDia" >
+        </div>
+        <div class="botonesEleccion">
+          <button type="submit">Cargar producto</button>
         </div>
         <div>
 
-        </div>
-
-
+        </div>  
 
       </form>
       </main>
