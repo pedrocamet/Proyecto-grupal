@@ -1,0 +1,30 @@
+[{
+    "id": 1,
+    "marca": "Renault",
+    "modelo": "Logan Intens",
+    "año": 2020,
+    "precio": 1540,
+    "descripcion": "Renault Logan Intens. Diseño renovado con caja de cambios CVT y gran espacio interior",
+    "imagen": "Renault_Logan_Intens.jpg"
+   },
+
+   {
+    "id": 2,
+    "marca": "Cafetera Moulinex Dolce Gusto Edited",
+    "modelo": 100,
+    "año": 50,
+    "precio": "visited",
+    "descripcion": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
+    "imagen": ""
+   },
+   {
+    "id": 3,
+    "marca": "Cafetera Moulinex Dolce Gusto Edited",
+    "modelo": 100,
+    "año": 50,
+    "precio": "visited",
+    "descripcion": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
+    "imagen": ""
+   }
+
+]
