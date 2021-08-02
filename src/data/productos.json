@@ -1,10 +1,30 @@
-[{"idAuto":1,"Modelo":"GTO","Marca":"Mitsubishi","Categoría":"ante vestibulum ante ipsum primis in faucibus orci luctus et ultrices","Año":1997,"Owner":"20/8/1980","Km ":11065},
-{"idAuto":2,"Modelo":"Grand Vitara","Marca":"Suzuki","Categoría":"integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo","Año":2006,"Owner":"8/12/1914","Km ":11514},
-{"idAuto":3,"Modelo":"G-Series 2500","Marca":"Chevrolet","Categoría":"nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id ligula suspendisse","Año":1996,"Owner":"29/4/1947","Km ":3003},
-{"idAuto":4,"Modelo":"3500","Marca":"Chevrolet","Categoría":"cras in purus eu magna vulputate luctus cum sociis natoque","Año":1998,"Owner":"23/12/1974","Km ":6223},
-{"idAuto":5,"Modelo":"Discovery","Marca":"Land Rover","Categoría":"donec ut dolor morbi vel lectus in quam fringilla rhoncus","Año":1997,"Owner":"6/10/1985","Km ":4795},
-{"idAuto":6,"Modelo":"Tundra","Marca":"Toyota","Categoría":"semper porta volutpat quam pede lobortis ligula sit amet eleifend pede libero quis orci","Año":2006,"Owner":"29/4/1944","Km ":2578},
-{"idAuto":7,"Modelo":"Ascender","Marca":"Isuzu","Categoría":"ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor","Año":2008,"Owner":"25/12/1918","Km ":8040},
-{"idAuto":8,"Modelo":"Cooper","Marca":"MINI","Categoría":"vestibulum eget vulputate ut ultrices vel augue vestibulum ante ipsum primis","Año":2010,"Owner":"20/10/1906","Km ":6458},
-{"idAuto":9,"Modelo":"TL","Marca":"Acura","Categoría":"luctus et ultrices posuere cubilia curae duis faucibus accumsan odio","Año":2002,"Owner":"18/7/1905","Km ":8176},
-{"idAuto":10,"Modelo":"Taurus","Marca":"Ford","Categoría":"in sagittis dui vel nisl duis ac nibh fusce lacus purus aliquet at","Año":1998,"Owner":"7/11/1911","Km ":6934}]
+[{
+    "id": 1,
+    "marca": "Renault",
+    "modelo": "Logan Intens",
+    "año": 2020,
+    "precio": 1540,
+    "descripcion": "Renault Logan Intens. Diseño renovado con caja de cambios CVT y gran espacio interior",
+    "imagen": "Renault_Logan_Intens.jpg"
+   },
+
+   {
+    "id": 2,
+    "marca": "Cafetera Moulinex Dolce Gusto Edited",
+    "modelo": 100,
+    "año": 50,
+    "precio": "visited",
+    "descripcion": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
+    "imagen": ""
+   },
+   {
+    "id": 3,
+    "marca": "Cafetera Moulinex Dolce Gusto Edited",
+    "modelo": 100,
+    "año": 50,
+    "precio": "visited",
+    "descripcion": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
+    "imagen": ""
+   }
+
+]
