@@ -1,30 +1,63 @@
-[{
-    "id": 1,
-    "marca": "Renault",
-    "modelo": "Logan Intens",
-    "año": 2020,
-    "precio": 1540,
-    "descripcion": "Renault Logan Intens. Diseño renovado con caja de cambios CVT y gran espacio interior",
-    "imagen": "Renault_Logan_Intens.jpg"
-   },
-
-   {
-    "id": 2,
-    "marca": "Cafetera Moulinex Dolce Gusto Edited",
-    "modelo": 100,
-    "año": 50,
-    "precio": "visited",
-    "descripcion": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
-    "imagen": ""
-   },
-   {
-    "id": 3,
-    "marca": "Cafetera Moulinex Dolce Gusto Edited",
-    "modelo": 100,
-    "año": 50,
-    "precio": "visited",
-    "descripcion": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
-    "imagen": ""
-   }
-
+[
+ {
+  "id": 1,
+  "marca": "ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae",
+  "modelo": "sed accumsan felis ut at dolor quis odio consequat varius integer ac leo pellentesque ultrices",
+  "categoria": "XS",
+  "ano": "6/7/2021",
+  "precio": 46,
+  "imagen": "RisusPraesent.mov"
+ },
+ {
+  "id": 2,
+  "marca": "tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris",
+  "modelo": "quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum",
+  "categoria": "3XL",
+  "ano": "25/12/2020",
+  "precio": 43,
+  "imagen": "VulputateUt.gif"
+ },
+ {
+  "id": 3,
+  "marca": "id luctus nec molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui",
+  "modelo": "et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse",
+  "categoria": "3XL",
+  "ano": "21/3/2021",
+  "precio": 12,
+  "imagen": "Posuere.avi"
+ },
+ {
+  "id": 4,
+  "marca": "sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere",
+  "modelo": "parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus",
+  "categoria": "XL",
+  "ano": "4/11/2020",
+  "precio": 46,
+  "imagen": "IntegerPedeJusto.ppt"
+ },
+ {
+  "id": 5,
+  "marca": "sit amet nunc viverra dapibus nulla suscipit ligula in lacus curabitur at ipsum ac tellus semper",
+  "modelo": "blandit non interdum in ante vestibulum ante ipsum primis in faucibus",
+  "categoria": "XS",
+  "ano": "12/1/2021",
+  "precio": 28,
+  "imagen": "VelSem.ppt"
+ },
+ {
+  "id": 6,
+  "marca": "asdfsd",
+  "modelo": "asdfas",
+  "categoria": "autoPequeño",
+  "ano": "",
+  "image": "1627956983671Vagon_Historia _3.jpg"
+ },
+ {
+  "id": 7,
+  "marca": "prueba",
+  "modelo": "prueba",
+  "categoria": "autoPequeño",
+  "ano": "",
+  "image": "1627957012058Vagon_Historia _3.jpg"
+ }
 ]
