@@ -27,6 +27,10 @@ const controlador =
         res.render ("./users/registro");    
     },  
 
+    detalleProducto: (req,res) =>{
+        res.render("./products/detalle-producto.ejs");
+    },
+
     creacionProducto: (req, res) => {
         res.render ("./products/creacion-producto.ejs");
     },  

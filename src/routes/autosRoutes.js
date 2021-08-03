@@ -33,8 +33,8 @@ router.get("/creacion-producto", autosController.creacionProducto);
 router.post("/creacion-producto",uploadFile.single('imageProduct') ,autosController.store); 
 
 
-/***********ONE PRODUCT DETAIL ************/
-//router.get("/productDetail/:id", autosController.productDetail); // detalle de un producto falta todo PARAMETRIZADO
+/*********** DETALLE DE UN PRODUCTO ************/
+router.get("/detalle-producto/:id", autosController.detalleProducto); // detalle de un producto falta todo PARAMETRIZADO
 
 
 /***********EDIT A PRODUCT    ************/
