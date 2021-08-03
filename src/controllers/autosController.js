@@ -28,7 +28,18 @@ const controlador =
     },  
 
     detalleProducto: (req,res) =>{
-        res.render("./products/detalle-producto.ejs");
+
+        let idURL = req.params.id;
+		let productoEncontrado;
+
+		for (let p of productos){
+			if (p.id==idURL){
+				productoEncontrado=p;
+				break;
+			}
+		}
+
+		res.render("./products/detalle-producto.ejs",{productoDetalle: productoEncontrado});
     },
 
     creacionProducto: (req, res) => {
