@@ -14,26 +14,38 @@
 
     <h2> DETALLE DE PRODUCTO </h2>
 
-    <img src="/img/<%=productoDetalle.imagen%>" alt="product image" class="product-detail-img">
-    <p>
-        <%=productoDetalle.descripcion%>
-    </p>
+    <div class="detalle-producto-total-T">
 
-    <p>
-        <%=productoDetalle.marca%>
-    </p>
+        <article>
+        <div class="detalle-producto-foto-T">
+            <img src="/img/<%=productoDetalle.imagen%>" alt="product image" class="product-detail-img">
+        </div>
+            <p class="detalle-producto-descripcion-T">
+            <%=productoDetalle.descripcion%>
+            </p>
+        </article>
+    
 
-    <p>
-        <%=productoDetalle.modelo%>
-    </p>
+    
 
-    <p>
-        <%=productoDetalle.ano%>
-    </p>
+    <div class="detalle-producto-caracteristicas-T">
+        <p>
+            <%=productoDetalle.marca%>
+         </p>
 
-    <p>
-        $ <%=productoDetalle.precio%>
-    </p>
+        <p>
+            <%=productoDetalle.modelo%>
+        </p>
+
+        <p>
+            <%=productoDetalle.ano%>
+        </p>
+
+        <p>
+            $ <%=productoDetalle.precio%>
+        </p>
+    </div>
+</div>
     
 </body>
 </html>
