@@ -74,7 +74,31 @@ const controlador =
 
     producto: (req, res) => {
         res.render ("producto");
-    }
+    },
+
+    //********************************* ELIMINAR EN PROCESO ****************************************/
+    eliminar: (req, res) => {
+
+		let id = req.params.id;
+		let ProductoEncontrado;
+
+		let Nproducts = products.filter(function(e){
+			return id!=e.id;
+		})
+
+		for (let producto of products){
+			if (producto.id == id){
+			    ProductoEncontrado=producto;
+			}
+		}
+
+		fs.unlinkSync(path.join(__dirname, '../../public/images/products/', ProductoEncontrado.image));
+
+		fs.writeFileSync(productsFilePath, JSON.stringify(Nproducts,null,' '));
+
+		res.redirect('/');
+	}
+
     
 }
 
