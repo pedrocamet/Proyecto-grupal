@@ -14,7 +14,7 @@
   "modelo": "Chronos",
   "ano": "2019",
   "precio": 4390,
-  "descripcion": "Cuenta con caja automática, tapizado encuero, una pantalla de 7 pulgadas en el tablero para personalizar los controles y la información del auto. El motor 1.8 ETORQ del 130cv ofrece rendimiento para respuestas más rápidas y una conducción más deportiva.",
+  "descripcion": "Cuenta con caja automática, tapizado encuero, una pantalla de 7 pulgadas en el tablero para personalizar los controles y la información del auto.",
   "imagen": "2-Fiat-Chronos.jpg"
  },
  {
@@ -23,7 +23,7 @@
   "modelo": "Corolla",
   "ano": "2017",
   "precio": 3980,
-  "descripcion": "Tiene 5 puertas y cuenta con frenado automático de emergencia, sistema de alerta de cambio involuntario de carril y programador de velocidad activo. El baúl tiene una capacidad de 390 litros.",
+  "descripcion": "Tiene 5 puertas y cuenta con frenado automático de emergencia, sistema de alerta de cambio involuntario de carril y programador de velocidad activo.",
   "imagen": "3-Toyota-Corolla.jpg"
  },
  {
@@ -31,8 +31,8 @@
   "marca": "Chevrolet",
   "modelo": "Onix",
   "ano": "2020",
-  "precio": 46,
-  "descripcion": "Motor naftero 1.2 litros que se combina con una caja manual de cinco velocidades para brindarte mucha más economía de combustible. Aire acondicionado digital, nuevo cargador inalámbrico, cámara de visión trasera y 6 airbags para ofrecer una protección extra a vos y a tu familia.",
+  "precio": 4690,
+  "descripcion": "Caja manual de 5 velocidades. Motor naftero. Aire acondicionado digital, cargador inalámbrico, cámara de visión trasera y 6 airbags.",
   "imagen": "4-Ch-Onix.jpg"
  },
  {
@@ -41,7 +41,7 @@
   "modelo": "Logan Intens",
   "ano": "2020",
   "precio": 5160,
-  "descripcion": "Cuenta con un sistema híbrido de 240 hp, espacio para ocho pasajeros, control de estabilidad, 10 airbags,faros de LED y cámara de reversa",
+  "descripcion": "Cuenta con un sistema híbrido de 240 hp, espacio para ocho pasajeros, control de estabilidad, 10 airbags,faros de LED y cámara de reversa.",
   "imagen": "5-Renault-Logan-Intens.jpg"
  },
  {
