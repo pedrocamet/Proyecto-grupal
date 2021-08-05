@@ -10,16 +10,15 @@
 
 </header>
 
-<body>
+<body >
+<div class="body-detalle-producto-T">
 
-    <h2> DETALLE DE PRODUCTO </h2>
 
     <div class="detalle-producto-total-T">
 
-        <article>
-        <div class="detalle-producto-foto-T">
-            <img src="/img/<%=productoDetalle.imagen%>" alt="product image" class="product-detail-img">
-        </div>
+        <article class="detalle-producto-fotoydescripcion-T" >
+            <img src="/img/<%=productoDetalle.imagen%>" alt="product image" class="detalle-producto-foto-T">
+
             <p class="detalle-producto-descripcion-T">
             <%=productoDetalle.descripcion%>
             </p>
@@ -29,24 +28,35 @@
     
 
     <div class="detalle-producto-caracteristicas-T">
-        <p>
+        <p class="detalle-producto-marca-T">
             <%=productoDetalle.marca%>
-         </p>
+        </p>
 
-        <p>
+        <p class="detalle-producto-modelo-T">
             <%=productoDetalle.modelo%>
         </p>
 
-        <p>
+        <p class="detalle-producto-ano-T">
             <%=productoDetalle.ano%>
         </p>
 
-        <p>
+        <p class="detalle-producto-precio-T">
             $ <%=productoDetalle.precio%>
         </p>
-    </div>
-</div>
+
+        <div class="detalle-producto-boton-T">
+            <button type="button" class="btn btn-outline-primary waves-effect" id="boton-alquilar-ahora-T"> Alquilar ahora</button>
+        </div>
+
+        <div class="detalle-producto-botones-extra-T">
+            <button type="button" class="btn btn-outline-primary waves-effect" id="boton-alquilar-ahora-T-2"> Editar </button>
+            <button type="button" class="btn btn-outline-primary waves-effect" id="boton-alquilar-ahora-T-3"> Eliminar </button>
+        </div>
     
+    </div>
+    
+</div>
+</div>
 </body>
 </html>
 

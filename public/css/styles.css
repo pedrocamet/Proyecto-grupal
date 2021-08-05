@@ -91,21 +91,21 @@
 }
 
 .caja1{
-  border: 30px solid lightskyblue;
-  background: lightskyblue;
+  border: 30px solid rgb(50, 135, 205);
+  background: rgb(50, 135, 205);
   border-top-left-radius: 7px;
   border-bottom-left-radius: 7px;
 }
 
 .caja2{
-  border: 30px solid lightskyblue;
-  background: lightskyblue;
+  border: 30px solid rgb(50, 135, 205);
+  background: rgb(50, 135, 205);
   
 }
 
 .caja3{
-  border: 30px solid lightskyblue;
-  background: lightskyblue;
+  border: 30px solid rgb(50, 135, 205);
+  background: rgb(50, 135, 205);
 
 }
 
@@ -731,26 +731,104 @@ font-size: 5vw ;
 }
 
 /******************************** DETALLE DEL PRODUCTO ******************************************/
+
+.body-detalle-producto-T{
+  background-color: rgb(50, 135, 205);
+  padding: 30px;
+}
+
 .detalle-producto-total-T{
+  padding:0px;
   display:flex;
-    justify-content: space-around;
+  width:80%;
+  margin:auto;
+  background-color:  white;
+  border-radius: 15px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.25);
+}
+
+.detalle-producto-fotoydescripcion-T{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
 }
 
 .detalle-producto-foto-T{
-  width: 50%;
-  padding-left: 20px;
-  padding-top: 20px;
+  width: 70%;
+  box-shadow: 0px 0px 10px rgb(100,100,100);
 }
 
 .detalle-producto-descripcion-T{
   display:flex;
   width: 80%;
-  padding-left: 20px;
-  padding-top: 20px;
+  padding: 15px;
+  font-size: 20px;
+  line-height: 1.5;
+
 }
 
 .detalle-producto-caracteristicas-T{
   display:flex;
+  flex-direction: column;
+  text-align: center;
+  width: 80%;
+  border-left: solid 1px rgba(0,0,0,.25);
+ 
+}
+
+.detalle-producto-marca-T{
+  font-size: 30px;
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
+  font-weight: bold;
+}
+
+.detalle-producto-modelo-T{
+  font-size: 22px;
+  padding-bottom: 10px;
+  font-style: italic;
+}
+
+.detalle-producto-ano-T{
+  font-size: 22px;
+  padding: 20px;
+}
+
+.detalle-producto-precio-T{
+  font-size: 26px;
+  padding: 20px;
+  font-weight: bolder;
+}
+
+.detalle-producto-boton-T{
+  padding:20px;
+}
+
+
+#boton-alquilar-ahora-T{
+  background-color: rgb(50, 135, 205);
+  font-size: 20px;
+  color: #ffffff;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 8px;
+  width: 70%;
+  margin:auto;
+}
+
+#boton-alquilar-ahora-T:hover{
+  box-shadow: 0px 0px 10px rgb(100,100,100);
+}
+
+
+.detalle-producto-botones-extra-T{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 30px;
+
 }
 
 
@@ -764,4 +842,37 @@ font-size: 5vw ;
   display: flex;
   flex-direction: row;
   width: auto;
+}
+
+  #boton-alquilar-ahora-T-2{
+  background-color: rebeccapurple;
+  font-size: 20px;
+  color: #ffffff;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 8px;
+  width: 35%;
+  margin:auto;
+  }
+
+
+#boton-alquilar-ahora-T-2:hover{
+  background-color:red;
+  box-shadow: 0px 0px 10px rgb(100,100,100);
+}
+
+#boton-alquilar-ahora-T-3{
+  background-color: rebeccapurple;
+  font-size: 20px;
+  color: #ffffff;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 8px;
+  width: 35%;
+  margin:auto;
+}
+
+#boton-alquilar-ahora-T-3:hover{
+  background-color:red;
+  box-shadow: 0px 0px 10px rgb(100,100,100);
 }
