@@ -752,3 +752,16 @@ font-size: 5vw ;
 .detalle-producto-caracteristicas-T{
   display:flex;
 }
+
+
+/******************************** LISTADO DE PRODUCTOS ******************************************/
+
+.titulo-centrado-P{
+  text-align: center;
+}
+
+.tipo-autos-P{
+  display: flex;
+  flex-direction: row;
+  width: auto;
+}
