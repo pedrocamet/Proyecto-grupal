@@ -36,6 +36,8 @@ router.post("/creacion-producto",uploadFile.single('imageProduct') ,autosControl
 /*********** DETALLE DE UN PRODUCTO ************/
 router.get("/detalle-producto/:id", autosController.detalleProducto); // detalle de un producto falta todo PARAMETRIZADO
 
+/***********lISTADO DE PRODUCTOS  ************/
+router.get("/listado-productos", autosController.listadoProducto); 
 
 /***********EDIT A PRODUCT    ************/
 //router.get("/productDetail/:id/edit", autosController.editProduct); //formulario de edicion de productos 

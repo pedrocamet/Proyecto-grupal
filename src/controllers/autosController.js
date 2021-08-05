@@ -42,6 +42,10 @@ const controlador =
 		res.render("./products/detalle-producto.ejs",{productoDetalle: productoEncontrado});
     },
 
+    listadoProducto: (req, res) => {
+        res.render ("./products/listado-productos.ejs")
+    },
+
     creacionProducto: (req, res) => {
         res.render ("./products/creacion-producto.ejs");
     },  
