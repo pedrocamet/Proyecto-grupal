@@ -13,15 +13,15 @@
         <link rel="stylesheet" href="/public/css/normalize.css">
 
     </head>
+    
     <body class="todocargarprod">
-      
-      <header class="bodyheaderf">
+    <header class="bodyheaderf">
           
           <p class="nombrecompleto">
               Nombre Completo 
           </p>
-          <img src="./img/Iso sin fondo.png" alt="logo" class="bodyheaderimgf">
-      </header>
+          <img src="../img/Iso sin fondo.png" alt="logo" class="bodyheaderimgf">
+     </header>
       <div class="reservaspendientesdiv">
         <h2 class="reservaspendientes">Editar Producto:</h2>
      </div>
@@ -36,14 +36,17 @@
         </div>
         <div class="nombremodelof">
           <label>Marca y modelo  </label>
-          <input type="text" name="marca">
-          <input type="text" name="modelo">
+          <input type="text" name="marca" value= <%= productoEditar.marca%> >
+          <input type="text" name="modelo" value= <%= productoEditar.modelo%>>
         </div>
         <div class="anodelvehiculof">
           <label> Año del vehículo</label>
           <input type="number" name="ano" id="">
         </div>
         <div class="imagenvehiculof">
+          <div>
+          <img src="" alt="">
+          </div>
           <label for="imageProduct" class="form-label">Seleccionar Imagen:</label>
           <input type="file" name= "imageProduct">
         </div>

@@ -42,8 +42,16 @@ const controlador =
 		res.render("./products/detalle-producto.ejs",{productoDetalle: productoEncontrado});
     },
     editarProducto: (req, res) => {
-        let idProd = req.params.id;
-        console.log(idprod) 
+        let idProducto = req.params.idProd;
+        let prodToEdit;
+        console.log(idProducto)
+        for (let p of productos){
+            if (p.id == idProducto){
+                prodToEdit = p;
+                break;
+            }
+        }
+        res.render ("./products/editar-producto.ejs", {productoEditar: prodToEdit});
     },    
 
     listadoProducto: (req, res) => {
