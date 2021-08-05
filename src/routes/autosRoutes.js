@@ -40,7 +40,7 @@ router.get("/detalle-producto/:id", autosController.detalleProducto); // detalle
 router.get("/listado-productos", autosController.listadoProducto); 
 
 /***********EDIT A PRODUCT    ************/
-//router.get("/productDetail/:id/edit", autosController.editProduct); //formulario de edicion de productos 
+router.get("/productDetail/:id/edit", autosController.editarProducto); //formulario de edicion de productos 
 //router.put("/productDetail/:id/edit", autosController.editProduct);// edicion y almacenamiento de producto 
 
 /***********DELETE ONE PRODUCT  ************/
