@@ -12,85 +12,74 @@
         <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/public/css/normalize.css">
     </head>
-    <body>
-        <header>
-            <%- include("../partials/header") %>
-        </header>   
+    <body>   
         <div>
-            <h1 class="titulo-centrado-P"> Listado de productos </h1>
-            <br>
-            <div class="tipo-autos-P">
-                <div class="tipo-autos2-P">
-                    <a href="#"></a>
-                        <div>
-                            <span>Autos pequeños</span>
-                        </div>
-                        <div>
-                            <img src="./img/auto-pequeño.jpeg">
-                        </div>
-                        <div>
-                            <button type="button"> Seleccionar </button>
-                        </div>
-                        <br>
-                    <a href="#"></a>
-                        <div>
-                            <span>Autos medianos</span>
-                        </div>
-                        <div>
-                            <img src="./img/auto-pequeño.jpeg">
-                        </div>
-                        <div>
-                            <button type="button"> Seleccionar </button>
-                        </div>
-                        <br>
-                    <a href="#"></a>
-                        <div>
-                            <span>Autos grandes</span>
-                        </div>
-                        <div>
-                            <img src="./img/auto-grande.jpeg">
-                        </div>
-                        <div>
-                            <button type="button"> Seleccionar </button>
-                        </div>
-                        <br>
-                    <a href="#"></a>
-                        <div>
-                            <span>Autos de alta gama</span>
-                        </div>
-                        <div>
-                            <img src="./img/auto-alta-gama.jpeg">
-                        </div>
-                        <div>
-                            <button type="button"> Seleccionar </button>
-                        </div>
-                        <br>
-                    <a href="#"></a>
-                        <div>
-                            <span>Autos familiares</span>
-                        </div>
-                        <div>
-                            <img src="./img/auto-familiar.jpeg">
-                        </div>
-                        <div>
-                            <button type="button"> Seleccionar </button>
-                        </div>
-                        <br>
-                    <a href="#"></a>
-                        <div>
-                            <span>Camionetas</span>
-                        </div>
-                        <div>
-                            <img src="./img/camionetas.jpeg">
-                        </div>
-                        <div>
-                            <button type="button"> Seleccionar </button>
-                        </div>
-                </div>
-            </div>
-        </div>
+            <header></header>
+                <h1 class="titulo-centrado-P"> Listado de productos </h1>
+                <%- include("../partials/header") %>
+            </header>
+            <nav class="navegador-P">
+                <h2> Buscador</h2>
+                <form>
+                    <label> Auto </label>
+                    <input type="checkbox">
+                    <label> Camioneta </label>
+                    <input type="checkbox">
+                    <label> Auto familiar </label>
+                    <input type="checkbox">
+                    <label> Auto alta gama </label>
+                    <input type="checkbox">
+                    <br>
+                    <input type="text">
+                    <input type="submit" value="Buscar">
+                </form>
+            </nav>
+            <section class="section-P">
+                <article class="contenedor-autos-P">
+                    <h2> Autos Medianos </h2>
+                    <img src="./img/auto-pequeño.jpeg">
+                    <br>
+                    <p> Precio: $25000 por 7 dias kms ilimitados</p>
+                    <br>
+                    <button type="button"> Seleccionar </button>
+                </article>
+                <article class="contenedor-autos-P">
+                    <h2> Autos Grandes </h2>
+                    <img src="./img/auto-grande.jpeg">
+                    <br>
+                    <p> Precio: $40000 por 7 dias kms ilimitados</p>
+                    <br>
+                    <button type="button"> Seleccionar </button>
+                </article>
+                <article class="contenedor-autos-P">
+                    <h2> Autos de alta gama </h2>
+                    <img src="./img/auto-alta-gama.jpeg">
+                    <br>
+                    <p> Precio: $65000 por 7 dias kms ilimitados</p>
+                    <br>
+                    <button type="button"> Seleccionar </button>
+                </article>
+                <article class="contenedor-autos-P">
+                    <h2> Autos Familiares </h2>
+                    <p> precio, etc</p>
+                    <img src="./img/auto-familiar.jpeg">
+                    <br>
+                    <p> Precio: $50000 por 7 dias kms ilimitados</p>
+                    <br>
+                    <button type="button"> Seleccionar </button>
+                </article>
+                <article class="contenedor-autos-P">
+                    <h2> Camionetas </h2>
+                    <img src="./img/Camionetas.jpeg">
+                    <br>
+                    <p> Precio: $100000 por 7 dias kms ilimitados</p>
+                    <br>
+                    <button type="button"> Seleccionar </button>
+                </article>
+            </section>
         <footer>
             <%- include("../partials/footer") %>
         </footer>
+    </div>
     </body> 
 </html>
