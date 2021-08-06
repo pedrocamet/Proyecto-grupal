@@ -41,7 +41,7 @@ router.get("/listado-productos", autosController.listadoProducto);
 
 /***********EDIT A PRODUCT    ************/
 router.get("/editar-producto/:idProd", autosController.editarProducto); //formulario de edicion de productos 
-//router.put("/productDetail/:id/edit", autosController.editProduct);// edicion y almacenamiento de producto 
+router.put("/editar-producto/:idProd", autosController.updateProducto);// edicion y almacenamiento de producto 
 
 /***********DELETE ONE PRODUCT  ************/
 //router.delete("/productDetail/:id/edit", autosController.editProduct);// eliminacion producto

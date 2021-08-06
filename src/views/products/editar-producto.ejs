@@ -26,12 +26,17 @@
         <h2 class="reservaspendientes">Editar Producto:</h2>
      </div>
       <main class="cuerpocargarprodf">
-        <form action="./creacion-producto" method="POST" enctype="multipart/form-data">
+        <form action="/autosRoutes/editar-producto/<%productoEditar.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
          <div class="modelovehiculof">
           <label class="modelovehiculofl"> Elija categoría del nuevo vehículo:</label>
-          <select name="claseDeVehiculo" class="selectmodelovehiculof">
-              <option value="autoPequeño" name="s">Auto Pequeño</option>
-              <option value="autoMediano" name="m"> Auto Mediano</option>
+          <select name="categoria" class="selectmodelovehiculof">
+            <% if(productoEditar.categoria == "autoPequeño"){ %>
+              <option value="autoPequeño" name="autoPequeño" selected>Auto Pequeño</option>
+              <option value="autoMediano" name="autoMediano"> Auto Mediano</option>
+              <%}else {%>
+              <option value="autoPequeño" name="autoPequeño" >Auto Pequeño</option>
+              <option value="autoMediano" name="autoMediano" selected> Auto Mediano</option>
+              <%};%>
           </select>
         </div>
         <div class="nombremodelof">
@@ -44,7 +49,7 @@
           <input type="number" name="ano" value= <%= productoEditar.ano%>>
         </div>
         <div class="imagenvehiculof">
-          <img src="/img/<%= productoEditar.imagen%>"class="imgEditarProd" alt="">
+          <img src="/img/<%= productoEditar.imagen%>"class="imgEditarProdf" alt="">
           
         </div class="imagenvehiculof">
           <label for="imageProduct" class="form-label">Seleccionar Imagen:</label>
@@ -54,9 +59,9 @@
           <label > Fecha de disponibilidad</label>
           <div class="calendarios">
             <label> Desde</label>
-            <input type="date">
+            <input type="date" name="fechaDispDesde" value=<%= productoEditar.modelo%>>
             <label> Hasta</label> 
-            <input type="date">
+            <input type="date" name="fechaDispHasta" value=<%= productoEditar.modelo%>>
           </div>
         </div>
         <div class="preciopordiainiciof">
@@ -64,8 +69,8 @@
           <input type="number" name="price" value= <%= productoEditar.precio%> >
         </div>
         
-        <div class="botonesEleccion">
-          <button type="submit">Cargar producto</button>
+        <div >
+          <button type="submit" class="botonEditarProdf">Cargar producto</button>
         </div>
         <div>
 
