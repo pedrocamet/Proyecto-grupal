@@ -41,15 +41,15 @@
         </div>
         <div class="anodelvehiculof">
           <label> Año del vehículo</label>
-          <input type="number" name="ano" id="">
+          <input type="number" name="ano" value= <%= productoEditar.ano%>>
         </div>
         <div class="imagenvehiculof">
-          <div>
-          <img src="" alt="">
-          </div>
+          <img src="/img/<%= productoEditar.imagen%>"class="imgEditarProd" alt="">
+          
+        </div class="imagenvehiculof">
           <label for="imageProduct" class="form-label">Seleccionar Imagen:</label>
           <input type="file" name= "imageProduct">
-        </div>
+          </div>
         <div class="fechadisponiblef">
           <label > Fecha de disponibilidad</label>
           <div class="calendarios">
@@ -61,7 +61,7 @@
         </div>
         <div class="preciopordiainiciof">
           <label> Precio por día</label>
-          <input type="number" name="price" >
+          <input type="number" name="price" value= <%= productoEditar.precio%> >
         </div>
         
         <div class="botonesEleccion">
