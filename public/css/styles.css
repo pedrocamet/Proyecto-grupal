@@ -841,7 +841,23 @@ font-size: 5vw ;
 .tipo-autos-P{
   display: flex;
   flex-direction: row;
-  width: auto;
+  width: 100%;
+  justify-content: space-around;
+  text-align: center;
+  margin: 10px;
+  border: 10px;
+  padding: 10px;
+
+}
+
+.tipo-autos2-P{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-around;
+  text-align: center;
+
+  
 }
 
   #boton-alquilar-ahora-T-2{
