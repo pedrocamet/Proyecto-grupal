@@ -1,8 +1,10 @@
 const express = require ("express");
 const path = require ("path");
 const app = express ();
+const multer = require ('multer');
 app.set ("view engine", "ejs");
 var methodOverride = require('method-override');
+
 
 app.use(methodOverride("_method"));
 /************* RUTAS GLOBALES ******************/

@@ -19,12 +19,14 @@
  },
  {
   "id": 3,
-  "marca": "Toyota",
+  "marca": "Honda",
   "modelo": "Corolla",
   "ano": "2017",
-  "precio": 3980,
   "descripcion": "Tiene 5 puertas y cuenta con frenado automático de emergencia, sistema de alerta de cambio involuntario de carril y programador de velocidad activo.",
-  "imagen": "3-Toyota-Corolla.jpg"
+  "imagen": "3-Toyota-Corolla.jpg",
+  "fechaDispDesde": "",
+  "fechaDispHasta": "",
+  "image": "1628516563624descarga.jpg"
  },
  {
   "id": 4,
@@ -46,19 +48,45 @@
  },
  {
   "id": 6,
-  "marca": "asdfsd",
+  "marca": "prueba",
   "modelo": "asdfas",
-  "categoria": "autoPequeño",
   "ano": "",
-  "image": "1627956983671Vagon_Historia _3.jpg"
+  "image": "1628481482391autos-uso-diario-feat.jpg",
+  "fechaDispDesde": "",
+  "fechaDispHasta": ""
  },
  {
   "id": 7,
-  "marca": "prueba",
-  "modelo": "prueba",
-  "categoria": "autoPequeño",
+  "marca": "varios",
+  "modelo": "cactus",
   "ano": "",
-  "precio": 5160,
-  "image": "1627957012058Vagon_Historia _3.jpg"
+  "fechaDispDesde": "",
+  "fechaDispHasta": "",
+  "image": "1628480875894autos-uso-diario-feat.jpg"
+ },
+ {
+  "id": 8,
+  "marca": "Toyota",
+  "modelo": "hilux",
+  "ano": "",
+  "image": "1628480981887RT_V_306c975b76a24b25b3124ecb12f26291.jpg",
+  "fechaDispDesde": "",
+  "fechaDispHasta": ""
+ },
+ {
+  "id": 9,
+  "marca": "Citroen",
+  "modelo": "Cactus",
+  "categoria": "autoPequeño",
+  "ano": "2022",
+  "image": "1628480311227autos-uso-diario-feat.jpg"
+ },
+ {
+  "id": 10,
+  "marca": "Honda",
+  "modelo": "OTro",
+  "categoria": "autoPequeño",
+  "ano": "2011",
+  "imagen": "1628526820161autos-uso-diario-feat.jpg"
  }
 ]
