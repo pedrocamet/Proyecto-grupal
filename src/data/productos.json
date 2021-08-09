@@ -46,27 +46,37 @@
  },
  {
   "id": 6,
-  "marca": "asdfsd",
+  "marca": "prueba",
   "modelo": "asdfas",
-  "categoria": "autoPequeño",
   "ano": "",
-  "image": "1627956983671Vagon_Historia _3.jpg"
+  "image": "1628481482391autos-uso-diario-feat.jpg",
+  "fechaDispDesde": "",
+  "fechaDispHasta": ""
  },
  {
   "id": 7,
-  "marca": "prueba",
-  "modelo": "prueba",
-  "categoria": "autoPequeño",
+  "marca": "varios",
+  "modelo": "cactus",
   "ano": "",
-  "precio": 5160,
-  "image": "1627957012058Vagon_Historia _3.jpg"
+  "fechaDispDesde": "",
+  "fechaDispHasta": "",
+  "image": "1628480875894autos-uso-diario-feat.jpg"
  },
  {
   "id": 8,
-  "marca": "Toyta ",
+  "marca": "Toyota",
   "modelo": "hilux",
-  "categoria": "autoPequeño",
   "ano": "",
-  "image": "1628474343112D_NQ_NP_630938-MLA31611468002_072019-O222.webp"
+  "image": "1628480981887RT_V_306c975b76a24b25b3124ecb12f26291.jpg",
+  "fechaDispDesde": "",
+  "fechaDispHasta": ""
+ },
+ {
+  "id": 9,
+  "marca": "Citroen",
+  "modelo": "Cactus",
+  "categoria": "autoPequeño",
+  "ano": "2022",
+  "image": "1628480311227autos-uso-diario-feat.jpg"
  }
 ]

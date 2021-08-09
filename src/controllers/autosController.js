@@ -54,9 +54,12 @@ const controlador =
         res.render ("./products/editar-producto.ejs", {productoEditar: prodToEdit});
     },    
     updateProducto: (req,res) => {
-        let idProducto = req.params.id;
+        
+        let idProducto = req.params.idProd;
+       
 		let prodToEdit;
-
+        console.log(idProducto)
+        
 		for (let s of productos){
 			if(idProducto==s.id){
                 s.marca= req.body.marca,	
@@ -64,13 +67,16 @@ const controlador =
 				s.categoria= req.body.category,
                 s.ano= req.body.ano,
 				s.precio= req.body.precio,
-                s.image= req.body.imageProduct,
                 s.fechaDispDesde= req.body.fechaDispDesde,
                 s.fechaDispHasta = req.body.fechaDispHasta
-                break;	
-
-				}	
-         } 
+                if (req.file.filename != undefined){
+                s.image = req.file.filename;
+                } else{
+                    	
+                }break;
+                
+        };	
+         }; 
         
 		fs.writeFileSync(productosFilePath, JSON.stringify(productos, null, " "))
 		res.redirect('/');
@@ -100,7 +106,7 @@ const controlador =
                 ano:req.body.ano,
                 price:req.body.precioPorDia,
                 image: nombreImagen
-            }
+            }   
            
     
                 productos.push(productoNuevo);

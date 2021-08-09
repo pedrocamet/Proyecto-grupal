@@ -30,7 +30,7 @@ router.get("/producto", autosController.producto);
 
 /***********CREATE ONE PRODUCT  ************/
 router.get("/creacion-producto", autosController.creacionProducto); 
-router.post("/creacion-producto", uploadFile.single('imageProduct'),  autosController.store); 
+router.post("/creacion-producto", uploadFile.single("imageProduct"),  autosController.store); 
 
 
 
