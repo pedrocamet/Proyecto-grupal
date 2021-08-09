@@ -54,30 +54,28 @@ const controlador =
         res.render ("./products/editar-producto.ejs", {productoEditar: prodToEdit});
     },    
     updateProducto: (req,res) => {
-        
         let idProducto = req.params.idProd;
-       
-		let prodToEdit;
+        let prodToEdit;
         console.log(idProducto)
-        
+        let imagenABorrar;
 		for (let s of productos){
-			if(idProducto==s.id){
-                s.marca= req.body.marca,	
+			if(idProducto==s.id){   
+                imagenABorrar= s.image;
 				s.modelo= req.body.modelo,
 				s.categoria= req.body.category,
                 s.ano= req.body.ano,
 				s.precio= req.body.precio,
                 s.fechaDispDesde= req.body.fechaDispDesde,
-                s.fechaDispHasta = req.body.fechaDispHasta
-                if (req.file.filename != undefined){
-                s.image = req.file.filename;
-                } else{
-                    	
-                }break;
+                s.fechaDispHasta = req.body.fechaDispHasta,
+                s.imagen=(req.file.filename)
+               break;
+            }    
+            }
                 
-        };	
-         }; 
-        
+    	       
+        fs.unlinkSync(path.join(__dirname, '../../public/img/', imagenABorrar));
+        //console.log("ruta:"(path.join(__dirname, '../../public/img/', imagenABorrar)))
+
 		fs.writeFileSync(productosFilePath, JSON.stringify(productos, null, " "))
 		res.redirect('/');
     },
@@ -105,7 +103,7 @@ const controlador =
                 categoria: req.body.claseDeVehiculo,
                 ano:req.body.ano,
                 price:req.body.precioPorDia,
-                image: nombreImagen
+                imagen: nombreImagen
             }   
            
     

@@ -19,12 +19,14 @@
  },
  {
   "id": 3,
-  "marca": "Toyota",
+  "marca": "Honda",
   "modelo": "Corolla",
   "ano": "2017",
-  "precio": 3980,
   "descripcion": "Tiene 5 puertas y cuenta con frenado automático de emergencia, sistema de alerta de cambio involuntario de carril y programador de velocidad activo.",
-  "imagen": "3-Toyota-Corolla.jpg"
+  "imagen": "3-Toyota-Corolla.jpg",
+  "fechaDispDesde": "",
+  "fechaDispHasta": "",
+  "image": "1628516563624descarga.jpg"
  },
  {
   "id": 4,
@@ -78,5 +80,13 @@
   "categoria": "autoPequeño",
   "ano": "2022",
   "image": "1628480311227autos-uso-diario-feat.jpg"
+ },
+ {
+  "id": 10,
+  "marca": "Honda",
+  "modelo": "OTro",
+  "categoria": "autoPequeño",
+  "ano": "2011",
+  "imagen": "1628526820161autos-uso-diario-feat.jpg"
  }
 ]
