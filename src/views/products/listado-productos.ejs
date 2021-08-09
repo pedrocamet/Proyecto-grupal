@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Creación producto </title>
+        <title>Listado de productos </title>
         <link href="/css/styles.css" rel="stylesheet">
         <link href="https://fontawesome.com/" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
@@ -12,63 +12,103 @@
         <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/public/css/normalize.css">
     </head>
-    <body>
-        <header>
-            <%- include("../partials/header") %>
-        </header>   
+    <body>   
         <div>
-            <h1 class="titulo-centrado-P"> Listado de productos </h1>
-            <div class="tipo-autos-P{">
-                <div>
-                    <div class="tipo-autos-P{">
-                        <a href="#"></a>
-                            <div>
-                                <span>Autos pequeños</span>
-                            </div>
-                            <div>
-                                <img src="../../../public/img/auto-pequeño.jpeg">
-                            </div>
-                        <a href="#"></a>
-                            <div>
-                                <span>Autos medianos</span>
-                            </div>
-                            <div>
-                                <img src="../../../public/img/auto-pequeño.jpeg">
-                            </div>
-                        <a href="#"></a>
-                            <div>
-                                <span>Autos grandes</span>
-                            </div>
-                            <div>
-                                <img src="../../../public/img/auto-grande.jpeg">
-                            </div>
-                        <a href="#"></a>
-                            <div>
-                                <span>Autos de alta gama</span>
-                            </div>
-                            <div>
-                                <img src="../../../public/img/auto-alta-gama.jpeg">
-                            </div>
-                        <a href="#"></a>
-                            <div>
-                                <span>Autos familiares</span>
-                            </div>
-                            <div>
-                                <img src="../../../public/img/auto-familiar.jpeg">
-                            </div>
-                        <a href="#"></a>
-                            <div>
-                                <span>Camionetas</span>
-                            </div>
-                            <div>
-                                <img src="../../../public/img/camionetas.jpeg">
-                            </div>
+            <header></header>
+                <h1 class="titulo-centrado-P"> Listado de productos </h1>
+                <%- include("../partials/header") %>
+            </header>
+            <nav class="navegador-P">
+                <h2 class="titulo-centrado-P" i class="fas fa-search"></i> Buscador </h2> 
+                <form>
+                    <h4>Tipo de auto</h4>
+                    <div class="navegador2-P">
+                        <ul title="Tipo de auto">
+                            <li>Auto <input type="checkbox"></li>
+                            <li>Camioneta <input type="checkbox"></li>
+                            <li>Auto familiar <input type="checkbox"></li>
+                            <li>Auto alta gama <input type="checkbox"></li>
+                        </ul>
                     </div>
-                </div>
-            </div>
-        </div>
+                    <br>
+                    <h4>Caracteristicas del auto</h4>
+                    <div class="navegador2-P">
+                        <ul title="Caracteristicas del auto">
+                            <li>Transmision manual <input type="checkbox"></li>
+                            <li>Transmision automatica <input type="checkbox"></li>
+                            <li>Nafta <input type="checkbox"></li>
+                            <li>Diesel <input type="checkbox"></li>
+                        </ul>
+                    </div>
+                    <br>
+                    <h4>Kilometraje</h4>
+                    <div class="navegador2-P">
+                        <ul title="Kilometraje">
+                            <li>Limitado <input type="checkbox"></li>
+                            <li>Ilimitado<input type="checkbox"></li>
+                        </ul>
+                    </div>
+                    <br>
+                    <input type="text">
+                    <input type="submit" value="Buscar">
+                </form>
+            </nav>
+            <section class="section-P">
+                <h4>Ofertas por tiempo limitado</h4>
+                <article class="contenedor-autos-P">
+                    <h2> Autos Medianos </h2>
+                    <img src="./img/auto-pequeño.jpeg">
+                    <br>
+                    <p> Precio: $25000 </p>
+                    <p> Alquiler por 7 dias </p>
+                    <p> Kms ilimitados</p>
+                    <br>
+                    <button type="button"> Seleccionar </button>
+                </article>
+                <article class="contenedor-autos-P">
+                    <h2> Autos Grandes </h2>
+                    <img src="./img/auto-grande.jpeg">
+                    <br>
+                    <p> Precio: $40000 </p>
+                    <p> Alquiler por 7 dias </p>
+                    <p> Kms ilimitados</p>
+                    <br>
+                    <button type="button"> Seleccionar </button>
+                </article>
+                <article class="contenedor-autos-P">
+                    <h2> Autos de alta gama </h2>
+                    <img src="./img/auto-alta-gama.jpeg">
+                    <br>
+                    <p> Precio: $65000 </p>
+                    <p> Alquiler por 7 dias </p>
+                    <p> Kms ilimitados</p>
+                    <br>
+                    <button type="button"> Seleccionar </button>
+                </article>
+                <article class="contenedor-autos-P">
+                    <h2> Autos Familiares </h2>
+                    <img src="./img/auto-familiar.jpeg">
+                    <br>
+                    <p> Precio: $50000 </p>
+                    <p> Alquiler por 7 dias </p>
+                    <p> Kms ilimitados</p>
+                    <br>
+                    <button type="button"> Seleccionar </button>
+                </article>
+                <article class="contenedor-autos-P">
+                    <h2> Camionetas </h2>
+                    <img src="./img/Camionetas.jpeg">
+                    <br>
+                    <p> Precio: $100000 </p>
+                    <p> Alquiler por 7 dias </p>
+                    <p> Kms ilimitados</p>
+                    <br>
+                    <button type="button"> Seleccionar </button>
+                </article>
+            </section>
         <footer>
             <%- include("../partials/footer") %>
         </footer>
+    </div>
     </body> 
 </html>

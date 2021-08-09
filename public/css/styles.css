@@ -834,17 +834,53 @@ font-size: 5vw ;
 
 /******************************** LISTADO DE PRODUCTOS ******************************************/
 
+
 .titulo-centrado-P{
+  text-align: center;
+  
+}
+
+@media (min-width: 768px){
+  .navegador-P{
+    background: whitesmoke;
+    text-align:left;
+    width: 30%;
+    float: left;
+    position: sticky;
+    top: 20px;
+  }
+}
+
+
+.navegador2-P{
+  margin-left: 20px;
+
+}
+
+@media (min-width: 768px){
+  .section-P{
+    width: 70%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.titulo-autos-P{
   text-align: center;
 }
 
-.tipo-autos-P{
-  display: flex;
-  flex-direction: row;
-  width: auto;
+.contenedor-autos-P{
+  border-bottom: 1px solid black;
+  margin-bottom: 10px;
+  padding: auto;
+
 }
 
-  #boton-alquilar-ahora-T-2{
+
+/********************************  FIN LISTADO DE PRODUCTOS ******************************************/
+
+#boton-alquilar-ahora-T-2{
   background-color: rebeccapurple;
   font-size: 20px;
   color: #ffffff;
