@@ -7,8 +7,6 @@ const productosFilePath = path.join(__dirname, '../data/productos.json');
 const productos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
 
 
-
-
 const controlador =
 {
     home: (req, res) => {
@@ -66,18 +64,18 @@ const controlador =
                 s.ano= req.body.ano,
 				s.precio= req.body.precio,
                 s.fechaDispDesde= req.body.fechaDispDesde,
-                s.fechaDispHasta = req.body.fechaDispHasta,
+                s.fechaDispHasta = req.body.fechaDispHasta, 
                 s.imagen=(req.file.filename)
                break;
-            }    
-            }
-                
-    	       
-        fs.unlinkSync(path.join(__dirname, '../../public/img/', imagenABorrar));
+            }}    
+        fs.writeFileSync(productosFilePath, JSON.stringify(productos, null, " "))
+                   
+        fs.unlinkSync(path.join(__dirname, '../../public/img/products', imagenABorrar));
+        res.redirect('/');  
         //console.log("ruta:"(path.join(__dirname, '../../public/img/', imagenABorrar)))
 
-		fs.writeFileSync(productosFilePath, JSON.stringify(productos, null, " "))
-		res.redirect('/');
+		//fs.writeFileSync(productosFilePath, JSON.stringify(productos, null, " "))
+		//res.redirect('/');
     },
     listadoProducto: (req, res) => {
         res.render ("./products/listado-productos.ejs")
