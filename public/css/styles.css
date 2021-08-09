@@ -834,29 +834,36 @@ font-size: 5vw ;
 
 /******************************** LISTADO DE PRODUCTOS ******************************************/
 
+
 .titulo-centrado-P{
   text-align: center;
+  
 }
 
-.navegador-P{
-  background: whitesmoke;
-  text-align:left;
-  width: 30%;
-  float: left;
-  position: sticky;
-  top: 20px;
+@media (min-width: 768px){
+  .navegador-P{
+    background: whitesmoke;
+    text-align:left;
+    width: 30%;
+    float: left;
+    position: sticky;
+    top: 20px;
+  }
 }
+
 
 .navegador2-P{
   margin-left: 20px;
 
 }
 
-.section-P{
-  width: 70%;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
+@media (min-width: 768px){
+  .section-P{
+    width: 70%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .titulo-autos-P{
@@ -869,6 +876,9 @@ font-size: 5vw ;
   padding: auto;
 
 }
+
+
+/********************************  FIN LISTADO DE PRODUCTOS ******************************************/
 
 #boton-alquilar-ahora-T-2{
   background-color: rebeccapurple;
