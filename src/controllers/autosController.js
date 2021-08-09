@@ -47,14 +47,14 @@ const controlador =
         
         for (let p of productos){
             if (p.id == idProducto){
-                prodToEdit = p;
+                prodToEdit = p; 
                 break;
             }
         }
         res.render ("./products/editar-producto.ejs", {productoEditar: prodToEdit});
     },    
     updateProducto: (req,res) => {
-        let idProducto = req.params.idProd;
+        let idProducto = req.params.id;
 		let prodToEdit;
 
 		for (let s of productos){
@@ -64,14 +64,14 @@ const controlador =
 				s.categoria= req.body.category,
                 s.ano= req.body.ano,
 				s.precio= req.body.precio,
-                s.imagen= req.body.imagen,
+                s.imagen= req.file.filename,
                 s.fechaDispDesde= req.body.fechaDispDesde,
                 s.fechaDispHasta = req.body.fechaDispHasta
-				break;	
+                break;	
 				}	
                 } 
             
-		fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, " "))
+		fs.writeFileSync(productosFilePath, JSON.stringify(productos, null, " "))
 		res.redirect('/');
     },
     listadoProducto: (req, res) => {

@@ -30,7 +30,8 @@ router.get("/producto", autosController.producto);
 
 /***********CREATE ONE PRODUCT  ************/
 router.get("/creacion-producto", autosController.creacionProducto); 
-router.post("/creacion-producto",uploadFile.single('imageProduct') ,autosController.store); 
+router.post("/creacion-producto", uploadFile.single('imageProduct'),  autosController.store); 
+
 
 
 /*********** DETALLE DE UN PRODUCTO ************/
@@ -41,7 +42,7 @@ router.get("/listado-productos", autosController.listadoProducto);
 
 /***********EDIT A PRODUCT    ************/
 router.get("/editar-producto/:idProd", autosController.editarProducto); //formulario de edicion de productos 
-router.put("/editar-producto/:idProd", autosController.updateProducto);// edicion y almacenamiento de producto 
+router.put("/editar-producto/:idProd", uploadFile.single('imageProduct'), autosController.updateProducto);// edicion y almacenamiento de producto 
 
 /***********DELETE ONE PRODUCT  ************/
 //router.delete("/productDetail/:id/edit", autosController.editProduct);// eliminacion producto

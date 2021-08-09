@@ -19,14 +19,14 @@
           
           <p class="nombrecompleto">
               Nombre Completo 
-          </p>
+          </p>  
           <img src="../img/Iso sin fondo.png" alt="logo" class="bodyheaderimgf">
      </header>
       <div class="reservaspendientesdiv">
         <h2 class="reservaspendientes">Editar Producto:</h2>
      </div>
       <main class="cuerpocargarprodf">
-        <form action="/autosRoutes/editar-producto/<%productoEditar.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
+        <form action="/editar-producto/<%=productoEditar.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
          <div class="modelovehiculof">
           <label class="modelovehiculofl"> Elija categoría del nuevo vehículo:</label>
           <select name="categoria" class="selectmodelovehiculof">
