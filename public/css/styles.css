@@ -840,13 +840,18 @@ font-size: 5vw ;
 
 .navegador-P{
   background: whitesmoke;
-  text-align: center;
-  width: 100%;
-  float: center;
+  text-align:left;
+  width: 20%;
+  float: left;
+}
+
+.navegador2-P{
+  margin-left: 20px;
+
 }
 
 .section-P{
-  width: 100%;
+  width: 80%;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -858,7 +863,8 @@ font-size: 5vw ;
 
 .contenedor-autos-P{
   border: 1px solid black;
-  margin: 5px;
+  margin-bottom: 10px;
+  padding: auto;
 
 }
 

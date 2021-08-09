@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Creación producto </title>
+        <title>Listado de productos </title>
         <link href="/css/styles.css" rel="stylesheet">
         <link href="https://fontawesome.com/" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
@@ -19,16 +19,24 @@
                 <%- include("../partials/header") %>
             </header>
             <nav class="navegador-P">
-                <h2> Buscador</h2>
+                <h2 class="titulo-centrado-P"> Buscador</h2>
                 <form>
-                    <label> Auto </label>
-                    <input type="checkbox">
-                    <label> Camioneta </label>
-                    <input type="checkbox">
-                    <label> Auto familiar </label>
-                    <input type="checkbox">
-                    <label> Auto alta gama </label>
-                    <input type="checkbox">
+                    <h4>Tipo de autos</h4>
+                    <div class="navegador2-P">
+                        <ul title="Tipo de autos">
+                            <li>Auto <input type="checkbox"></li>
+                            <li>Camioneta <input type="checkbox"></li>
+                            <li>Auto familiar <input type="checkbox"></li>
+                            <li>Auto alta gama <input type="checkbox"></li>
+                        </ul>
+                    </div>
+                    <br>
+                    <ul title="Caracteristicas del auto"  >
+                        <li>Transmision manual <input type="checkbox"></li>
+                        <li>Transmision automatica <input type="checkbox"></li>
+                        <li>Nafta <input type="checkbox"></li>
+                        <li>Diesel <input type="checkbox"></li>
+                    </ul>
                     <br>
                     <input type="text">
                     <input type="submit" value="Buscar">
@@ -39,7 +47,9 @@
                     <h2> Autos Medianos </h2>
                     <img src="./img/auto-pequeño.jpeg">
                     <br>
-                    <p> Precio: $25000 por 7 dias kms ilimitados</p>
+                    <p> Precio: $25000 </p>
+                    <p> Alquiler por 7 dias </p>
+                    <p> Kms ilimitados</p>
                     <br>
                     <button type="button"> Seleccionar </button>
                 </article>
@@ -47,7 +57,9 @@
                     <h2> Autos Grandes </h2>
                     <img src="./img/auto-grande.jpeg">
                     <br>
-                    <p> Precio: $40000 por 7 dias kms ilimitados</p>
+                    <p> Precio: $40000 </p>
+                    <p> Alquiler por 7 dias </p>
+                    <p> Kms ilimitados</p>
                     <br>
                     <button type="button"> Seleccionar </button>
                 </article>
@@ -55,16 +67,19 @@
                     <h2> Autos de alta gama </h2>
                     <img src="./img/auto-alta-gama.jpeg">
                     <br>
-                    <p> Precio: $65000 por 7 dias kms ilimitados</p>
+                    <p> Precio: $65000 </p>
+                    <p> Alquiler por 7 dias </p>
+                    <p> Kms ilimitados</p>
                     <br>
                     <button type="button"> Seleccionar </button>
                 </article>
                 <article class="contenedor-autos-P">
                     <h2> Autos Familiares </h2>
-                    <p> precio, etc</p>
                     <img src="./img/auto-familiar.jpeg">
                     <br>
-                    <p> Precio: $50000 por 7 dias kms ilimitados</p>
+                    <p> Precio: $50000 </p>
+                    <p> Alquiler por 7 dias </p>
+                    <p> Kms ilimitados</p>
                     <br>
                     <button type="button"> Seleccionar </button>
                 </article>
@@ -72,7 +87,9 @@
                     <h2> Camionetas </h2>
                     <img src="./img/Camionetas.jpeg">
                     <br>
-                    <p> Precio: $100000 por 7 dias kms ilimitados</p>
+                    <p> Precio: $100000 </p>
+                    <p> Alquiler por 7 dias </p>
+                    <p> Kms ilimitados</p>
                     <br>
                     <button type="button"> Seleccionar </button>
                 </article>
