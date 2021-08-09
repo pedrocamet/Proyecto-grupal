@@ -59,18 +59,19 @@ const controlador =
 
 		for (let s of productos){
 			if(idProducto==s.id){
-				s.marca= req.body.marca,	
+                s.marca= req.body.marca,	
 				s.modelo= req.body.modelo,
 				s.categoria= req.body.category,
                 s.ano= req.body.ano,
 				s.precio= req.body.precio,
-                s.imagen= req.file.filename,
+                s.image= req.body.imageProduct,
                 s.fechaDispDesde= req.body.fechaDispDesde,
                 s.fechaDispHasta = req.body.fechaDispHasta
                 break;	
+
 				}	
-                } 
-            
+         } 
+        
 		fs.writeFileSync(productosFilePath, JSON.stringify(productos, null, " "))
 		res.redirect('/');
     },
