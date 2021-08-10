@@ -10,7 +10,8 @@ const productos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
 const controlador =
 {
     home: (req, res) => {
-        res.render ("home");
+        const productos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
+		res.render('home', {productos: productos});
     },
 
     login: (req, res) => {
@@ -125,15 +126,15 @@ const controlador =
 			return id!=e.id;
 		})
 
-		for (let producto of products){
+		for (let producto of productos){
 			if (producto.id == id){
 			    ProductoEncontrado=producto;
 			}
 		}
 
-		fs.unlinkSync(path.join(__dirname, '../../public/images/products/', ProductoEncontrado.image));
+		fs.unlinkSync(path.join(__dirname, '../../public/img/', ProductoEncontrado.image));
 
-		fs.writeFileSync(productsFilePath, JSON.stringify(Nproducts,null,' '));
+		fs.writeFileSync(productosFilePath, JSON.stringify(Nproducts,null,' '));
 
 		res.redirect('/');
 	}

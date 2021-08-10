@@ -22,7 +22,7 @@
   text-align: center;
   height: 100%;
   width: 100%;
-  background-color: #ebebeb;
+  background-color: rgb(50, 135, 205);
 }
 
 /* HEADER DEL HOME */
@@ -112,37 +112,64 @@
 .caja4{
   border: 30px solid yellowgreen;
   background: yellowgreen;
-  padding-top:2px;
-  padding-bottom:2px;
+  padding-bottom:1px;
   border-bottom-right-radius: 7px;
   border-top-right-radius: 7px;
 }
 
 
 .texto-2{
-  font-size: 40px;
+  font-size: 25px;
   padding-top:30px;
   padding-bottom:10px;
+  padding-left:10px;
+  font-family: "Nunito Sans", sans-serif;
+  text-align:left;
+  color: rgb(53,51,51);
+}
+
+.texto-3-T{
+  font-size:25px;
 }
 
 .foto-producto{
+  width: 29.7vw;
+  height: 20vw;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.foto-producto:hover{
   width: 30vw;
   height: 20vw;
-  box-shadow : 0px 0px 10px rgb(100,100,100 );
+  box-shadow : 0px 0px 10px rgb(100,100,100);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.nombre-marca-T{
+  font-size: 25px;
+}
+
+.nombre-modelo-T{
+  padding-bottom:5px;
 }
 
 .recuadro{
-  border-top: solid 1px black;
-  box-shadow : 0px 0px 10px rgb(100,100,100 );
-  background-color: yellowgreen;
-
+  border-top: solid 1px rgba(0,0,0,.50);
+  box-shadow : 0px 0px 10px rgb(100,100,100);
+  background-color: rgb(225, 195, 236);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width: 30%;
+  margin: auto;
 }
 
 .flex-container{
-  box-shadow : 0px 0px 10px rgb(100,100,100);
-  border: solid 1px powderblue;
   display:flex;
+  flex-direction: column;
   justify-content: space-around;
+  padding-bottom: 30px;
 }
 
 .cajas-entrada2 {
@@ -158,6 +185,10 @@
   width: 15vw;
   height: 15vh;
   padding-top:20px;
+}
+
+.espacio-recuadros{
+  padding-bottom:30px;
 }
 
 .datos-footer{
@@ -739,7 +770,6 @@ font-size: 5vw ;
 
 .detalle-producto-total-T{
   padding:0px;
-  display:flex;
   width:80%;
   margin:auto;
   background-color:  white;
@@ -772,7 +802,6 @@ font-size: 5vw ;
   display:flex;
   flex-direction: column;
   text-align: center;
-  width: 80%;
   border-left: solid 1px rgba(0,0,0,.25);
  
 }
@@ -828,6 +857,59 @@ font-size: 5vw ;
   flex-direction: row;
   justify-content: space-around;
   padding-top: 30px;
+  padding-bottom:30px;
+
+}
+
+#boton-alquilar-ahora-T-2{
+  background-color: rebeccapurple;
+  font-size: 20px;
+  color: #ffffff;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 8px;
+  margin:auto;
+}
+
+
+#boton-alquilar-ahora-T-2:hover{
+  background-color:red;
+  box-shadow: 0px 0px 10px rgb(100,100,100);
+}
+
+#boton-alquilar-ahora-T-3{
+  background-color: rebeccapurple;
+  font-size: 20px;
+  color: #ffffff;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 8px;
+  margin:auto;
+}
+
+#boton-alquilar-ahora-T-3:hover{
+  background-color:red;
+  box-shadow: 0px 0px 10px rgb(100,100,100);
+}
+
+@media (min-width: 1070px){
+  .detalle-producto-total-T{
+    padding:0px;
+    display:flex;
+    width:80%;
+    margin:auto;
+    background-color:white;
+    border-radius: 15px;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.25)
+  }
+
+  .detalle-producto-caracteristicas-T{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    border-left: solid 1px rgba(0,0,0,.25)
+  }
 
 }
 
@@ -884,35 +966,3 @@ font-size: 5vw ;
 
 /********************************  FIN LISTADO DE PRODUCTOS ******************************************/
 
-#boton-alquilar-ahora-T-2{
-  background-color: rebeccapurple;
-  font-size: 20px;
-  color: #ffffff;
-  justify-content: center;
-  padding: 5px;
-  border-radius: 8px;
-  width: 35%;
-  margin:auto;
-  }
-
-
-#boton-alquilar-ahora-T-2:hover{
-  background-color:red;
-  box-shadow: 0px 0px 10px rgb(100,100,100);
-}
-
-#boton-alquilar-ahora-T-3{
-  background-color: rebeccapurple;
-  font-size: 20px;
-  color: #ffffff;
-  justify-content: center;
-  padding: 5px;
-  border-radius: 8px;
-  width: 35%;
-  margin:auto;
-}
-
-#boton-alquilar-ahora-T-3:hover{
-  background-color:red;
-  box-shadow: 0px 0px 10px rgb(100,100,100);
-}

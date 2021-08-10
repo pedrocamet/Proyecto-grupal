@@ -49,8 +49,12 @@
         </div>
 
         <div class="detalle-producto-botones-extra-T">
-            <button type="button" class="btn btn-outline-primary waves-effect" id="boton-alquilar-ahora-T-2"> Editar </button>
-            <button type="button" class="btn btn-outline-primary waves-effect" id="boton-alquilar-ahora-T-3"> Eliminar </button>
+            <a href="/editar-producto/<%=productoDetalle.id%>" class="action-button edit" >
+                <button type="button" class="btn btn-outline-primary waves-effect" id="boton-alquilar-ahora-T-2"> Editar </button> </a>
+
+            <form action="/<%=productoDetalle.id%>?_method=DELETE" method="POST" style="display: inline-flex" onsubmit="return confirm('¿Estás seguro que querés eliminarlo?');">
+            <button type="submit" class="btn btn-outline-primary waves-effect" id="boton-alquilar-ahora-T-3"> Eliminar </button>
+            </form>
         </div>
     
     </div>

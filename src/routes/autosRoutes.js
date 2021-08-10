@@ -45,7 +45,7 @@ router.get("/editar-producto/:idProd", autosController.editarProducto); //formul
 router.put("/editar-producto/:idProd", uploadFile.single('imageProduct'), autosController.updateProducto);// edicion y almacenamiento de producto 
 
 /***********DELETE ONE PRODUCT  ************/
-//router.delete("/productDetail/:id/edit", autosController.editProduct);// eliminacion producto
+router.delete(":id/", autosController.eliminar);// eliminacion producto
 
 
 module.exports = router;

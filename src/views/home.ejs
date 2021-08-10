@@ -61,62 +61,27 @@ rel="stylesheet" />
         </div>
 
         <p class="texto-2"> Nuevos modelos este mes </p>
-
-
-
         <section class="flex-container">
-                <div>
-                    <img src="/img/toyotasienna.jpg" class="foto-producto">
+            <% for(let producto of productos) { %>
+                <% if(producto.id <= 5) { %>
+
+                <div class="caja1-home-T">
+                    <a href="/detalle-producto/<%=producto.id %>">
+                    <img src="/img/<%=producto.imagen %>" class="foto-producto">
                         <article class="recuadro">
                                  <div class="precio-descuento"> 
-                                    <p class="precio">$1.690</p>
-                                    <p class="descuento">20% off</p>
+                                    <p class="nombre-marca-T"><%=producto.marca %></p>
+                                    <p class="nombre-modelo-T"><%=producto.modelo %></p>
+                                    <h2>$<%=producto.precio%></h2>
                                  </div>
-                             <div> Toyota Sienna</div>
                         </article>
-                </div>        
-                <div>
-                    <img src="/img/toyotacorolla.jpg" class="foto-producto">
-                        <article class="recuadro">
-                                 <div class="precio-descuento"> 
-                                    <p class="precio">$1.280</p>
-                                    <p class="descuento">40% off</p>
-                                 </div>
-                             <div> Toyota Corolla </div>
-                        </article>
-                </div>    
-                <div>
-                    <img src="/img/fiatchronos.jpg" class="foto-producto">
-                        <article class="recuadro">
-                                 <div class="precio-descuento"> 
-                                    <p class="precio">$2.770</p>
-                                    <p class="descuento">10% off</p>
-                                 </div>
-                             <div> Fiat Cronos</div>
-                        </article>
-                </div>  
+                        <div class="espacio-recuadros">          </div>
+                    </a>
+                </div>
+                <% } %>
+                <% } %>
+                <div class="espacio-recuadros">          </div>
         </section>
-
-
-        <p class="texto-2"> ¿No estás usando tu auto? ¡Registrate y ganá plata alquilándolo! </p>
-
-    <form class="cajas-entrada2">
-        <div class="input-text-t1">
-            <label>  </label>
-                <input type="text" placeholder="Marca">
-        </div>
-        <div class="input-text-t2">
-            <label>  </label>
-                <input type="text" placeholder="Modelo/Versión">
-        </div>
-        <div class="input-text-t3">
-            <label> </label>
-                <input type="text" placeholder="Año">
-        </div>
-        <div class="input-text-t4">
-        <button> Calcular </button>
-        </div>
-    </form>
 
     </main>
 
