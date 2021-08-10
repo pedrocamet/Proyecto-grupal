@@ -14,7 +14,7 @@ app.use("/", autosRoutes);
 const publicPath = path.resolve(__dirname, './public');  
 app.use(express.static(publicPath));
 
-const publicPath2 = path.resolve(__dirname, './src/views');  
+const publicPath2 = path.resolve(__dirname, './views');  
 app.use(express.static(publicPath2));
 
 
