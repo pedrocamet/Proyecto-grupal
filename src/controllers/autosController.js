@@ -11,7 +11,7 @@ const controlador =
 {
     home: (req, res) => {
         const productos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
-		res.render('home', {productos: productos});
+		res.render("home", {productos: productos});
     },
 
     login: (req, res) => {
