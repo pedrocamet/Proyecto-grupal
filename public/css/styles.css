@@ -716,6 +716,25 @@ display: flex;
   order: 5;
 }
 }
+/* Editar PRODUCTO -------Editar PRODUCTO ------- Editar PRODUCTO -------Editar PRODUCTO -------*/
+
+.seleccionarImagenf{
+  padding: 20px
+}
+.botonEleccionf{
+  padding: 20px;
+  background-color: #047AC2;
+  border-radius: 5px;
+  font-size: 0.5em;
+  color: #fff;
+  font-weight: 600;
+}
+.recuadroEditImgf{
+  width: 100px;
+}
+.imgEditarProdf{
+  width: 200px;
+}
 
 /* CREACION NUEVO PRODUCTO ------CREACION NUEVO PRODUCTO ------CREACION NUEVO PRODUCTO ------CREACION NUEVO PRODUCTO ------*/
 
