@@ -8,13 +8,13 @@ var methodOverride = require('method-override');
 
 app.use(methodOverride("_method"));
 /************* RUTAS GLOBALES ******************/
-const autosRoutes = require("./routes/autosRoutes");
+const autosRoutes = require("./src/routes/autosRoutes");
 app.use("/", autosRoutes);
 
-const publicPath = path.resolve(__dirname, '../public');  
+const publicPath = path.resolve(__dirname, './public');  
 app.use(express.static(publicPath));
 
-const publicPath2 = path.resolve(__dirname, './views');  
+const publicPath2 = path.resolve(__dirname, './src/views');  
 app.use(express.static(publicPath2));
 
 

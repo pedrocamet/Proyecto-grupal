@@ -948,7 +948,7 @@ font-size: 5vw ;
     width: 30%;
     float: left;
     position: sticky;
-    top: 20px;
+    top: 1px;
   }
 }
 
@@ -964,6 +964,7 @@ font-size: 5vw ;
     text-align: center;
     display: flex;
     flex-direction: column;
+    background: whitesmoke;
   }
 }
 
@@ -975,7 +976,10 @@ font-size: 5vw ;
   border-bottom: 1px solid black;
   margin-bottom: 10px;
   padding: auto;
+}
 
+.texto-listado-P{
+  font-family: sans-serif;
 }
 
 
