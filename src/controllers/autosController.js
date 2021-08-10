@@ -122,7 +122,7 @@ const controlador =
 		let id = req.params.id;
 		let ProductoEncontrado;
 
-		let Nproducts = products.filter(function(e){
+		let Nproducts = productos.filter(function(e){
 			return id!=e.id;
 		})
 
@@ -132,7 +132,7 @@ const controlador =
 			}
 		}
 
-		fs.unlinkSync(path.join(__dirname, '../../public/img/', ProductoEncontrado.image));
+		fs.unlinkSync(path.join(__dirname, '../../public/img/', ProductoEncontrado.imagen));
 
 		fs.writeFileSync(productosFilePath, JSON.stringify(Nproducts,null,' '));
 
