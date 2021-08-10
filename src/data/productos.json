@@ -76,16 +76,28 @@
   "id": 9,
   "marca": "Citroen",
   "modelo": "Cactus",
-  "categoria": "autoPequeño",
   "ano": "2022",
-  "image": "1628480311227autos-uso-diario-feat.jpg"
+  "image": "1628480311227autos-uso-diario-feat.jpg",
+  "fechaDispDesde": "",
+  "fechaDispHasta": "",
+  "imagen": "1628562214085caballo arabe.jpg"
  },
  {
   "id": 10,
   "marca": "Honda",
   "modelo": "OTro",
-  "categoria": "autoPequeño",
   "ano": "2011",
-  "imagen": "1628526820161autos-uso-diario-feat.jpg"
+  "imagen": "1628561388051autos-uso-diario-feat.jpg",
+  "fechaDispDesde": "",
+  "fechaDispHasta": ""
+ },
+ {
+  "id": 11,
+  "marca": "BMW",
+  "modelo": "Mini",
+  "ano": "2012",
+  "imagen": "1628562805070miniamarillo.jpg",
+  "fechaDispDesde": "",
+  "fechaDispHasta": ""
  }
 ]
