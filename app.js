@@ -11,10 +11,10 @@ app.use(methodOverride("_method"));
 const autosRoutes = require("./src/routes/autosRoutes");
 app.use("/", autosRoutes);
 
-const publicPath = path.resolve(__dirname, '/public');  
+const publicPath = path.resolve(__dirname, './public');  
 app.use(express.static(publicPath));
 
-const publicPath2 = path.resolve(__dirname, '/src/views');  
+const publicPath2 = path.resolve(__dirname, './src/views');  
 app.use(express.static(publicPath2));
 
 
