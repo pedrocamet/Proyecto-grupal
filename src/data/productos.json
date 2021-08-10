@@ -19,14 +19,14 @@
  },
  {
   "id": 3,
-  "marca": "Honda",
+  "marca": "Toyota",
   "modelo": "Corolla",
   "ano": "2017",
+  "precio": 5190,
   "descripcion": "Tiene 5 puertas y cuenta con frenado automático de emergencia, sistema de alerta de cambio involuntario de carril y programador de velocidad activo.",
   "imagen": "3-Toyota-Corolla.jpg",
   "fechaDispDesde": "",
-  "fechaDispHasta": "",
-  "image": "1628516563624descarga.jpg"
+  "fechaDispHasta": ""
  },
  {
   "id": 4,
@@ -42,10 +42,9 @@
   "marca": "Renault",
   "modelo": "Logan",
   "ano": "2020",
+  "precio": 5620,
   "descripcion": "Cuenta con un sistema híbrido de 240 hp, espacio para ocho pasajeros, control de estabilidad, 10 airbags,faros de LED y cámara de reversa.",
-  "imagen": "1628542472477descarga.jpg",
-  "fechaDispDesde": "",
-  "fechaDispHasta": ""
+  "imagen": "5-Renault-Logan-Intens.jpg"
  },
  {
   "id": 6,
