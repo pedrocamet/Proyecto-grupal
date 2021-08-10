@@ -10,7 +10,8 @@ const productos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
 const controlador =
 {
     home: (req, res) => {
-        res.render("home")
+        const productos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
+		res.render('home', {productos: productos});
     },
 
     login: (req, res) => {
