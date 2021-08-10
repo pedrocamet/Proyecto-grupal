@@ -59,24 +59,23 @@ const controlador =
         let imagenABorrar;
 		for (let s of productos){
 			if(idProducto==s.id){   
-                imagenABorrar= s.image;
+                imagenABorrar= s.imagen;
 				s.modelo= req.body.modelo,
 				s.categoria= req.body.category,
                 s.ano= req.body.ano,
 				s.precio= req.body.precio,
                 s.fechaDispDesde= req.body.fechaDispDesde,
                 s.fechaDispHasta = req.body.fechaDispHasta, 
-                s.imagen=(req.file.filename)
+                s.imagen= req.file.filename
                break;
             }}    
-        fs.writeFileSync(productosFilePath, JSON.stringify(productos, null, " "))
+        fs.writeFileSync(productosFilePath, JSON.stringify(productos, null, " ")),
+        console.log(imagenABorrar)
                    
-        fs.unlinkSync(path.join(__dirname, '../../public/img/products', imagenABorrar));
-        res.redirect('/');  
-        //console.log("ruta:"(path.join(__dirname, '../../public/img/', imagenABorrar)))
+        fs.unlinkSync(path.join(__dirname, '../../../Proyecto-grupal/public/img/', imagenABorrar));
 
-		//fs.writeFileSync(productosFilePath, JSON.stringify(productos, null, " "))
-		//res.redirect('/');
+        res.redirect('/');  
+        
     },
     listadoProducto: (req, res) => {
         res.render ("./products/listado-productos.ejs")
