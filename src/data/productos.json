@@ -13,9 +13,10 @@
   "marca": "Fiat",
   "modelo": "Chronos",
   "ano": "2019",
-  "precio": 4390,
   "descripcion": "Cuenta con caja automática, tapizado en cuero, una pantalla de 7 pulgadas en el tablero para personalizar los controles y la información del auto.",
-  "imagen": "2-Fiat-Chronos.jpg"
+  "imagen": "16287199006621-Toyota-Sienna.jpg",
+  "fechaDispDesde": "",
+  "fechaDispHasta": ""
  },
  {
   "id": 3,
