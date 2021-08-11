@@ -72,7 +72,7 @@ const controlador =
         fs.writeFileSync(productosFilePath, JSON.stringify(productos, null, " ")),
         console.log(imagenABorrar)
                    
-        fs.unlinkSync(path.join(__dirname, '../../../Proyecto-grupal/public/img/', imagenABorrar));
+        fs.unlinkSync(path.join(__dirname, '../../public/img/', imagenABorrar));
 
         res.redirect('/');  
         
