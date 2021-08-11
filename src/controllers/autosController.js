@@ -75,7 +75,7 @@ const controlador =
         fs.unlinkSync(path.join(__dirname, '../../../Proyecto-grupal/public/img/', imagenABorrar));
 
         res.redirect('/');  
-        node 
+        
     },
     listadoProducto: (req, res) => {
         res.render ("./products/listado-productos.ejs")
