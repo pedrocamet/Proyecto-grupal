@@ -41,9 +41,10 @@
   "marca": "Renault",
   "modelo": "Logan",
   "ano": "2020",
-  "precio": 5620,
   "descripcion": "Cuenta con un sistema híbrido de 240 hp, espacio para ocho pasajeros, control de estabilidad, 10 airbags,faros de LED y cámara de reversa.",
-  "imagen": "5-Renault-Logan-Intens.jpg"
+  "imagen": "1628719203603Logan Blanco.jpg",
+  "fechaDispDesde": "",
+  "fechaDispHasta": ""
  },
  {
   "id": 6,
