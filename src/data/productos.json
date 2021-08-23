@@ -3,18 +3,19 @@
   "id": 1,
   "marca": "Toyota",
   "modelo": "Sienna",
-  "ano": "2018",
-  "precio": 4600,
+  "ano": "2020",
   "descripcion": "Cuenta con un sistema híbrido de 240 hp, espacio para ocho pasajeros, control de estabilidad, 10 airbags,faros de LED y cámara de reversa.",
-  "imagen": "1-Toyota-Sienna.jpg"
+  "imagen": "1629743684092descarga.jpg",
+  "fechaDispDesde": "",
+  "fechaDispHasta": ""
  },
  {
   "id": 2,
   "marca": "Fiat",
   "modelo": "Chronos",
-  "ano": "2019",
+  "ano": "2020",
   "descripcion": "Cuenta con caja automática, tapizado en cuero, una pantalla de 7 pulgadas en el tablero para personalizar los controles y la información del auto.",
-  "imagen": "16287199006621-Toyota-Sienna.jpg",
+  "imagen": "1629743703548RT_V_306c975b76a24b25b3124ecb12f26291.jpg",
   "fechaDispDesde": "",
   "fechaDispHasta": ""
  },
@@ -24,7 +25,7 @@
   "modelo": "Corolla",
   "ano": "2017",
   "descripcion": "Tiene 5 puertas y cuenta con frenado automático de emergencia, sistema de alerta de cambio involuntario de carril y programador de velocidad activo.",
-  "imagen": "1628560377706D_NQ_NP_630938-MLA31611468002_072019-O222.webp",
+  "imagen": "1629743715736autos-uso-diario-feat.jpg",
   "fechaDispDesde": "",
   "fechaDispHasta": ""
  },
@@ -33,17 +34,18 @@
   "marca": "Chevrolet",
   "modelo": "Onix",
   "ano": "2020",
-  "precio": 4690,
   "descripcion": "Caja manual de 5 velocidades. Motor naftero. Aire acondicionado digital, cargador inalámbrico, cámara de visión trasera y 6 airbags.",
-  "imagen": "4-Ch-Onix.jpg"
+  "imagen": "1629743751076Onix-RS-850x555.jpg",
+  "fechaDispDesde": "",
+  "fechaDispHasta": ""
  },
  {
   "id": 5,
   "marca": "Renault",
   "modelo": "Logan",
-  "ano": "2020",
+  "ano": "2029",
   "descripcion": "Cuenta con un sistema híbrido de 240 hp, espacio para ocho pasajeros, control de estabilidad, 10 airbags,faros de LED y cámara de reversa.",
-  "imagen": "1628719203603Logan Blanco.jpg",
+  "imagen": "1629745582617renault_logan_exclusive_1_0.jpg",
   "fechaDispDesde": "",
   "fechaDispHasta": ""
  },
