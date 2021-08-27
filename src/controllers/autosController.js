@@ -29,7 +29,16 @@ const controlador =
     },  
 
     procesarRegistro: (req,res) => {
-        res.render ("./users/registro"); 
+
+        const resultValidation = validationResult(req);
+
+        if(resultValidation.errors.length > 0){
+            return res.render("./users/registro",{
+            errors: resultValidation.mapped(),
+            oldData: req.body
+        });
+    }
+        return res.send ("Las validaciones fueron correctas");
 
     },
 

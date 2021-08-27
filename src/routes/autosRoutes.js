@@ -35,8 +35,6 @@ router.post("/creacion-producto", uploadFile.single("imageProduct"),  autosContr
 
 /*********** REGISTRO **********************/
 
-router.post("/registro", uploadFile.single("fotoPerfil"), autosController.procesarRegistro);
-
 const validaciones =[
   body("nombre").notEmpty().withMessage("Completar el campo").bail(),
   body("apellido").notEmpty().withMessage("Completar el campo").bail(),
@@ -44,7 +42,7 @@ const validaciones =[
   body("password").notEmpty().withMessage("Completar el campo")
 ];
 
-router.post("/registro", validaciones, autosController.registro)
+router.post("/registro", uploadFile.single("fotoPerfil"), validaciones, autosController.procesarRegistro)
 
 
 /*********** DETALLE DE UN PRODUCTO ************/
