@@ -39,7 +39,14 @@ const validaciones =[
   body("nombre").notEmpty().withMessage("Completar el campo").bail(),
   body("apellido").notEmpty().withMessage("Completar el campo").bail(),
   body("email").notEmpty().isEmail().withMessage("Complete el campo con un email válido").bail(),
-  body("password").notEmpty().withMessage("Completar el campo")
+  body("password").notEmpty().withMessage("Completar el campo"),
+  body("fotoPerfil").custom((value, {req}) => {
+    let file = req.file;
+    if(!file){
+      throw new Error ("Tenés que subir una foto de perfil");
+    }
+    return true;
+  })
 ];
 
 router.post("/registro", uploadFile.single("fotoPerfil"), validaciones, autosController.procesarRegistro)

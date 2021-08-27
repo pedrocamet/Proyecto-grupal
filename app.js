@@ -4,9 +4,11 @@ const app = express ();
 const multer = require ('multer');
 app.set ("view engine", "ejs");
 var methodOverride = require('method-override');
-
-
 app.use(methodOverride("_method"));
+
+//Para captar la información que llega del formulario a través de POST
+app.use(express.urlencoded({extended: false}));
+
 /************* RUTAS GLOBALES ******************/ 
 const autosRoutes = require("./src/routes/autosRoutes");
 app.use("/", autosRoutes);

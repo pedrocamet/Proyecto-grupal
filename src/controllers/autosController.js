@@ -3,6 +3,8 @@ const path = require('path');
 const multer = require ('multer');
 const { DefaultDeserializer } = require('v8');
 const {validationResult} = require("express-validator");
+const User = require("../models/User");
+const bcryptjs = require("bcryptjs");
 
 const productosFilePath = path.join(__dirname, '../data/productos.json');
 const productos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
@@ -33,12 +35,20 @@ const controlador =
         const resultValidation = validationResult(req);
 
         if(resultValidation.errors.length > 0){
-            return res.render("./users/registro",{
+            return res.render("./users/registro", {
             errors: resultValidation.mapped(),
             oldData: req.body
-        });
+        });  
     }
-        return res.send ("Las validaciones fueron correctas");
+
+        let userToCreate = {
+            ...req.body,
+            password: bcryptjs.hashSync(req.body.password, 10),
+            fotoPerfil: req.file.filename
+        }
+
+        User.create(userToCreate);
+        return res.send ("OK, se guardó el usuario");
 
     },
 
