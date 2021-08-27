@@ -1,10 +1,9 @@
 const autosController = require("./../controllers/autosController");
 const express = require ("express");
+const {body} = require ("express-validator");
 const router = express.Router();
 const multer = require ("multer");
 const path = require("path");
-
-
 
 //************ Multerconfiguration ***************/
 
@@ -20,6 +19,8 @@ const configuracionImagen = multer.diskStorage({
 
 const uploadFile = multer({storage: configuracionImagen});
 
+/*********************************************************************/
+
 router.get("/", autosController.home);
 router.get("/login", autosController.login);
 router.get("/carrito", autosController.carrito);
@@ -32,10 +33,22 @@ router.get("/producto", autosController.producto);
 router.get("/creacion-producto", autosController.creacionProducto); 
 router.post("/creacion-producto", uploadFile.single("imageProduct"),  autosController.store); 
 
+/*********** REGISTRO **********************/
+
+router.post("/registro", uploadFile.single("fotoPerfil"), autosController.procesarRegistro);
+
+const validaciones =[
+  body("nombre").notEmpty().withMessage("Completar el campo").bail(),
+  body("apellido").notEmpty().withMessage("Completar el campo").bail(),
+  body("email").notEmpty().isEmail().withMessage("Complete el campo con un email válido").bail(),
+  body("password").notEmpty().withMessage("Completar el campo")
+];
+
+router.post("/registro", validaciones, autosController.registro)
 
 
 /*********** DETALLE DE UN PRODUCTO ************/
-router.get("/detalle-producto/:id", autosController.detalleProducto); // detalle de un producto falta todo PARAMETRIZADO
+router.get("/detalle-producto/:id", autosController.detalleProducto); 
 
 /***********lISTADO DE PRODUCTOS  ************/
 router.get("/listado-productos", autosController.listadoProducto); 

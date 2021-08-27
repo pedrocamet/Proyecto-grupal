@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const multer = require ('multer');
 const { DefaultDeserializer } = require('v8');
+const {validationResult} = require("express-validator");
 
 const productosFilePath = path.join(__dirname, '../data/productos.json');
 const productos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
@@ -20,11 +21,17 @@ const controlador =
 
     carrito: (req, res) => {
         res.render ("carrito");
+
     },
 
     registro: (req, res) => {
         res.render ("./users/registro");    
     },  
+
+    procesarRegistro: (req,res) => {
+        res.render ("./users/registro"); 
+
+    },
 
     detalleProducto: (req,res) =>{
 
@@ -122,7 +129,6 @@ const controlador =
         res.render ("producto");
     },
 
-    //********************************* ELIMINAR EN PROCESO ****************************************/
     eliminar: (req, res) => {
 
 		let id = req.params.id;
@@ -144,7 +150,6 @@ const controlador =
 
 		res.redirect('/');
 	}
-
     
 }
 
