@@ -30,28 +30,6 @@ const controlador =
         res.render ("./users/registro");    
     },  
 
-    procesarRegistro: (req,res) => {
-
-        const resultValidation = validationResult(req);
-
-        if(resultValidation.errors.length > 0){
-            return res.render("./users/registro", {
-            errors: resultValidation.mapped(),
-            oldData: req.body
-        });  
-    }
-
-        let userToCreate = {
-            ...req.body,
-            password: bcryptjs.hashSync(req.body.password, 10),
-            fotoPerfil: req.file.filename
-        }
-
-        User.create(userToCreate);
-        return res.send ("OK, se guardó el usuario");
-
-    },
-
     detalleProducto: (req,res) =>{
 
         let idURL = req.params.id;
