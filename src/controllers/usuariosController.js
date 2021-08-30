@@ -16,6 +16,25 @@ const userControlador =
     res.render ("./users/registro.ejs");
   },
 
+  // login y cruce de datos
+
+  loginUsuario: (req, res) => {
+    res.render ("login");
+  },
+
+  procesarLogin: (req, res) => {
+    let errors = validationResult(req);
+
+    if (errors.isEmpty()){
+      
+
+    } else {
+      return res.render("login", {errors: errors.errors});
+    }
+  },
+
+  // fin login y cruce de datos
+
   procesarRegistro: (req,res) => {
 
     const resultValidation = validationResult(req);
