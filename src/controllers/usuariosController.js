@@ -2,8 +2,9 @@ const fs = require('fs');
 const path = require('path');
 const multer = require ('multer');
 const { DefaultDeserializer } = require('v8');
-const bcrypt = require ('bcryptjs');
+const bcryptjs = require ('bcryptjs');
 const {validationResult} = require("express-validator");
+const {body} = require ("express-validator");
 
 const usuariosFilePath = path.join(__dirname, '../data/usuarios.json');
 const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, 'utf-8'));
@@ -18,20 +19,20 @@ const userControlador =
   procesarRegistro: (req,res) => {
 
     const resultValidation = validationResult(req);
-    res.send(resultValidation);
-    /*
+  
     if(resultValidation.isEmpty()){
 
       let userToCreate = {
-        nombre: req.file.filename,
-        apellido: req.file.filename,
-        email: req.file.filename,
+        nombre: req.body.nombre,
+        apellido: req.body.apellido,
+        email: req.body.email,
         password: bcryptjs.hashSync(req.body.password, 10),
         fotoPerfil: req.file.filename
-
       }
 
+      
       usuarios.push(userToCreate);
+      fs.writeFileSync(usuariosFilePath, JSON.stringify(usuarios, null, " "))
       return res.send ("OK, se guardó el usuario");
 
 

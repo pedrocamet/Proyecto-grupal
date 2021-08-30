@@ -1,1 +1,10 @@
-[{ }]
+[
+ {},
+ {
+  "nombre": "fdgfgfdgdfg",
+  "apellido": "gfddffdgdfgdf",
+  "email": "dffgfd@asc.com",
+  "password": "$2a$10$0m027qn5NSQ4UgNtoQw7nePD/piw7Ncpyf.9J6pOJ.CXTGMJ1XJJG",
+  "fotoPerfil": "1630329327308biciceta.jpg"
+ }
+]
