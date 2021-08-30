@@ -2,6 +2,9 @@ const fs = require('fs');
 const path = require('path');
 const multer = require ('multer');
 const { DefaultDeserializer } = require('v8');
+const {validationResult} = require("express-validator");
+const User = require("../models/User");
+const bcryptjs = require("bcryptjs");
 
 const productosFilePath = path.join(__dirname, '../data/productos.json');
 const productos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
@@ -30,6 +33,7 @@ const controlador =
 
     carrito: (req, res) => {
         res.render ("carrito");
+
     },
 
     registro: (req, res) => {
@@ -69,21 +73,28 @@ const controlador =
         let imagenABorrar;
 		for (let s of productos){
 			if(idProducto==s.id){   
-                imagenABorrar= s.imagen;
+                
 				s.modelo= req.body.modelo,
 				s.categoria= req.body.category,
                 s.ano= req.body.ano,
 				s.precio= req.body.precio,
                 s.fechaDispDesde= req.body.fechaDispDesde,
-                s.fechaDispHasta = req.body.fechaDispHasta, 
-                s.imagen= req.file.filename
-               break;
+                s.fechaDispHasta = req.body.fechaDispHasta 
+                if(req.file != undefined){
+                    imagenABorrar= s.imagen;
+                    s.imagen=req.file.filename
+                    fs.unlinkSync(path.join(__dirname, '../../public/img/', imagenABorrar));
+                } else {
+                    s.imagen =s.imagen
+                    
+                }
+                break;
             }}    
+
         fs.writeFileSync(productosFilePath, JSON.stringify(productos, null, " ")),
         console.log(imagenABorrar)
+        
                    
-        fs.unlinkSync(path.join(__dirname, '../../../Proyecto-grupal/public/img/', imagenABorrar));
-
         res.redirect('/');  
         
     },
@@ -125,7 +136,6 @@ const controlador =
         res.render ("producto");
     },
 
-    //********************************* ELIMINAR EN PROCESO ****************************************/
     eliminar: (req, res) => {
 
 		let id = req.params.id;
@@ -147,7 +157,6 @@ const controlador =
 
 		res.redirect('/');
 	}
-
     
 }
 
