@@ -25,12 +25,31 @@ const userControlador =
   procesarLogin: (req, res) => {
     let errors = validationResult(req);
 
-    if (errors.isEmpty()){
+    /*if (errors.isEmpty()){
       
-
+      users = {
+        email: req.body.email,
+        password: bcryptjs.hashSync(req.body.password, 10)
+      }
+      
+      for (let i = 0; i < users.length; i++) {
+        if (users[i].email == req.body.email) {
+          if (bcrypt.compareSync(req.body.password, users[i].password))
+          let usuarioALoguearse = users[i];
+          break;
+        }
+      }
+      if (usuarioALoguearse == undefined) {
+        return res.render("login", {errors: [
+          {msg: "Credenciales invalidas"}
+        ]});
+      }
+      req.session.usuarioLogueado = usuarioALoguearse;
+      res.render("Success");
     } else {
-      return res.render("login", {errors: errors.errors});
-    }
+      return res.render("login", {errors: errors.errors}
+      );
+    } */
   },
 
   // fin login y cruce de datos
