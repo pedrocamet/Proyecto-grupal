@@ -32,13 +32,10 @@ const validaciones =[
     return true;
   })
 ];
+router.get("/registro", usuariosController.creacionUsuario);
 
 router.post("/registro", uploadFile.single("fotoPerfil"), validaciones, usuariosController.procesarRegistro);
 
 
-
-
-
-router.get("/registro", usuariosController.creacionUsuario);
 
 module.exports = router;
