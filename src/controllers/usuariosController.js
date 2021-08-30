@@ -33,7 +33,7 @@ const userControlador =
       
       usuarios.push(userToCreate);
       fs.writeFileSync(usuariosFilePath, JSON.stringify(usuarios, null, " "))
-      return res.send ("OK, se guardó el usuario");
+      return res.redirect ("/");
 
 
 
