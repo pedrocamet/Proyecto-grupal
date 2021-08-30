@@ -18,6 +18,16 @@ const controlador =
         res.render ("login");
     },
 
+    procesLogin: (req, res) => {
+        let errors = validationResult(req);
+
+        if (errors.isEmpty()) {
+
+        } else {
+            return res.render("/login", {errors: errors.errors});
+        }
+    },
+
     carrito: (req, res) => {
         res.render ("carrito");
     },

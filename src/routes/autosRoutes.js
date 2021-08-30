@@ -3,6 +3,7 @@ const express = require ("express");
 const router = express.Router();
 const multer = require ("multer");
 const path = require("path");
+const {check} = require('express-validator');
 
 
 
@@ -46,6 +47,12 @@ router.put("/editar-producto/:idProd", uploadFile.single('imageProduct'), autosC
 
 /***********DELETE ONE PRODUCT  ************/
 router.delete("/:id", autosController.eliminar);// eliminacion producto
+
+/*********** LOG IN  ************/
+
+router.post("/login", [
+ check("email").isEmail(),
+], autosController.procesLogin);
 
 
 module.exports = router;

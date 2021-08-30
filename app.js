@@ -4,10 +4,15 @@ const app = express ();
 const multer = require ('multer');
 app.set ("view engine", "ejs");
 var methodOverride = require('method-override');
+const session = require("express-session");
 
 
 app.use(methodOverride("_method"));
+
+app.use(session({secret: "secreto"}));
+
 /************* RUTAS GLOBALES ******************/
+
 const autosRoutes = require("./src/routes/autosRoutes");
 app.use("/", autosRoutes);
 
@@ -16,8 +21,6 @@ app.use(express.static(publicPath));
 
 const publicPath2 = path.resolve(__dirname, './views');  
 app.use(express.static(publicPath2));
-
-
 
 //*************** LEVANTAR SERVIDOR ******************//
 app.listen(process.env.PORT || 3005, () => {
