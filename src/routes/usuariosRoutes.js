@@ -47,4 +47,8 @@ check("password").isLength({min: 10}).withMessage("La contraseña debe contener 
 
 // fin cruce de datos para login
 
+
+/***********EDITAR DATOS PERSONALES    ************/
+router.get("/datosPersonales", usuariosController.datosPersonales);
+
 module.exports = router;

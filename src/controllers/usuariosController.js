@@ -88,7 +88,48 @@ const userControlador =
     
     
 */
-}
+},
+ datosPersonales:(req,res) => {
+        let idUsuario = req.params.idUser;
+        let userToEdit;
+        
+        for (let u of usuarios){
+            if (u.id == idUsuario){
+                userToEdit = u; 
+                break;
+            }
+        }
+        res.render ("./users/datosPersonales.ejs", {usuarioEditar: userToEdit});
+        
+    },
+    updateProducto: (req,res) => {
+      let idUser = req.params.idUser;
+      let userToEdit;
+      console.log(idUser)
+      let imagenPerfilABorrar;
+  for (let u of usuarios){
+    if(idUser==u.id){                 
+      u.nombre= req.body.nombre,
+      s.apellido= req.body.category,
+      s.email= req.body.ano,
+      s.password= req.body.precio            
+              if(req.file != undefined){
+                  imagenPerfilABorrar= u.fotoPerfil;
+                  u.fotoPerfil=req.file.filename
+                  fs.unlinkSync(path.join(__dirname, '../../public/img/', imagePerfilABorrar));
+              } else {
+                  u.fotoPerfil=u.fotoPerfil                 
+              }
+              break;
+          }}    
+
+      fs.writeFileSync(usuariosFilePath, JSON.stringify(usuarios, null, " ")),
+      console.log(imagenPerfilABorrar)
+      
+                 
+      res.redirect('/');  
+      
+  },  
 
 /*
   registrarse: function(req, res, next){

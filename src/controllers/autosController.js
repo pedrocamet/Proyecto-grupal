@@ -150,15 +150,15 @@ const controlador =
 			    ProductoEncontrado=producto;
 			}
 		}
-
+       
+      
 		fs.unlinkSync(path.join(__dirname, '../../public/img/', ProductoEncontrado.imagen));
 
 		fs.writeFileSync(productosFilePath, JSON.stringify(Nproducts,null,' '));
 
 		res.redirect('/');
 	}
-    
-}
 
+}
 
 module.exports = controlador;
