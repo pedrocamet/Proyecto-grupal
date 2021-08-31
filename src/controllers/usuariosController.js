@@ -25,17 +25,18 @@ const userControlador =
   procesarLogin: (req, res) => {
    console.log(req.body);
    
-    /* 
+    
     
     let errors = validationResult(req);
 
     if (errors.isEmpty()){
+      let usuarioALogearse;
       
     let archivoUsuario = fs.readFileSync("usuarios.json")
       
       for (let i = 0; i < users.length; i++) {
         if (users[i].email == req.body.email && bcrypt.compareSync(req.body.password, users[i].password))
-          let usuarioALoguearse = users[i];
+           usuarioALoguearse = users[i];
           break;
         }
       }
@@ -47,7 +48,7 @@ const userControlador =
       req.session.usuarioLogueado = usuarioALoguearse;
       res.render("login");
 
-      */
+      
      
     }, 
 
