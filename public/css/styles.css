@@ -1046,3 +1046,10 @@ font-size: 5vw ;
   color: #fff;
   font-family:sans-serif;
 }
+
+.barra-superior-2{
+  position: relative;
+  width: 410px;
+  height: 50px;
+  box-shadow: 0 6px 10 px rgba(179, 179, 179, .5);
+}

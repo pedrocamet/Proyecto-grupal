@@ -23,9 +23,11 @@ const userControlador =
   },
 
   procesarLogin: (req, res) => {
-    let errors = validationResult(req);
+   console.log(req.body);
+   
+    /*let errors = validationResult(req);
 
-    /*if (errors.isEmpty()){
+    if (errors.isEmpty()){
       
     let archivoUsuario = fs.readFileSync("usuarios.json")
       
@@ -41,12 +43,9 @@ const userControlador =
         ]});
       }
       req.session.usuarioLogueado = usuarioALoguearse;
-      res.render("Success");
-    } else {
-      return res.render("login", {errors: errors.errors}
-      );
-    } */
-  },
+      res.render("login");
+      */
+    }, 
 
   // fin login y cruce de datos
 
