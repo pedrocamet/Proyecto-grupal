@@ -1033,7 +1033,7 @@ font-size: 5vw ;
   height: 120vh;
   width: 100%;
   background-image: url(/img/paisaje-cuenta.jpeg);
-  background-position: top;
+  background-position: center;
 }
 
 .contenedor-cuenta-P{
@@ -1049,7 +1049,7 @@ font-size: 5vw ;
   border: 1px solid black;
   margin-left: 10px;
   margin-right: 10px;
-  background-color: rgba(202, 196, 196, 0.479);
+  background-color: rgba(190, 184, 184, 0.637);
 }
 
 
