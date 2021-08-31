@@ -1025,3 +1025,24 @@ font-size: 5vw ;
 }
 
 /********************************  FIN BARRA DE NAVEGACION ******************************************/
+
+/********************************  VISTA CUENTA   ******************************************/
+
+
+.foto-fondo-2-P {
+  height: 120vh;
+  width: 100%;
+  background-image: url(/img/paisaje-cuenta.jpeg);
+  background-position: top;
+}
+
+.option-2{
+  display: block;
+  width: calc(410px / 4);
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  text-decoration: none;
+  color: #fff;
+  font-family:sans-serif;
+}
