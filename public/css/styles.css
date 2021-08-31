@@ -1036,20 +1036,3 @@ font-size: 5vw ;
   background-position: top;
 }
 
-.option-2{
-  display: block;
-  width: calc(410px / 4);
-  height: 50px;
-  text-align: center;
-  line-height: 50px;
-  text-decoration: none;
-  color: #fff;
-  font-family:sans-serif;
-}
-
-.barra-superior-2{
-  position: relative;
-  width: 410px;
-  height: 50px;
-  box-shadow: 0 6px 10 px rgba(179, 179, 179, .5);
-}

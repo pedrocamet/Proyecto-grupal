@@ -25,7 +25,9 @@ const userControlador =
   procesarLogin: (req, res) => {
    console.log(req.body);
    
-    /*let errors = validationResult(req);
+    /* 
+    
+    let errors = validationResult(req);
 
     if (errors.isEmpty()){
       
@@ -44,7 +46,9 @@ const userControlador =
       }
       req.session.usuarioLogueado = usuarioALoguearse;
       res.render("login");
+
       */
+     
     }, 
 
   // fin login y cruce de datos
