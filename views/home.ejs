@@ -1,118 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> ¡Alquilá tu auto al instante! </title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/public/css/normalize.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-rel="stylesheet" />
-</head>
-<body>
-    <header class="header-detalles">
-        <img src="/img/Iso sin fondo.png" alt="logo auto" class="foto-logo">
-            <section class="items-header">
-                <div class="header1">Conoce más</div>
-                <i class="fas fa-angle-down" id="desplegar"></i>
-                <div class="header2">
-                    <a href="login"> Ingresar </a>
-                </div>
-                <div class="header3">
-                    <a href="usuario/registro"> Registrarme </a>
-                </div>
-                <div class="header3">   
-                    <a href="carrito"> Carrito </a>
-                </div>
-                <div class="header3">
-                    <a href="producto"> Productos </a>
-                </div>
-            </section>
-    </header>
-
-    <main class="main-detalles">
-    
-        <div class="foto-entrada">
-            <p class="letra"> Una nueva manera de alquilar autos </p>
-
-            <form class="cajas-entrada">
+    <head> 
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> ¡Alquilá tu auto al instante! </title>
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/public/css/normalize.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"rel="stylesheet" />
+    </head>
+    <body>
+        <header>
+            <%- include("./partials/header") %>
+        </header> 
+        <main class="main-detalles">
+            <div class="foto-entrada">
+                <p class="letra"> Una nueva manera de alquilar autos </p>
+                <form class="cajas-entrada">
                     <div class="caja1">
                         <label> <i class="fas fa-map-marker-alt" id="icono"></i> </label>
                         <input type="text" placeholder="Ubicación" class="input-text-principal-1">
                     </div>
                     <div class="caja2">
-                <label> <i class="far fa-calendar-alt" id="icono"></i> </label>
-                <input type="text" placeholder="Desde" class="input-text-principal-1">
+                        <label> <i class="far fa-calendar-alt" id="icono"></i> </label>
+                        <input type="text" placeholder="Desde" class="input-text-principal-1">
                     </div>
                     <div class="caja3">
-                <label> <i class="fas fa-calendar-alt" id="icono"></i> </label>
-                <input type="text" placeholder="Hasta" class="input-text-principal-1">
+                        <label> <i class="fas fa-calendar-alt" id="icono"></i> </label>
+                        <input type="text" placeholder="Hasta" class="input-text-principal-1">
                     </div>
                     <div class="caja4">
-                    <i class="fas fa-search" id="icono"></i>
+                        <i class="fas fa-search" id="icono"></i>
                     </div>
-            </form>
-        </div>
-
-        <p class="texto-2"> Nuevos modelos este mes </p>
-        <section class="flex-container">
-            <% for(let producto of productos) { %>
-                <% if(producto.id <= 5) { %>
-
-                <div class="caja1-home-T">
-                    <a href="/detalle-producto/<%=producto.id %>">
-                    <img src="/img/<%=producto.imagen %>" class="foto-producto">
+                </form>
+            </div>
+            <p class="texto-2"> Nuevos modelos este mes </p>
+            <section class="flex-container">
+                <% for(let producto of productos) { %>
+                    <% if(producto.id <= 5) { %>
+                    <div class="caja1-home-T">
+                        <a href="/detalle-producto/<%=producto.id %>">
+                        <img src="/img/<%=producto.imagen %>" class="foto-producto">
                         <article class="recuadro">
-                                 <div class="precio-descuento"> 
-                                    <p class="nombre-marca-T"><%=producto.marca %></p>
-                                    <p class="nombre-modelo-T"><%=producto.modelo %></p>
-                                    <h2>$<%=producto.precio%></h2>
-                                 </div>
+                            <div class="precio-descuento"> 
+                                <p class="nombre-marca-T"><%=producto.marca %></p>
+                                <p class="nombre-modelo-T"><%=producto.modelo %></p>
+                                <h2>$<%=producto.precio%></h2>
+                            </div>
                         </article>
                         <div class="espacio-recuadros">          </div>
-                    </a>
-                </div>
-                <% } %>
-                <% } %>
-                <div class="espacio-recuadros">          </div>
-        </section>
-
-    </main>
-
-    <footer> 
-        <section class="datos-footer">
-            <div><img src="/img/Iso sin fondo.png" alt="logo auto" class="foto-logo2"></div> 
-            <div class="app-google"> 
-                <h4 class="texto-nosotros"> Apps </h4>
-                <img src="/img/app-store.png" class="foto-google"> 
-                <img src="/img/google-play.png" class="foto-google">
-            </div>
-            
-                    <div>
-                      <h4 class="texto-nosotros"> Contacto </h4>  
-                            <p> (ARG) 0800-111-1111 </p>
-                            <p> (Whatsapp) +541111111111 </p>
-                            <p> info@prueba.com.ar </p>
-                            <p> Buenos Aires / Argentina </p>
-                            <div class="botones-redes">
-                            <p><i class="fab fa-facebook-square" id="facebook"></i></p>
-                            <p><i class="fab fa-twitter-square" id="twitter"></i></p>
-                            <p><i class="fab fa-instagram-square" id="instagram"></i></p>
-                            </div>
-                    </div>  
-                    
+                        </a>
+                    </div>
+                    <% } %>
+                    <% } %>
+                    <div class="espacio-recuadros">          </div>
             </section>
-        </section>
-
-        <div class="footer-bottom"></div>
-    </footer>
-    
-
-</body>
+        </main>
+        <footer>  
+            <%- include("./partials/footer") %>
+        </footer> 
+    </body>
 </html>

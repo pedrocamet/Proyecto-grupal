@@ -25,7 +25,7 @@ const uploadFile = multer({storage: configuracionImagen});
 router.get("/", autosController.home);
 router.get("/login", autosController.login);
 router.get("/carrito", autosController.carrito);
-
+router.get("/homeLogin", autosController.homeLogin);
 
 /***********lISTADO DE PRODUCTOS  ************/
 router.get("/producto", autosController.producto); 

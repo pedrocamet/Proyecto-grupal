@@ -23,18 +23,18 @@ const userControlador =
   },
 
   procesarLogin: (req, res) => {
+   console.log(req.body);
+   
+    /* 
+    
     let errors = validationResult(req);
 
-    /*if (errors.isEmpty()){
+    if (errors.isEmpty()){
       
-      users = {
-        email: req.body.email,
-        password: bcryptjs.hashSync(req.body.password, 10)
-      }
+    let archivoUsuario = fs.readFileSync("usuarios.json")
       
       for (let i = 0; i < users.length; i++) {
-        if (users[i].email == req.body.email) {
-          if (bcrypt.compareSync(req.body.password, users[i].password))
+        if (users[i].email == req.body.email && bcrypt.compareSync(req.body.password, users[i].password))
           let usuarioALoguearse = users[i];
           break;
         }
@@ -45,12 +45,11 @@ const userControlador =
         ]});
       }
       req.session.usuarioLogueado = usuarioALoguearse;
-      res.render("Success");
-    } else {
-      return res.render("login", {errors: errors.errors}
-      );
-    } */
-  },
+      res.render("login");
+
+      */
+     
+    }, 
 
   // fin login y cruce de datos
 
