@@ -1038,7 +1038,18 @@ font-size: 5vw ;
 
 .contenedor-cuenta-P{
   text-align: center;
-  color: #fff;
+  color: black;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.contenedor-cuenta-2-P{
+  text-align: center;
+  color: black;
+  border: 1px solid black;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: rgb(202, 196, 196);
 }
 
 
