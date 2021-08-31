@@ -21,6 +21,10 @@ const controlador =
         res.render ("login");
     },
 
+    homeLogin: (req, res) => {
+        res.render ("homeLogin");
+    },
+
     procesLogin: (req, res) => {
         let errors = validationResult(req);
 
