@@ -23,33 +23,34 @@ const userControlador =
   },
 
   procesarLogin: (req, res) => {
-   console.log(req.body);
-   
-    /* 
-    
-    let errors = validationResult(req);
-
-    if (errors.isEmpty()){
-      
-    let archivoUsuario = fs.readFileSync("usuarios.json")
-      
-      for (let i = 0; i < users.length; i++) {
-        if (users[i].email == req.body.email && bcrypt.compareSync(req.body.password, users[i].password))
-          let usuarioALoguearse = users[i];
-          break;
-        }
-      }
-      if (usuarioALoguearse == undefined) {
-        return res.render("login", {errors: [
-          {msg: "Credenciales invalidas"}
-        ]});
-      }
-      req.session.usuarioLogueado = usuarioALoguearse;
-      res.render("login");
-
-      */
-     
-    }, 
+    console.log(req.body);
+ 
+     let errors = validationResult(req);
+ 
+     let usuarioALoguearse;
+ 
+     if (errors.isEmpty()){
+ 
+ 
+     let archivoUsuario = fs.readFileSync("usuarios.json")
+ 
+       for (let i = 0; i < users.length; i++) {
+         if (users[i].email == req.body.email && bcrypt.compareSync(req.body.password, users[i].password)) {
+            usuarioALoguearse = users[i];
+           break;
+         }}
+       }
+       if (usuarioALoguearse == undefined) {
+         return res.render("login", {errors: [
+           {msg: "Credenciales invalidas"}
+         ]});
+       }
+       req.session.usuarioLogueado = usuarioALoguearse;
+       res.render("login");
+ 
+ 
+ 
+     },
 
   // fin login y cruce de datos
 
@@ -87,7 +88,48 @@ const userControlador =
     
     
 */
-}
+},
+ datosPersonales:(req,res) => {
+        let idUsuario = req.params.idUser;
+        let userToEdit;
+        
+        for (let u of usuarios){
+            if (u.id == idUsuario){
+                userToEdit = u; 
+                break;
+            }
+        }
+        res.render ("./users/datosPersonales.ejs", {usuarioEditar: userToEdit});
+        
+    },
+    updateProducto: (req,res) => {
+      let idUser = req.params.idUser;
+      let userToEdit;
+      console.log(idUser)
+      let imagenPerfilABorrar;
+  for (let u of usuarios){
+    if(idUser==u.id){                 
+      u.nombre= req.body.nombre,
+      s.apellido= req.body.category,
+      s.email= req.body.ano,
+      s.password= req.body.precio            
+              if(req.file != undefined){
+                  imagenPerfilABorrar= u.fotoPerfil;
+                  u.fotoPerfil=req.file.filename
+                  fs.unlinkSync(path.join(__dirname, '../../public/img/', imagePerfilABorrar));
+              } else {
+                  u.fotoPerfil=u.fotoPerfil                 
+              }
+              break;
+          }}    
+
+      fs.writeFileSync(usuariosFilePath, JSON.stringify(usuarios, null, " ")),
+      console.log(imagenPerfilABorrar)
+      
+                 
+      res.redirect('/');  
+      
+  },  
 
 /*
   registrarse: function(req, res, next){
