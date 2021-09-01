@@ -1037,11 +1037,18 @@ font-size: 5vw ;
   justify-content: space-between;
 }
 #botonmodificar{
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  margin-top: 2vw;
+}
+#botonmodificar button{
+
   justify-content: center;
-  text-align: center;
-  align-items: center;
-  border: red 5px solid;
-  background-color: magenta;
+  border: 5px green solid;
+  margin-top: 2vw;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 

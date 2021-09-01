@@ -96,7 +96,7 @@ const userControlador =
         res.render ("./users/datosPersonales.ejs", {usuarioEditar: userToEdit});
         
     },
-    updateProducto: (req,res) => {
+    updateUser: (req,res) => {
       let idUser = req.params.idUser;
       let userToEdit;
       console.log(idUser)
@@ -104,16 +104,19 @@ const userControlador =
   for (let u of usuarios){
     if(idUser==u.id){                 
       u.nombre= req.body.nombre,
-      s.apellido= req.body.category,
-      s.email= req.body.ano,
-      s.password= req.body.precio            
-              if(req.file != undefined){
+      u.apellido= req.body.category,
+      u.email= req.body.ano
+      let validacion;
+      if (validacion = bcrypt.compareSync(req.body.passwordAnterior, u.password)){;
+        
+      u.password= bcrypt.hashSync(req.body.password,10)  
+        if(req.file != undefined){
                   imagenPerfilABorrar= u.fotoPerfil;
                   u.fotoPerfil=req.file.filename
                   fs.unlinkSync(path.join(__dirname, '../../public/img/', imagePerfilABorrar));
               } else {
                   u.fotoPerfil=u.fotoPerfil                 
-              }
+              }}
               break;
           }}    
 

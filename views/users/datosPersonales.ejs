@@ -22,7 +22,7 @@
             <h1 class="texto-alineado-P"> <strong> Tus Datos Personales:</strong></h1>
             <br>
 
-            <form action="/usuario/registro" method="POST" enctype="multipart/form-data" class="DP-formF">
+            <form action="/usuario/datosPersonales" method="POST" enctype="multipart/form-data" class="DP-formF">
             
             <div class="DP-formF">
                 <div class="DP-formInputs-F">
@@ -46,6 +46,12 @@
                         <input autofocus class="DP-inputF" id="email" name="email" value=<%= usuarioEditar.mail%>required type="text" value>
                     </div>
                 </div>
+                <div class="DP-datosF">
+                    <div class="DP-datosinputF" >
+                        <label>Contraseña Anterior : </label>
+                        <input autofocus class="DP-inputF" id="password" name="passwordAnterior" value=<%= usuarioEditar.password%>    required type="password" value>
+                    </div> 
+                </div>
 
             
                 <div class="DP-datosF">
@@ -58,10 +64,10 @@
                         </div class="ciento5">
                             <label for="imageUser" class="seleccionarImagenF">Seleccionar Imagen:</label>
                             <input type="file" name= "imageUser">
-                            
                         </div>
-                        <button type="submit" id="botonmodificar" > Modificar </button>
-                        
+                        <div id="botonmodificar">
+                        <button type="submit" > Modificar </button>
+                    </div> 
             <div class="footer-P">  
                     <div>
                         
