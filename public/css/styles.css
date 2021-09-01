@@ -1036,6 +1036,15 @@ font-size: 5vw ;
   align-items: center;
   justify-content: space-between;
 }
+#botonmodificar{
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  border: red 5px solid;
+  background-color: magenta;
+}
+
+
 
 
 
