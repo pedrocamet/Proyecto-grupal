@@ -1,4 +1,4 @@
-[ 
+[
  {},
  {
   "nombre": "fdgfgfdgdfg",
@@ -69,5 +69,12 @@
   "email": "federicodeloredo@gmail.com",
   "password": "$2a$10$NCgu6VJFJhTE3PobUcJuFeKWiVERYhWW7MQ0bGcs/3jWrPOo9611O",
   "fotoPerfil": "1630331901690Logo Vagon 3.png"
+ },
+ {
+  "nombre": "Pedro Felix",
+  "apellido": "Camet",
+  "email": "cametp@gmail.com",
+  "password": "$2a$10$y46QClNexBzzKk8zGWEeWe3H8mJFDVnA6NzvseZH3zG3shgf26hxW",
+  "fotoPerfil": "16305356006181629748964795Onix-RS-850x555.jpg"
  }
 ]
