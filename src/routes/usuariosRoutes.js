@@ -3,7 +3,7 @@ const express = require ("express");
 const router = express.Router();
 const multer = require ("multer");
 const path = require("path");
-const {body} = require ("express-validator");
+const {body, check} = require ("express-validator");
 
 const configuracionImagen = multer.diskStorage({
   destination: function(req, file, cb) {       // request, archivo y callback que almacena archivo en destino
@@ -32,13 +32,19 @@ const validaciones =[
     return true;
   })
 ];
+router.get("/registro", usuariosController.creacionUsuario);
 
 router.post("/registro", uploadFile.single("fotoPerfil"), validaciones, usuariosController.procesarRegistro);
 
+// cruce de datos para login
 
+router.get("/login", usuariosController.loginUsuario);
 
+router.post("/login", [
+check("email").isEmail().withMessage("email invalido"),
+check("password").isLength({min: 10}).withMessage("La contraseña debe contener al menos 10 caracteres")
+],usuariosController.procesarLogin);
 
-
-router.get("/registro", usuariosController.creacionUsuario);
+// fin cruce de datos para login
 
 module.exports = router;

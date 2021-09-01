@@ -16,6 +16,43 @@ const userControlador =
     res.render ("./users/registro.ejs");
   },
 
+  // login y cruce de datos
+
+  loginUsuario: (req, res) => {
+    res.render ("login");
+  },
+
+  procesarLogin: (req, res) => {
+   console.log(req.body);
+   
+    /* 
+    
+    let errors = validationResult(req);
+
+    if (errors.isEmpty()){
+      
+    let archivoUsuario = fs.readFileSync("usuarios.json")
+      
+      for (let i = 0; i < users.length; i++) {
+        if (users[i].email == req.body.email && bcrypt.compareSync(req.body.password, users[i].password))
+          let usuarioALoguearse = users[i];
+          break;
+        }
+      }
+      if (usuarioALoguearse == undefined) {
+        return res.render("login", {errors: [
+          {msg: "Credenciales invalidas"}
+        ]});
+      }
+      req.session.usuarioLogueado = usuarioALoguearse;
+      res.render("login");
+
+      */
+     
+    }, 
+
+  // fin login y cruce de datos
+
   procesarRegistro: (req,res) => {
 
     const resultValidation = validationResult(req);

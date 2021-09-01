@@ -985,3 +985,72 @@ font-size: 5vw ;
 
 /********************************  FIN LISTADO DE PRODUCTOS ******************************************/
 
+/********************************  BARRA DE NAVEGACION ******************************************/
+
+.barra-superior{
+  position: relative;
+  width: 410px;
+  height: 50px;
+  background: #fff;
+  box-shadow: 0 6px 10 px rgba(179, 179, 179, .5);
+}
+
+.listado-P{
+  display: flex;
+}
+
+.listado-2-P{
+  list-style: none;
+}
+
+.option{
+  display: block;
+  width: calc(410px / 4);
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  text-decoration: none;
+  color: #121212;
+  font-family:sans-serif;
+}
+
+.slide{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: calc(410px / 4);
+  height: 4px;
+  background: #3641b7;
+  transition: 4s;
+}
+
+/********************************  FIN BARRA DE NAVEGACION ******************************************/
+
+/********************************  VISTA CUENTA   ******************************************/
+
+
+.foto-fondo-2-P {
+  height: 120vh;
+  width: 100%;
+  background-image: url(/img/paisaje-cuenta.jpeg);
+  background-position: center;
+}
+
+.contenedor-cuenta-P{
+  text-align: center;
+  color: black;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.contenedor-cuenta-2-P{
+  text-align: center;
+  color: black;
+  border: 1px solid black;
+  margin-left: 120px;
+  margin-right: 120px;
+  background-color: rgba(190, 184, 184, 0.637);
+}
+
+
+/********************************  FIN VISTA CUENTA   ******************************************/
