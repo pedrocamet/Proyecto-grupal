@@ -985,6 +985,65 @@ font-size: 5vw ;
 
 /********************************  FIN LISTADO DE PRODUCTOS ******************************************/
 
+/********************************  INICIO DATOS PERSONALES ******************************************/
+.container-F {
+  text-align: center;
+  align-items: right;
+  box-sizing: border-box;
+  justify-content: center;
+}
+.mt-3-P, .my-3-P {
+  margin-top: 1rem !important;
+}
+
+
+.DP-formCompletoF{
+  text-align: center;
+  
+}
+
+.DP-datosF{
+  margin-bottom: 1rem;
+  display: flex;
+  text-align: center;
+  justify-content: center;    
+}
+
+.DP-formF{
+  text-align: center;
+  display: block;
+  align-items: center;
+  color: white;
+  justify-content: center
+  
+  }
+
+.DP-datosinputF{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center
+}
+.DP-inputF{
+  width: 15rem;
+  display: flex; 
+  justify-content: center;
+}
+.DP-formInputs-F{
+  width: 100%;
+  display: block;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+
+
+
+
+/********************************  FIN DATOS PERSONALES  ******************************************/
 /********************************  BARRA DE NAVEGACION ******************************************/
 
 .barra-superior{
