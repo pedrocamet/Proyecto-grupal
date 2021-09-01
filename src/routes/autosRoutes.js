@@ -54,9 +54,6 @@ router.post("/login", [
  check("email").isEmail(),
 ], autosController.procesLogin);
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 8ee5cc804a592c37b6486eb6eac35f5a34ff271e
 
 module.exports = router;
