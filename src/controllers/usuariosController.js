@@ -27,7 +27,7 @@ const userControlador =
  
      let errors = validationResult(req);
  
-     let usuarioALoguearse;
+     let ;
  
      if (errors.isEmpty()){
  
@@ -114,7 +114,7 @@ const userControlador =
       u.email= req.body.ano
       let validacion;
       if (validacion = bcrypt.compareSync(req.body.passwordAnterior, u.password)){;
-        
+
       u.password= bcrypt.hashSync(req.body.password,10)  
         if(req.file != undefined){
                   imagenPerfilABorrar= u.fotoPerfil;
