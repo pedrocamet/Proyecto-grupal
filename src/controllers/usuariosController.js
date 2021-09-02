@@ -22,7 +22,7 @@ const userControlador =
   loginUsuario: (req, res) => {
     res.render ("login");
   },
-
+  
   procesarLogin: (req, res) => {
 
  
@@ -43,11 +43,12 @@ const userControlador =
            {msg: "Credenciales invalidas"}
          ]});
        }
-       console.log(usuarioALoguearse);
+       
        
        req.session.usuarioLogueado = usuarioALoguearse;
+       
       
-       res.render("homeLogin");
+       res.render("users/datosPersonales");
      },
 
   // fin login y cruce de datos
@@ -82,22 +83,22 @@ const userControlador =
         oldData: req.body
     });  
 }
-
-    
     
 */
 },
  datosPersonales:(req,res) => {
-        let idUsuario = req.params.idUser;
-        let userToEdit;
+  console.log(req.session.usuarioLogueado);
+        let emailUser = req.session.usuarioLogueado.email;
         
-        for (let u of usuarios){
-            if (u.id == idUsuario){
+        console.log(req.session.usuarioLogueado.email)
+        /*for (let u of usuarios){
+            if (u.email == emailUser){
                 userToEdit = u; 
                 break;
             }
-        }
-        res.render ("./users/datosPersonales.ejs", {usuarioEditar: userToEdit});
+        }*/
+        let userToEdit= req.session.usuarioLogueado;
+        res.render ("./users/datosPersonales.ejs",{usuarioEditar: userToEdit});
         
     },
     updateUser: (req,res) => {

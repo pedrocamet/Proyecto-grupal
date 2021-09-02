@@ -14,6 +14,8 @@ app.use(express.urlencoded({extended: false}));
 
 app.use(session({
   secret: "Secreto",
+  resave: false,
+  saveUninitialized: false
 }));
 
 const autosRoutes = require("./src/routes/autosRoutes");

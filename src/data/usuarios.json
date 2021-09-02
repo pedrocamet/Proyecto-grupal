@@ -76,5 +76,19 @@
   "email": "cametp@gmail.com",
   "password": "$2a$10$y46QClNexBzzKk8zGWEeWe3H8mJFDVnA6NzvseZH3zG3shgf26hxW",
   "fotoPerfil": "16305356006181629748964795Onix-RS-850x555.jpg"
+ },
+ {
+  "nombre": "Martin",
+  "apellido": "del orto",
+  "email": "fads@cual.com.ar",
+  "password": "$2a$10$iKRTEguJFyd5Af9avg/w0.0S1.RvlBCc5v/n3J0sBHL2MGxvbXcqu",
+  "fotoPerfil": "1630547502890caballo arabe.jpg"
+ },
+ {
+  "nombre": "Facu",
+  "apellido": "Facu",
+  "email": "facu@facu.com.ar",
+  "password": "$2a$10$lZFbbiMsm3cTZ8udRnz/6eMmVdLlUEZovU1X.xD09aPN6Syh7Z7M.",
+  "fotoPerfil": "1630548132876descarga (1).jpg"
  }
 ]
