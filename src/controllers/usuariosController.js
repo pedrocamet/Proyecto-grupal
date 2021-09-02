@@ -6,6 +6,7 @@ const bcryptjs = require ('bcryptjs');
 const {validationResult} = require("express-validator");
 const {body} = require ("express-validator");
 
+
 const usuariosFilePath = path.join(__dirname, '../data/usuarios.json');
 const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, 'utf-8'));
 
@@ -15,6 +16,41 @@ const userControlador =
   creacionUsuario: (req, res) => {
     res.render ("./users/registro.ejs");
   },
+
+  // login y cruce de datos
+
+  loginUsuario: (req, res) => {
+    res.render ("login");
+  },
+
+  procesarLogin: (req, res) => {
+
+ 
+     let errors = validationResult(req);
+    
+     let usuarioALoguearse;
+ 
+     if (errors.isEmpty()){
+
+       for (let i = 0; i < usuarios.length; i++) {
+         if ((usuarios[i].email == req.body.email) && (bcryptjs.compareSync(req.body.password, usuarios[i].password))) {
+            usuarioALoguearse = usuarios[i];
+           break;
+         }}
+       } 
+       if (usuarioALoguearse == undefined) {
+         return res.render("login", {errors: [
+           {msg: "Credenciales invalidas"}
+         ]});
+       }
+       console.log(usuarioALoguearse);
+       
+       req.session.usuarioLogueado = usuarioALoguearse;
+      
+       res.render("homeLogin");
+     },
+
+  // fin login y cruce de datos
 
   procesarRegistro: (req,res) => {
 
@@ -50,7 +86,51 @@ const userControlador =
     
     
 */
-}
+},
+ datosPersonales:(req,res) => {
+        let idUsuario = req.params.idUser;
+        let userToEdit;
+        
+        for (let u of usuarios){
+            if (u.id == idUsuario){
+                userToEdit = u; 
+                break;
+            }
+        }
+        res.render ("./users/datosPersonales.ejs", {usuarioEditar: userToEdit});
+        
+    },
+    updateUser: (req,res) => {
+      let idUser = req.params.idUser;
+      let userToEdit;
+      console.log(idUser)
+      let imagenPerfilABorrar;
+  for (let u of usuarios){
+    if(idUser==u.id){                 
+      u.nombre= req.body.nombre,
+      u.apellido= req.body.category,
+      u.email= req.body.ano
+      let validacion;
+      if (validacion = bcrypt.compareSync(req.body.passwordAnterior, u.password)){;
+
+      u.password= bcrypt.hashSync(req.body.password,10)  
+        if(req.file != undefined){
+                  imagenPerfilABorrar= u.fotoPerfil;
+                  u.fotoPerfil=req.file.filename
+                  fs.unlinkSync(path.join(__dirname, '../../public/img/', imagePerfilABorrar));
+              } else {
+                  u.fotoPerfil=u.fotoPerfil                 
+              }}
+              break;
+          }}    
+
+      fs.writeFileSync(usuariosFilePath, JSON.stringify(usuarios, null, " ")),
+      console.log(imagenPerfilABorrar)
+      
+                 
+      res.redirect('/');  
+      
+  },  
 
 /*
   registrarse: function(req, res, next){

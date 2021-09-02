@@ -9,46 +9,40 @@
         </header>   
 
         <div class="foto-fondo-P">
-        <nav class="navbar-P">
-        </nav>
-        <div class="container-P"></div>
-        <div class="container-P mt-3-P">
-            <h1 class="texto-alineado-P"> <strong> Iniciar sesion en tu cuenta de Rental Auto </strong></h1>
-            <br>
-            <div class="texto-alineado-P">
-                <div class="form-group-P">
-                    <div class="input-group-P" id="username">
-                        <input autofocus class="form-control-P" id="username" name="username" placeholder="Nombre de usuario" required type="text" value>
-                    </div>
-                </div>
-                <div class="form-group-P">
-                    <div class="input-group-P" id="show_hide_password">
-                        <input autofocus class="form-control-P" id="password" name="password" placeholder="Contraseña" required type="password" value>
-                    </div>
-                    <a href=""> ¿Se te olvido tu contraseña? </a> 
-                </div>
-                <div class="footer-P">
-                    <button type="submit"> Iniciar sesión </button>
-                    <p> O </p>
-                    <a href="https://www.facebook.com/"> Continuar con facebook </a>
-                    <br>
-                    <a href="https://www.google.com/"> Continuar con Google </a>
-                </div>
+            <nav class="navbar-P">
+            </nav>
+            <div class="container-P"></div>
+            <div class="container-P mt-3-P">
+                <h1 class="texto-alineado-P"> <strong> Iniciar sesion en tu cuenta de Rental Auto </strong></h1>
                 <br>
-            <p class="texto-alineado-P"> ¿Nuevo en Rental Auto? 
-                <a href="registro"> Crea una cuenta. </a>
-            </p>
-        </div>  
-        
-        <footer class="footer-P">  
-            <div class="container-P">
-                <div class="texto-alineado-P">
-                    <p> Copyright Rental Auto, Todos los derechos reservados </p>
-                    <p> Terminos y condiciones </p>
-                    <p> Politica de privacidad </p>
-                </div>
-            </div>
+                <form class="texto-alineado-P" action="/usuario/login" method="POST">
+                    <div class="form-group-P">
+                        <div class="input-group-P" id="username">
+                            <input autofocus class="form-control-P" id="username" name="email" placeholder="Nombre de usuario" required type="text" value>
+                        </div>
+                    </div>
+                    <div class="form-group-P">
+                        <div class="input-group-P" id="show_hide_password">
+                            <input autofocus class="form-control-P" id="password" name="password" placeholder="Contraseña" required type="password" value>
+                        </div>
+                        <a href=""> ¿Se te olvido tu contraseña? </a> 
+                    </div>
+                    <div class="footer-P">
+                        <button type="submit" value="Login"> Iniciar sesión </button>
+                        <p> O </p>
+                        <a href="https://www.facebook.com/"> Continuar con facebook </a>
+                        <br>
+                        <a href="https://www.google.com/"> Continuar con Google </a>
+                    </div>
+                    <br>
+                </form>    
+                <p class="texto-alineado-P"> ¿Nuevo en Rental Auto? 
+                    <a href="/usuario/registro"> Crea una cuenta. </a>
+                </p>
+            </div>  
+        </div>
+        <footer>  
+            <%- include("./partials/footer") %>
         </footer> 
-        </div> 
     </body> 
 </html>

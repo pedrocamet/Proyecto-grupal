@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Registro</title>
+        <link href="/css/styles.css" rel="stylesheet">
+        <link href="https://fontawesome.com/" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/public/css/normalize.css">
+
+    </head>
+    <body>
+        <header>
+            <%- include("../partials/header") %>
+        </header>   
+        <div class="foto-fondo-registro-P">
+        <br>
+        <div class="container-F">
+            <h1 class="texto-alineado-P"> <strong> Tus Datos Personales:</strong></h1>
+            <br>
+
+            <form action="/usuario/datosPersonales" method="POST" enctype="multipart/form-data" class="DP-formF">
+            
+            <div class="DP-formF">
+                <div class="DP-formInputs-F">
+                <div class="DP-datosF">
+                    <div class="DP-datosinputF" >
+                        <label for="">Nombre: </label>
+                        <input autofocus class="DP-inputF" id="username" name="nombre" value=<%= usuarioEditar.nombre%>required type="text" value>
+                    </div>
+                </div>
+
+                <div class="DP-datosF">
+                    <div class="DP-datosinputF" >
+                        <label for="">Apellido:</label>
+                        <input autofocus class="DP-inputF" id="username" name="apellido" value=<%= usuarioEditar.apellido%> required type="text" value>
+                    </div>
+                </div>
+
+                <div class="DP-datosF">
+                    <div class="DP-datosinputF" >
+                        <label for="">Email: </label>
+                        <input autofocus class="DP-inputF" id="email" name="email" value=<%= usuarioEditar.mail%>required type="text" value>
+                    </div>
+                </div>
+                <div class="DP-datosF">
+                    <div class="DP-datosinputF" >
+                        <label>Contraseña Anterior : </label>
+                        <input autofocus class="DP-inputF" id="password" name="passwordAnterior" value=<%= usuarioEditar.password%>    required type="password" value>
+                    </div> 
+                </div>
+
+            
+                <div class="DP-datosF">
+                    <div class="DP-datosinputF" >
+                        <label>Contraseña: </label>
+                        <input autofocus class="DP-inputF" id="password" name="password" value=<%= usuarioEditar.password%>    required type="password" value>
+                    </div> 
+                </div>
+            </div>
+                        </div class="ciento5">
+                            <label for="imageUser" class="seleccionarImagenF">Seleccionar Imagen:</label>
+                            <input type="file" name= "imageUser">
+                        </div>
+                        <div id="botonmodificar">
+                        <button type="submit" > Modificar </button>
+                    </div> 
+            <div class="footer-P">  
+                    <div>
+                        
+                    </div>
+            </form>
+
+                
+        </div>  
+        
+        <footer class="footer-P">  
+            <div class="container-P">
+                <div class="texto-alineado-P">
+                    <p> Copyright Rental Auto, Todos los derechos reservados </p>
+                    <p> Terminos y condiciones </p>
+                    <p> Politica de privacidad </p>
+                </div>
+            </div>
+        </footer> 
+        </div> 
+    </body> 
+</html>

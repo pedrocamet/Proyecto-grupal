@@ -21,6 +21,20 @@ const controlador =
         res.render ("login");
     },
 
+    homeLogin: (req, res) => {
+        res.render ("homeLogin");
+    },
+
+    procesLogin: (req, res) => {
+        let errors = validationResult(req);
+
+        if (errors.isEmpty()) {
+
+        } else {
+            return res.render("/login", {errors: errors.errors});
+        }
+    },
+
     carrito: (req, res) => {
         res.render ("carrito");
 
@@ -140,15 +154,15 @@ const controlador =
 			    ProductoEncontrado=producto;
 			}
 		}
-
+       
+      
 		fs.unlinkSync(path.join(__dirname, '../../public/img/', ProductoEncontrado.imagen));
 
 		fs.writeFileSync(productosFilePath, JSON.stringify(Nproducts,null,' '));
 
 		res.redirect('/');
 	}
-    
-}
 
+}
 
 module.exports = controlador;

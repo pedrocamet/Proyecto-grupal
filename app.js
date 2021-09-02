@@ -1,14 +1,21 @@
 const express = require ("express");
+const session = require("express-session");
 const path = require ("path");
 const app = express ();
 app.set ("view engine", "ejs");
 var methodOverride = require('method-override');
 app.use(methodOverride("_method"));
 
+
 //Para captar la información que llega del formulario a través de POST
 app.use(express.urlencoded({extended: false}));
 
 /************* RUTAS GLOBALES ******************/ 
+
+app.use(session({
+  secret: "Secreto",
+}));
+
 const autosRoutes = require("./src/routes/autosRoutes");
 app.use("/", autosRoutes);
 
@@ -20,7 +27,6 @@ app.use(express.static(publicPath));
 
 const publicPath2 = path.resolve(__dirname, './views');  
 app.use(express.static(publicPath2));
-
 
 /************************LO QUE PASO JERO PARA RUTAS NO DEFINIDAS */
 

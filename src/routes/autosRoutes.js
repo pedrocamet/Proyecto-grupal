@@ -4,6 +4,7 @@ const {body} = require ("express-validator");
 const router = express.Router();
 const multer = require ("multer");
 const path = require("path");
+const {check} = require('express-validator');
 
 //************ Multerconfiguration ***************/
 
@@ -24,7 +25,7 @@ const uploadFile = multer({storage: configuracionImagen});
 router.get("/", autosController.home);
 router.get("/login", autosController.login);
 router.get("/carrito", autosController.carrito);
-
+router.get("/homeLogin", autosController.homeLogin);
 
 /***********lISTADO DE PRODUCTOS  ************/
 router.get("/producto", autosController.producto); 
@@ -46,6 +47,13 @@ router.put("/editar-producto/:idProd", uploadFile.single('imageProduct'), autosC
 
 /***********DELETE ONE PRODUCT  ************/
 router.delete("/:id", autosController.eliminar);// eliminacion producto
+
+/*********** LOG IN  ************/
+
+router.post("/login", [
+ check("email").isEmail(),
+], autosController.procesLogin);
+
 
 
 module.exports = router;
