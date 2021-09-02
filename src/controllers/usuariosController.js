@@ -55,10 +55,12 @@ const userControlador =
   procesarRegistro: (req,res) => {
 
     const resultValidation = validationResult(req);
+    const lastUser = usuarios.length;
   
     if(resultValidation.isEmpty()){
 
       let userToCreate = {
+        id: lastUser,
         nombre: req.body.nombre,
         apellido: req.body.apellido,
         email: req.body.email,
