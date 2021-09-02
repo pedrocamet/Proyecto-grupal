@@ -6,6 +6,7 @@ const bcryptjs = require ('bcryptjs');
 const {validationResult} = require("express-validator");
 const {body} = require ("express-validator");
 
+
 const usuariosFilePath = path.join(__dirname, '../data/usuarios.json');
 const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, 'utf-8'));
 
@@ -42,8 +43,11 @@ const userControlador =
            {msg: "Credenciales invalidas"}
          ]});
        }
-       /*req.session.usuarioLogueado = usuarioALoguearse;
-       res.render("success");*/
+       console.log(usuarioALoguearse);
+       
+       req.session.usuarioLogueado = usuarioALoguearse;
+      
+       res.render("homeLogin");
      },
 
   // fin login y cruce de datos
