@@ -46,9 +46,9 @@ const userControlador =
        
        
        req.session.usuarioLogueado = usuarioALoguearse;
-       
-      
-       res.render("users/datosPersonales");
+       let usuarioAModificar = req.session.usuarioLogueado;
+       console.log(usuarioAModificar)
+       res.render("users/datosPersonales",{usuarioAEditar: usuarioAModificar});
      },
 
   // fin login y cruce de datos
@@ -89,17 +89,7 @@ const userControlador =
 */
 },
  datosPersonales:(req,res) => {
-  console.log(req.session.usuarioLogueado);
-        let emailUser = req.session.usuarioLogueado.email;
-        
-        console.log(req.session.usuarioLogueado.email)
-        /*for (let u of usuarios){
-            if (u.email == emailUser){
-                userToEdit = u; 
-                break;
-            }
-        }*/
-        let userToEdit= req.session.usuarioLogueado;
+ 
         res.render ("./users/datosPersonales.ejs",{usuarioEditar: userToEdit});
         
     },
