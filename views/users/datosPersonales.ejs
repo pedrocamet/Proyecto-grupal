@@ -22,13 +22,12 @@
             <h1 class="texto-alineado-P"> <strong> Tus Datos Personales:</strong></h1>
             <br>
 
-            <form action="/usuario/datosPersonales" method="POST" enctype="multipart/form-data" class="DP-formF">
-            
-            <div class="DP-formF">
+            <form action="/usuario/datosPersonales/" method="POST" enctype="multipart/form-data" class="DP-formF">
+                <div class="DP-formF">
                 <div class="DP-formInputs-F">
                 <div class="DP-datosF">
                     <div class="DP-datosinputF" >
-                        <label for="">Nombre: </label>
+                        <label for="">Nombre: </label>  
                         <input autofocus class="DP-inputF" id="username" name="nombre" value=<%= usuarioEditar.nombre%>required type="text" value>
                     </div>
                 </div>
@@ -36,14 +35,14 @@
                 <div class="DP-datosF">
                     <div class="DP-datosinputF" >
                         <label for="">Apellido:</label>
-                        <input autofocus class="DP-inputF" id="username" name="apellido" value=<%= usuarioEditar.apellido%> required type="text" value>
+                        <input autofocus class="DP-inputF" id="username" name="apellido" value=<%= usuariaEditar.apellido%> required type="text" value>
                     </div>
                 </div>
 
                 <div class="DP-datosF">
                     <div class="DP-datosinputF" >
                         <label for="">Email: </label>
-                        <input autofocus class="DP-inputF" id="email" name="email" value=<%= usuarioEditar.mail%>required type="text" value>
+                        <input autofocus class="DP-inputF" id="email" name="email" value=<%= usuarioEditar.email%>required type="text" value>
                     </div>
                 </div>
                 <div class="DP-datosF">

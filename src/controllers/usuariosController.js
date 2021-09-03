@@ -22,7 +22,7 @@ const userControlador =
   loginUsuario: (req, res) => {
     res.render ("login");
   },
-
+  
   procesarLogin: (req, res) => {
 
  
@@ -43,9 +43,10 @@ const userControlador =
            {msg: "Credenciales invalidas"}
          ]});
        }
-       console.log(usuarioALoguearse);
+       
        
        req.session.usuarioLogueado = usuarioALoguearse;
+       
       
        res.render("homeLogin");
        console.log("succes");
@@ -56,10 +57,12 @@ const userControlador =
   procesarRegistro: (req,res) => {
 
     const resultValidation = validationResult(req);
+    const lastUser = usuarios.length;
   
     if(resultValidation.isEmpty()){
 
       let userToCreate = {
+        id: lastUser,
         nombre: req.body.nombre,
         apellido: req.body.apellido,
         email: req.body.email,
@@ -83,22 +86,22 @@ const userControlador =
         oldData: req.body
     });  
 }
-
-    
     
 */
 },
  datosPersonales:(req,res) => {
-        let idUsuario = req.params.idUser;
-        let userToEdit;
+  console.log(req.session.usuarioLogueado);
+        let emailUser = req.session.usuarioLogueado.email;
         
-        for (let u of usuarios){
-            if (u.id == idUsuario){
+        console.log(req.session.usuarioLogueado.email)
+        /*for (let u of usuarios){
+            if (u.email == emailUser){
                 userToEdit = u; 
                 break;
             }
-        }
-        res.render ("./users/datosPersonales.ejs", {usuarioEditar: userToEdit});
+        }*/
+        let userToEdit= req.session.usuarioLogueado;
+        res.render ("./users/datosPersonales.ejs",{usuarioEditar: userToEdit});
         
     },
     updateUser: (req,res) => {
@@ -113,7 +116,7 @@ const userControlador =
       u.email= req.body.ano
       let validacion;
       if (validacion = bcrypt.compareSync(req.body.passwordAnterior, u.password)){;
-        
+
       u.password= bcrypt.hashSync(req.body.password,10)  
         if(req.file != undefined){
                   imagenPerfilABorrar= u.fotoPerfil;
