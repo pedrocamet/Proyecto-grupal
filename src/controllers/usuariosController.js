@@ -93,7 +93,7 @@ const userControlador =
         res.render ("./users/datosPersonales.ejs",{usuarioEditar: userToEdit});
         
     },
-    updateUser: (req,res) => {
+  updateUser: (req,res) => {
       let idUser = req.params.idUser;
       let userToEdit;
       console.log(idUser)
