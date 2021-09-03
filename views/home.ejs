@@ -42,11 +42,11 @@
             <p class="texto-2"> Nuevos modelos este mes </p>
             <section class="flex-container">
                 <% for(let producto of productos) { %>
-                    <% if(producto.id <= 5) { %>
+                    <% if(producto.id <= 6) { %>
                     <div class="caja1-home-T">
                         <a href="/detalle-producto/<%=producto.id %>">
                         <img src="/img/<%=producto.imagen %>" class="foto-producto">
-                        <article class="recuadro">
+                        <article class="recuadro-T">
                             <div class="precio-descuento"> 
                                 <p class="nombre-marca-T"><%=producto.marca %></p>
                                 <p class="nombre-modelo-T"><%=producto.modelo %></p>
