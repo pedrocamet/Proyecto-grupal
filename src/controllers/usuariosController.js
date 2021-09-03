@@ -48,6 +48,7 @@ const userControlador =
        req.session.usuarioLogueado = usuarioALoguearse;
       
        res.render("homeLogin");
+       console.log("succes");
      },
 
   // fin login y cruce de datos
