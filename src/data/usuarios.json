@@ -31,5 +31,13 @@
   "email": "fsdffds@hjafsd.com",
   "password": "$2a$10$RB2FKRER3ACYOj1uRLWZxucvj2s/RVLFjcmjC7O6fOC251KIaPOYe",
   "fotoPerfil": "1630587256204biciceta.jpg"
+ },
+ {
+  "id": 5,
+  "nombre": "dsasfsa",
+  "apellido": "fdsfds",
+  "email": "fsfdsfd@fsd.com",
+  "password": "$2a$10$iuhtuBW.CgErFign7IlJm.zLVk5AYxe6gC3ujR16Yuwz03qcOK0Me",
+  "fotoPerfil": "1630670286117biciceta.jpg"
  }
 ]
