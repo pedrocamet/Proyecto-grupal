@@ -9,7 +9,7 @@ const {body} = require ("express-validator");
 
 const usuariosFilePath = path.join(__dirname, '../data/usuarios.json');
 const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, 'utf-8'));
-
+let usuarioAModificar ;
 
 const userControlador = 
 {
@@ -46,8 +46,8 @@ const userControlador =
        
        
        req.session.usuarioLogueado = usuarioALoguearse;
-       let usuarioAModificar = req.session.usuarioLogueado;
-       console.log(usuarioAModificar)
+       usuarioAModificar = req.session.usuarioLogueado;
+       
        res.render("users/datosPersonales",{usuarioAEditar: usuarioAModificar});
      },
 
@@ -94,19 +94,20 @@ const userControlador =
         
     },
   updateUser: (req,res) => {
-      let idUser = req.params.idUser;
+    console.log(usuarioAModificar)
+      let idUser = usuarioAModificar.id;
       let userToEdit;
       console.log(idUser)
       let imagenPerfilABorrar;
   for (let u of usuarios){
     if(idUser==u.id){                 
       u.nombre= req.body.nombre,
-      u.apellido= req.body.category,
-      u.email= req.body.ano
+      u.apellido= req.body.apellido,
+      u.email= req.body.email
       let validacion;
-      if (validacion = bcrypt.compareSync(req.body.passwordAnterior, u.password)){;
-
-      u.password= bcrypt.hashSync(req.body.password,10)  
+      console.log(u.password)
+      if (validacion = bcryptjs.compareSync(req.body.passwordAnterior, u.password)){
+      u.password= bcryptjs.hashSync(req.body.passwordNueva,10)  
         if(req.file != undefined){
                   imagenPerfilABorrar= u.fotoPerfil;
                   u.fotoPerfil=req.file.filename
