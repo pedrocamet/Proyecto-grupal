@@ -6,6 +6,9 @@ const {validationResult} = require("express-validator");
 const User = require("../models/User");
 const bcryptjs = require("bcryptjs");
 
+//TRAE TODOS LOS MODELOS/TABLAS
+const db = require("../../database/models")
+
 const productosFilePath = path.join(__dirname, '../data/productos.json');
 const productos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
 
@@ -15,6 +18,15 @@ const controlador =
     home: (req, res) => {
         const productos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
 		res.render("home", {productos: productos});
+    },
+
+    //PROBANDO LISTADO CON BASE DE DATOS
+    list: (req,res) => {
+
+        //db.Productos.findAll()
+        //.then(function(autos){
+            res.render("list") //, {autos: autos})
+        //})
     },
 
     login: (req, res) => {

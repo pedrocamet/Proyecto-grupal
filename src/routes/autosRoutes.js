@@ -29,6 +29,7 @@ router.get("/homeLogin", autosController.homeLogin);
 
 /***********lISTADO DE PRODUCTOS  ************/
 router.get("/producto", autosController.producto); 
+router.get("/listado", autosController.list);
 
 /***********CREATE ONE PRODUCT  ************/
 router.get("/creacion-producto", autosController.creacionProducto); 

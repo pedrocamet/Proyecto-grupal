@@ -7,6 +7,7 @@ module.exports = {
     "database": "rentalautofinal",
     "host": "127.0.0.1",
     "dialect": "mysql"
+    //¿PORT?
   },
   "test": {
     "username": "root",
