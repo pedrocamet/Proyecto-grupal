@@ -10,6 +10,8 @@ app.use(methodOverride("_method"));
 //Para captar la información que llega del formulario a través de POST
 app.use(express.urlencoded({extended: false}));
 
+
+
 /************* RUTAS GLOBALES ******************/ 
 
 app.use(session({
