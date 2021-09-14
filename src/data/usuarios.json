@@ -34,10 +34,18 @@
  },
  {
   "id": 5,
-  "nombre": "dsasfsa",
-  "apellido": "fdsfds",
-  "email": "fsfdsfd@fsd.com",
-  "password": "$2a$10$iuhtuBW.CgErFign7IlJm.zLVk5AYxe6gC3ujR16Yuwz03qcOK0Me",
-  "fotoPerfil": "1630670286117biciceta.jpg"
+  "nombre": "Martin",
+  "apellido": "Martin",
+  "email": "Martin@martin.com.ar",
+  "password": "$2a$10$2cg7PSiNOZjakU3IDhRosehm/vdFLl/JN/m4pI5Z2wiIPa/ubJ9jK",
+  "fotoPerfil": "1630686797906autos-uso-diario-feat.jpg"
+ },
+ {
+  "id": 6,
+  "nombre": "Maria",
+  "apellido": "Maria",
+  "email": "Maria@maria.com.ar",
+  "password": "$2a$10$7AK9t8rQlb6h8ZDAw874/u81vtvXY97TeFoc5iG2AJRCrQ6qusAIu",
+  "fotoPerfil": "1630687054807descarga.jpg"
  }
 ]
