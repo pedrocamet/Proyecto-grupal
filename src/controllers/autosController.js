@@ -6,6 +6,10 @@ const {validationResult} = require("express-validator");
 const User = require("../models/User");
 const bcryptjs = require("bcryptjs");
 
+//BASE DE DATOS
+const db = require("../../database/models")
+const Op = db.Sequelize.Op; // o const {Op} = require("sequelize");
+
 const productosFilePath = path.join(__dirname, '../data/productos.json');
 const productos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
 
@@ -161,7 +165,40 @@ const controlador =
 		fs.writeFileSync(productosFilePath, JSON.stringify(Nproducts,null,' '));
 
 		res.redirect('/');
-	}
+	},
+
+// +++++++++++++++++++++++++ RUTAS SOBRE LA BASE DE DATOS +++++++++++++++++++++++++ //
+
+    list: (req,res) => {
+
+    //db.Productos.findAll()
+    //.then(function(autos){
+
+    //Ó
+
+    //db.Productos.findAll().then((autos) => { // SELECT * FROM PRODUCTOS
+        //let listaProductos=[];
+
+        //for(producto of Productos){
+            //listaProductos.push(producto.marca + producto.modelo)
+        //}
+        //console.log("ver:  ", listaProductos);
+
+        res.render("list") //, {autos: autos})
+    //})
+},
+
+    listDetalle: function(req,res){
+
+        //db.Productos.findByPk(req.params.id)
+
+        //.then(function(auto){
+
+        res.render("listDetalle") //, {producto: auto});
+        
+    //})
+    }
+
 
 }
 

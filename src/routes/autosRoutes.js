@@ -30,6 +30,7 @@ router.get("/homeLogin", autosController.homeLogin);
 /***********lISTADO DE PRODUCTOS  ************/
 router.get("/producto", autosController.producto); 
 
+
 /***********CREATE ONE PRODUCT  ************/
 router.get("/creacion-producto", autosController.creacionProducto); 
 router.post("/creacion-producto", uploadFile.single("imageProduct"),  autosController.store); 
@@ -53,6 +54,11 @@ router.delete("/:id", autosController.eliminar);// eliminacion producto
 router.post("/login", [
  check("email").isEmail(),
 ], autosController.procesLogin);
+
+// +++++++++++++++++++++++++ RUTAS SOBRE LA BASE DE DATOS +++++++++++++++++++++++++ //
+router.get("/listado", autosController.list);
+
+
 
 
 
