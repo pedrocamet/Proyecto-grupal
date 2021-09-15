@@ -37,7 +37,7 @@ const userControlador =
             usuarioALoguearse = usuarios[i];
            break;
          }}
-       } 
+       } []
        if (usuarioALoguearse == undefined) {
          return res.render("login", {errors: [
            {msg: "Credenciales invalidas"}
@@ -46,6 +46,8 @@ const userControlador =
        
        
        req.session.usuarioLogueado = usuarioALoguearse;
+       usuarioAModificar = req.session.usuarioLogueado;
+       
        
        let usuarioAModificar = req.session.usuarioLogueado;
        console.log(usuarioAModificar)
