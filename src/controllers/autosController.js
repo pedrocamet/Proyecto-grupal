@@ -186,7 +186,18 @@ const controlador =
 
         res.render("list") //, {autos: autos})
     //})
-}
+},
+
+    listDetalle: function(req,res){
+
+        //db.Productos.findByPk(req.params.id)
+
+        //.then(function(auto){
+
+        res.render("listDetalle") //, {producto: auto});
+        
+    //})
+    }
 
 
 }
