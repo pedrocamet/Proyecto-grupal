@@ -2,25 +2,27 @@
 module.exports = {
 
   "development": {
-    "username": "root",
-    "password": 122746,
-    "database": "rentalautofinal",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-    //¿PORT?
-  },
+    "username": "fdelo1",
+    "password": "122746Fe",
+    "database": "fdelo1_rentalauto",
+    "host": "mysql-fdelo1.alwaysdata.net",
+    "dialect": "mysql",
+    //"port": 3306
+   },
   "test": {
     "username": "root",
     "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "database": "fdelo1_rentalautopruebas",
+    "host": "mysql-fdelo1.alwaysdata.net",
+    "dialect": "mysql",
+    //"port": 3306
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "username": "fdelo1",
+    "password": "122746Fe",
+    "database": "fdelo1_rentalauto",
+    "host": "mysql-fdelo1.alwaysdata.net",
+    "dialect": "mysql",
+    //"dialect": "mysql"
   }
 }
