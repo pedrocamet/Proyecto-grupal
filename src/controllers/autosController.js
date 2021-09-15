@@ -6,8 +6,9 @@ const {validationResult} = require("express-validator");
 const User = require("../models/User");
 const bcryptjs = require("bcryptjs");
 
-//TRAE TODOS LOS MODELOS/TABLAS
+//BASE DE DATOS
 const db = require("../../database/models")
+const Op = db.Sequelize.Op; // o const {Op} = require("sequelize");
 
 const productosFilePath = path.join(__dirname, '../data/productos.json');
 const productos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
@@ -18,15 +19,6 @@ const controlador =
     home: (req, res) => {
         const productos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
 		res.render("home", {productos: productos});
-    },
-
-    //PROBANDO LISTADO CON BASE DE DATOS
-    list: (req,res) => {
-
-        //db.Productos.findAll()
-        //.then(function(autos){
-            res.render("list") //, {autos: autos})
-        //})
     },
 
     login: (req, res) => {
@@ -173,7 +165,29 @@ const controlador =
 		fs.writeFileSync(productosFilePath, JSON.stringify(Nproducts,null,' '));
 
 		res.redirect('/');
-	}
+	},
+
+// +++++++++++++++++++++++++ RUTAS SOBRE LA BASE DE DATOS +++++++++++++++++++++++++ //
+
+    list: (req,res) => {
+
+    //db.Productos.findAll()
+    //.then(function(autos){
+
+    //Ó
+
+    //db.Productos.findAll().then((autos) => { // SELECT * FROM PRODUCTOS
+        //let listaProductos=[];
+
+        //for(producto of Productos){
+            //listaProductos.push(producto.marca + producto.modelo)
+        //}
+        //console.log("ver:  ", listaProductos);
+
+        res.render("list") //, {autos: autos})
+    //})
+}
+
 
 }
 
