@@ -16,6 +16,14 @@ function clienteData(sequelize, Datatypes){
     config = {timestamps:false};
 
     const cliente = sequelize.define(alias, cols, config);
+
+    cliente.associate = function(models){
+        cliente.hasMany(models.venta, {
+            as: "Venta",
+            foreignkey: "id_Cliente"
+        })
+    }
+
     return cliente;
     
 }

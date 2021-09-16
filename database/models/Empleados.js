@@ -15,6 +15,14 @@ function empleadosData(sequelize, Datatypes){
     config = {timestamps:false};
 
     const empleados = sequelize.define(alias, cols, config);
+
+    empleados.associate = function(models){
+        empleados.hasMany(models.venta, {
+            as: "Venta",
+            foreignkey: "id_Empleados"
+        })
+    }
+
     return empleados;
     
 }
