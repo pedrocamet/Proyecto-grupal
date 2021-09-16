@@ -19,7 +19,7 @@ function empleadosData(sequelize, Datatypes){
     empleados.associate = function(models){
         empleados.hasMany(models.venta, {
             as: "Venta",
-            foreignkey: "id_Empleados"
+            foreignKey: "id_Empleados"
         })
     }
 */

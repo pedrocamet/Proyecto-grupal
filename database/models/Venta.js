@@ -24,19 +24,19 @@ function ventaData(sequelize, Datatypes){
     venta.associate = function(models){
         venta.belongsTo(models.empleados, {
             as: "Empleados",
-            foreignkey: "id_Empleados"
+            foreignKey: "id_Empleados"
         })
     }
     venta.associate = function(models){
         venta.belongsTo(models.cliente, {
             as: "Cliente",
-            foreignkey: "id_Cliente"
+            foreignKey: "id_Cliente"
         })
     }
     venta.associate = function(models){
         venta.belongsTo(models.productos, {
             as: "Productos",
-            foreignkey: "id_Productos"
+            foreignKey: "id_Productos"
         })
     }
 */
