@@ -14,6 +14,15 @@ function productosData(sequelize, Datatypes){
     config = {timestamps:false};
 
     const productos = sequelize.define(alias, cols, config);
+
+    productos.associate = function(models){
+        productos.belongsTo(models.venta, {
+            as: "Venta",
+            foreignkey: "id_Productos"
+        })
+    }
+    
+
     return productos;
     
 }
