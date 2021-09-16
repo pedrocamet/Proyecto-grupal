@@ -23,6 +23,6 @@ module.exports = {
     "database": "fdelo1_rentalauto",
     "host": "mysql-fdelo1.alwaysdata.net",
     "dialect": "mysql",
-    //"dialect": "mysql"
+    
   }
 }

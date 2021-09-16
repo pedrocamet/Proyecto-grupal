@@ -8,7 +8,8 @@ function productosData(sequelize, Datatypes){
         modelo: {type: Datatypes.STRING(50)},
         año: {type: Datatypes.DATE},
         categoria: {type: Datatypes.STRING(50)},
-        kmInicio: {type: Datatypes.INTEGER}
+        kmInicio: {type: Datatypes.INTEGER},
+        precioDia: {type: Datatypes.INTEGER}
     };
     
     config = {timestamps:false};
