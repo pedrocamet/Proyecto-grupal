@@ -114,13 +114,37 @@ const controlador =
         res.render ("./products/creacion-producto.ejs");
     },  
     store: (req, res) => {
-                idNuevo = 0;
+            db.Productos.create({
+            
+            marca: req.body.marca,
+            modelo: req.body.modelo,
+            categoria: req.body.claseDeVehiculo,
+            año:req.body.ano,
+            precioDia:req.body.precioPorDia,
+            KmInicio:100,
+        }) 
+        .then(function(data){
+            res.redirect('/')
+        })
+        .catch(function(e){
+            res.send(e)
+        })
+        //res.redirect('/')
+
+
+
+
+               /* idNuevo = 0;
             for (let s of productos){
                 if(idNuevo<s.id){
                     idNuevo = s.id;
             }
-        }
-            idNuevo++
+        }   */
+        //idNuevo++
+// desde aca nuevo probando guardar en base 
+       // hasta aca 
+        /*
+            
     
             let nombreImagen =req.file.filename;
             let productoNuevo = {
@@ -132,11 +156,10 @@ const controlador =
                 price:req.body.precioPorDia,
                 imagen: nombreImagen
             }   
-           
-    
+            
                 productos.push(productoNuevo);
              fs.writeFileSync(productosFilePath, JSON.stringify(productos, null, " "))
-            res.redirect('/');
+            res.redirect('/');*/
 
     },
 
