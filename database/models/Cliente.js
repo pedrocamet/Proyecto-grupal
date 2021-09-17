@@ -20,7 +20,7 @@ function clienteData(sequelize, Datatypes){
     cliente.associate = function(models){
         cliente.hasMany(models.venta, {
             as: "Venta",
-            foreignkey: "id_Cliente"
+            foreignKey: "id_Cliente"
         })
     }
 */
