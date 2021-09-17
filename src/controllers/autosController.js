@@ -169,11 +169,17 @@ const controlador =
 
 // +++++++++++++++++++++++++ RUTAS SOBRE LA BASE DE DATOS +++++++++++++++++++++++++ //
 
-    list: (req,res) => {
-
-    //db.Productos.findAll()
-    //.then(function(autos){
-
+    list: function(req,res){
+        /*
+        db.productos.findAll({
+            include: [{association: "Venta"}]
+        })
+            .then(function(autos){
+                res.render("list", {
+                    
+                }) 
+            }
+           */     
     //Ó
 
     //db.Productos.findAll().then((autos) => { // SELECT * FROM PRODUCTOS
@@ -186,6 +192,7 @@ const controlador =
 
         res.render("list") //, {autos: autos})
     //})
+            
 },
 
     listDetalle: function(req,res){
@@ -198,8 +205,7 @@ const controlador =
         
     //})
     }
-
-
 }
+
 
 module.exports = controlador;
