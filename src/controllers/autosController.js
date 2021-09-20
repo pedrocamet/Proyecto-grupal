@@ -114,13 +114,40 @@ const controlador =
         res.render ("./products/creacion-producto.ejs");
     },  
     store: (req, res) => {
-                idNuevo = 0;
+        //let nombreImagen =req.file.filename;
+            db.Productos.create({            
+            marca: req.body.marca,
+            modelo: req.body.modelo,
+            categoria: req.body.claseDeVehiculo,
+            año:req.body.ano,
+            precioDia:req.body.precioPorDia,
+            KmInicio:100,
+            fechaInicioDisp: req.body.fechaInicioDisp,
+            fechaFinDisp: req.body.fechaFinDisp,
+            //imagen: nombreImagen
+        }) 
+        .then(function(data){
+            res.redirect('/')
+        })
+        .catch(function(e){
+            res.send(e)
+        })
+        //res.redirect('/')
+
+
+
+
+               /* idNuevo = 0;
             for (let s of productos){
                 if(idNuevo<s.id){
                     idNuevo = s.id;
             }
-        }
-            idNuevo++
+        }   */
+        //idNuevo++
+// desde aca nuevo probando guardar en base 
+       // hasta aca 
+        /*
+            
     
             let nombreImagen =req.file.filename;
             let productoNuevo = {
@@ -132,11 +159,10 @@ const controlador =
                 price:req.body.precioPorDia,
                 imagen: nombreImagen
             }   
-           
-    
+            
                 productos.push(productoNuevo);
              fs.writeFileSync(productosFilePath, JSON.stringify(productos, null, " "))
-            res.redirect('/');
+            res.redirect('/');*/
 
     },
 
@@ -147,6 +173,11 @@ const controlador =
     eliminar: (req, res) => {
 
 		let id = req.params.id;
+        
+
+
+
+        /*
 		let ProductoEncontrado;
 
 		let Nproducts = productos.filter(function(e){
@@ -163,17 +194,23 @@ const controlador =
 		fs.unlinkSync(path.join(__dirname, '../../public/img/', ProductoEncontrado.imagen));
 
 		fs.writeFileSync(productosFilePath, JSON.stringify(Nproducts,null,' '));
-
+        */
 		res.redirect('/');
 	},
 
 // +++++++++++++++++++++++++ RUTAS SOBRE LA BASE DE DATOS +++++++++++++++++++++++++ //
 
-    list: (req,res) => {
-
-    //db.Productos.findAll()
-    //.then(function(autos){
-
+    list: function(req,res){
+        /*
+        db.productos.findAll({
+            include: [{association: "Venta"}]
+        })
+            .then(function(autos){
+                res.render("list", {
+                    
+                }) 
+            }
+           */     
     //Ó
 
     //db.Productos.findAll().then((autos) => { // SELECT * FROM PRODUCTOS
@@ -186,6 +223,7 @@ const controlador =
 
         res.render("list") //, {autos: autos})
     //})
+            
 },
 
     listDetalle: function(req,res){
@@ -198,8 +236,7 @@ const controlador =
         
     //})
     }
-
-
 }
+
 
 module.exports = controlador;
