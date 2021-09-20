@@ -49,7 +49,16 @@ const controlador =
     },  
 
     detalleProducto: (req,res) =>{
+        let productoEncontrado ;
+        db.Productos.findByPk(req.params.id).then(productoEncontrado => {
+            console.log(productoEncontrado)
+        })
+        .catch(function(e){
+            res.send(e)
+        })
+           
 
+        /*
         let idURL = req.params.id;
 		let productoEncontrado;
 
@@ -59,8 +68,9 @@ const controlador =
 				break;
 			}
 		}
-
+       */
 		res.render("./products/detalle-producto.ejs",{productoDetalle: productoEncontrado});
+        //res.redirect('/');
     },
     editarProducto: (req, res) => {
         let idProducto = req.params.idProd;
@@ -114,14 +124,17 @@ const controlador =
         res.render ("./products/creacion-producto.ejs");
     },  
     store: (req, res) => {
-            db.Productos.create({
-            
+        //let nombreImagen =req.file.filename;
+            db.Productos.create({            
             marca: req.body.marca,
             modelo: req.body.modelo,
             categoria: req.body.claseDeVehiculo,
             año:req.body.ano,
             precioDia:req.body.precioPorDia,
             KmInicio:100,
+            fechaInicioDisp: req.body.fechaInicioDisp,
+            fechaFinDisp: req.body.fechaFinDisp,
+            //imagen: nombreImagen
         }) 
         .then(function(data){
             res.redirect('/')
@@ -168,8 +181,17 @@ const controlador =
     },
 
     eliminar: (req, res) => {
+	
+        db.Productos.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+        res.redirect('/');
 
-		let id = req.params.id;
+
+
+        /*
 		let ProductoEncontrado;
 
 		let Nproducts = productos.filter(function(e){
@@ -186,8 +208,8 @@ const controlador =
 		fs.unlinkSync(path.join(__dirname, '../../public/img/', ProductoEncontrado.imagen));
 
 		fs.writeFileSync(productosFilePath, JSON.stringify(Nproducts,null,' '));
-
-		res.redirect('/');
+        */
+		
 	},
 
 // +++++++++++++++++++++++++ RUTAS SOBRE LA BASE DE DATOS +++++++++++++++++++++++++ //
