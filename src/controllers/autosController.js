@@ -49,7 +49,16 @@ const controlador =
     },  
 
     detalleProducto: (req,res) =>{
+        let productoEncontrado ;
+        db.Productos.findByPk(req.params.id).then(productoEncontrado => {
+            console.log(productoEncontrado)
+        })
+        .catch(function(e){
+            res.send(e)
+        })
+           
 
+        /*
         let idURL = req.params.id;
 		let productoEncontrado;
 
@@ -59,8 +68,9 @@ const controlador =
 				break;
 			}
 		}
-
+       */
 		res.render("./products/detalle-producto.ejs",{productoDetalle: productoEncontrado});
+        //res.redirect('/');
     },
     editarProducto: (req, res) => {
         let idProducto = req.params.idProd;
@@ -171,9 +181,13 @@ const controlador =
     },
 
     eliminar: (req, res) => {
-
-		let id = req.params.id;
-        
+	
+        db.Productos.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+        res.redirect('/');
 
 
 
@@ -195,7 +209,7 @@ const controlador =
 
 		fs.writeFileSync(productosFilePath, JSON.stringify(Nproducts,null,' '));
         */
-		res.redirect('/');
+		
 	},
 
 // +++++++++++++++++++++++++ RUTAS SOBRE LA BASE DE DATOS +++++++++++++++++++++++++ //
