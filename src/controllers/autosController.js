@@ -171,9 +171,13 @@ const controlador =
     },
 
     eliminar: (req, res) => {
-
-		let id = req.params.id;
-        
+	
+        db.Productos.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+        res.redirect('/');
 
 
 
@@ -195,7 +199,7 @@ const controlador =
 
 		fs.writeFileSync(productosFilePath, JSON.stringify(Nproducts,null,' '));
         */
-		res.redirect('/');
+		
 	},
 
 // +++++++++++++++++++++++++ RUTAS SOBRE LA BASE DE DATOS +++++++++++++++++++++++++ //
