@@ -202,7 +202,7 @@ const controlador =
                     
                 }) 
             }
-           */     
+        */
     //Ó
 
     //db.Productos.findAll().then((autos) => { // SELECT * FROM PRODUCTOS
@@ -214,6 +214,7 @@ const controlador =
         //console.log("ver:  ", listaProductos);
 
         res.render("list") //, {autos: autos})
+        
     //})
             
 },
