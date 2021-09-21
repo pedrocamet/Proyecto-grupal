@@ -95,20 +95,13 @@ const userControlador =
     
 */
 },
- datosPersonales:(req,res) => {
-
-  let productoEncontrado;      
+ datosPersonales:(req,res) => {   
   db.Clientes.findByPk(req.params.id).then(function(productoEncontrado) {
   res.render("./users/datosUsuarios.ejs",{productoDetalle: productoEncontrado});
   })     
   .catch(function(e){
   res.send(e)
   })
-  console.log( "producto 2 =" + productoEncontrado)
-
-    
-
-
 
   },
 

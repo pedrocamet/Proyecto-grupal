@@ -17,8 +17,14 @@ const productos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
 const controlador =
 {
     home: (req, res) => {
-        const productos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
-		res.render("home", {productos: productos});
+
+        db.Productos.findOne(req.params.id).then(function(productoEncontrado) {
+        res.render("home.ejs",{productoDetalle: productoEncontrado});
+        })     
+        .catch(function(e){
+        res.send(e)
+        })
+
     },
 
     login: (req, res) => {

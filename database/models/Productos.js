@@ -11,7 +11,8 @@ function productosData(sequelize, Datatypes){
         kmInicio: {type: Datatypes.INTEGER(11)},
         precioDia: {type: Datatypes.INTEGER(11)},
         fechaInicioDisp: {type: Datatypes.DATE},
-        fechaFinDisp: {type: Datatypes.DATE}
+        fechaFinDisp: {type: Datatypes.DATE},
+        foto: {type: Datatypes.STRING(150)},
     };
     
     config = {timestamps:false};
