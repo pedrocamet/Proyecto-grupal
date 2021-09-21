@@ -49,16 +49,17 @@ const controlador =
     },  
 
     detalleProducto: (req,res) =>{
-        let productoEncontrado ;
-        db.Productos.findByPk(req.params.id).then(productoEncontrado => {
-            console.log(productoEncontrado)
-        })
+        let productoEncontrado;      
+        db.Productos.findByPk(req.params.id).then(function(productoEncontrado) {
+        res.render("./products/detalle-producto.ejs",{productoDetalle: productoEncontrado});
+        })     
         .catch(function(e){
-            res.send(e)
+        res.send(e)
         })
-           
-
+        console.log( "producto 2 =" + productoEncontrado)
         /*
+
+        
         let idURL = req.params.id;
 		let productoEncontrado;
 
@@ -69,7 +70,7 @@ const controlador =
 			}
 		}
        */
-		res.render("./products/detalle-producto.ejs",{productoDetalle: productoEncontrado});
+		
         //res.redirect('/');
     },
     editarProducto: (req, res) => {
