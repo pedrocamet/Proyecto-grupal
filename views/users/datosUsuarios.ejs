@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../partials/head") %>
+</head>
+
+<header>
+
+    <%- include("../partials/header") %>
+
+</header>
+
+<body >
+<div class="body-detalle-producto-T">
+
+
+    <div class="detalle-producto-total-T">
+      <!--
+        <article class="detalle-producto-fotoydescripcion-T" >
+            <img src="/img/<%#productoDetalle.imagen%>" alt="product image" class="detalle-producto-foto-T">
+
+            <p class="detalle-producto-descripcion-T">
+                // <%#productoDetalle.descripcion %>
+            </p> 
+        
+        </article>
+
+        -->
+
+        
+ 
+    <div class="detalle-producto-caracteristicas-T">
+        <p class="datos-personales-usuarios-T"> Datos personales </p>
+
+        <p class="datos-usuarios-T">
+           Nombre: <%=productoDetalle.nombre%>
+        </p>
+
+        
+        <p class="datos-usuarios-T">
+           Apellido: <%=productoDetalle.apellido%>
+        </p>
+
+        <p class="datos-usuarios-T">
+           Fecha de nacimiento: <%=productoDetalle.nacimiento%>
+        </p>
+
+        <p class="datos-usuarios-T">
+           CUIT: <%=productoDetalle.cuit%>
+        </p>
+
+        <p class="datos-usuarios-T">
+           Domicilio:  <%=productoDetalle.domicilio%>
+        </p>
+
+        <p class="datos-usuarios-T">
+           Celular: <%=productoDetalle.celular%>
+        </p>
+
+        <p class="datos-usuarios-T">
+            Correo electrónico: <%=productoDetalle.mail%>
+        </p>
+
+        <img src="/img/perfil/<%=productoDetalle.foto%>">
+
+        <div class="espacio-datos-usuarios-T"></div>
+
+         <!--
+        <div class="detalle-producto-boton-T">
+            <button type="button" class="btn btn-outline-primary waves-effect" id="boton-alquilar-ahora-T"> Alquilar ahora</button>
+        </div>
+
+        <div class="detalle-producto-botones-extra-T">
+            <a href="/editar-producto/<%#productoDetalle.id%>" class="action-button edit" >
+                <button type="button" class="btn btn-outline-primary waves-effect" id="boton-alquilar-ahora-T-2"> Editar </button> </a>
+
+            <form action="/<%#productoDetalle.id%>?_method=DELETE" method="POST" style="display: inline-flex" onsubmit="return confirm('¿Estás seguro que querés eliminarlo?');">
+            <button type="submit" class="btn btn-outline-primary waves-effect" id="boton-alquilar-ahora-T-3"> Eliminar </button>
+            </form>
+        </div>
+         -->
+    
+    </div>
+    
+</div>
+
+</div>
+</body>
+</html>
+
+<footer>
+
+    <%- include("../partials/footer") %>
+    
+</footer>
+
+</html>

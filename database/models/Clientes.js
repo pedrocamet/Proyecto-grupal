@@ -1,16 +1,17 @@
 function clienteData(sequelize, Datatypes){
 
-    alias = "Cliente";
+    alias = "Clientes";
 
     cols = {
         id:{type: Datatypes.INTEGER, primaryKey: true, autoIncrement:true},
-        nombre: {type: Datatypes.STRING(50)},
-        apellido: {type: Datatypes.STRING(50)},
-        fechaNacimiento: {type: Datatypes.DATE},
-        cuit: {type: Datatypes.INTEGER},
+        nombre: {type: Datatypes.STRING(100)},
+        apellido: {type: Datatypes.STRING(100)},
+        nacimiento: {type: Datatypes.DATE},
+        cuit: {type: Datatypes.STRING(50)},
         domicilio: {type: Datatypes.STRING(100)},
-        celular: {type: Datatypes.INTEGER},
-        mail: {type: Datatypes.STRING(100)}
+        celular: {type: Datatypes.STRING(50)},
+        mail: {type: Datatypes.STRING(100)},
+        foto: {type: Datatypes.STRING(150)}
     };
     
     config = {timestamps:false};
