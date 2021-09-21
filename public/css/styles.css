@@ -969,6 +969,15 @@ font-size: 5vw ;
   text-align:start;
 }
 
+.datos-personales-todo-T{
+  display:flex;
+}
+
+.datos-personales-foto{
+  width:50%;
+  margin:auto;
+  display:flex;
+}
 
 
 
