@@ -7,6 +7,10 @@ const {validationResult} = require("express-validator");
 const {body} = require ("express-validator");
 
 
+//BASE DE DATOS
+const db = require("../../database/models")
+const Op = db.Sequelize.Op; // o const {Op} = require("sequelize");
+
 const usuariosFilePath = path.join(__dirname, '../data/usuarios.json');
 const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, 'utf-8'));
 let usuarioAModificar ;
@@ -91,11 +95,16 @@ const userControlador =
     
 */
 },
- datosPersonales:(req,res) => {
- 
-        res.render ("./users/datosPersonales.ejs",{usuarioEditar: userToEdit});
-        
-    },
+ datosPersonales:(req,res) => {   
+  db.Clientes.findByPk(req.params.id).then(function(productoEncontrado) {
+  res.render("./users/datosUsuarios.ejs",{productoDetalle: productoEncontrado});
+  })     
+  .catch(function(e){
+  res.send(e)
+  })
+
+  },
+
   updateUser: (req,res) => {
     console.log(usuarioAModificar)
       let idUser = usuarioAModificar.id;

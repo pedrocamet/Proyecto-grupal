@@ -946,6 +946,45 @@ font-size: 5vw ;
 }
 
 
+/******************************** DATOS USUARIOS TOMMY ******************************************/
+
+.datos-usuarios-T{
+  font-size: 25px;
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
+  font-weight: bold;
+  text-align:start;
+}
+
+.espacio-datos-usuarios-T{
+  padding: 20px;
+}
+
+.datos-personales-usuarios-T{
+  font-size: 25px;
+  padding-top: 15px;
+  padding-left: 15px;
+  text-decoration: underline;
+  text-align:start;
+}
+
+.datos-personales-todo-T{
+  display:flex;
+}
+
+.datos-personales-foto{
+  width:50%;
+  margin:auto;
+  display:flex;
+}
+
+
+
+
+
+
+
 /******************************** LISTADO DE PRODUCTOS ******************************************/
 
 
