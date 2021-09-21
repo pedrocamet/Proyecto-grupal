@@ -2,12 +2,12 @@
 module.exports = {
 
   "development": {
-    "username": "fdelo1",
-    "password": "122746Fe",
-    "database": "fdelo1_rentalauto",
-    "host": "mysql-fdelo1.alwaysdata.net",
-    "dialect": "mysql",
-    //"port": 3306
+    "username": process.env.DB_USER,
+    "password": process.env.DB_PASS,
+    "database": process.env.DB_NAME,
+    "host": process.env.DB_HOST,
+    "port": process.env.DB_PORT,
+    "dialect": "mysql"
    },
   "test": {
     "username": "root",
@@ -18,10 +18,10 @@ module.exports = {
     //"port": 3306
   },
   "production": {
-    "username": "fdelo1",
-    "password": "122746Fe",
-    "database": "fdelo1_rentalauto",
-    "host": "mysql-fdelo1.alwaysdata.net",
+    "username": process.env.DB_USER,
+    "password": process.env.DB_PASS,
+    "database": process.env.DB_NAME,
+    "host": process.env.DB_HOST,
     "dialect": "mysql",
     
   }
