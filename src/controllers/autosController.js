@@ -18,7 +18,7 @@ const controlador =
 {
     home: (req, res) => {
 
-        db.Productos.findOne(req.params.id).then(function(productoEncontrado) {
+        db.Productos.findAll(req.params.id).then(function(productoEncontrado) {
         res.render("home.ejs",{productoDetalle: productoEncontrado});
         })     
         .catch(function(e){
