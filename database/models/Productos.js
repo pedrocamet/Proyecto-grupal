@@ -4,10 +4,10 @@ function productosData(sequelize, Datatypes){
 
     cols = {
         id: {type: Datatypes.INTEGER, primaryKey: true, autoIncrement:true},
-        marca: {type: Datatypes.STRING(50)},
-        modelo: {type: Datatypes.STRING(50)},
+        marca: {type: Datatypes.STRING(100)},
+        modelo: {type: Datatypes.STRING(100)},
         año: {type: Datatypes.DATE},
-        categoria: {type: Datatypes.STRING(50)},
+        categoria: {type: Datatypes.STRING(100)},
         kmInicio: {type: Datatypes.INTEGER},
         precioDia: {type: Datatypes.INTEGER},
         fechaInicioDisp: {type: Datatypes.DATE},
