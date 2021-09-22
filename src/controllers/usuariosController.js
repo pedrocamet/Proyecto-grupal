@@ -50,8 +50,6 @@ const userControlador =
        
        
        req.session.usuarioLogueado = usuarioALoguearse;
-       usuarioAModificar = req.session.usuarioLogueado;
-       
        
        let usuarioAModificar = req.session.usuarioLogueado;
        console.log(usuarioAModificar)
