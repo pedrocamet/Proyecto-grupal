@@ -47,5 +47,21 @@
   "email": "Maria@maria.com.ar",
   "password": "$2a$10$7AK9t8rQlb6h8ZDAw874/u81vtvXY97TeFoc5iG2AJRCrQ6qusAIu",
   "fotoPerfil": "1630687054807descarga.jpg"
+ },
+ {
+  "id": 7,
+  "nombre": "tuvieja",
+  "apellido": "entanga",
+  "email": "tuvie@gmail.com",
+  "password": "$2a$10$7rZd/LM/N8bajNrO8fSu6eEmWYRVUT7OUpx6jQ4T/0ehGiaFE5IZq",
+  "fotoPerfil": "1632274962842Olas.jpg"
+ },
+ {
+  "id": 8,
+  "nombre": "pedro",
+  "apellido": "pedro",
+  "email": "pedro@gmail.com",
+  "password": "$2a$10$XDh9yaRNW5Wb33lxM/d/Q.v77T/.Vas3G25BSSOiS9GARRez2gxeK",
+  "fotoPerfil": "1632275088419Olas.jpg"
  }
 ]
