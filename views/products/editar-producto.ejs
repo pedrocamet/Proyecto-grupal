@@ -46,7 +46,7 @@
         </div>
         <div class="anodelvehiculof">
           <label> Año del vehículo</label>
-          <input type="number" name="ano" value= <%= productoEditar.ano%>>
+          <input type="date" name="ano" value= <%= productoEditar.año%>>
         </div>
         <div class="imagenvehiculof">
           <img src="/img/<%=productoEditar.imagen%>"class="imgEditarProdf" alt="">
@@ -59,14 +59,14 @@
           <label > Fecha de disponibilidad</label>
           <div class="calendarios">
             <label> Desde</label>
-            <input type="date" name="fechaDispDesde" value=<%= productoEditar.modelo%>>
+            <input type="date" name="fechaDispDesde" value=<%= productoEditar.fechaInicioDisp%>>
             <label> Hasta</label> 
-            <input type="date" name="fechaDispHasta" value=<%= productoEditar.modelo%>>
+            <input type="date" name="fechaDispHasta" value=<%= productoEditar.fechaFinDisp%>>
           </div>
         </div>
         <div class="preciopordiainiciof">
           <label> Precio por día</label>
-          <input type="number" name="price" value= <%= productoEditar.precio%> >
+          <input type="number" name="precioDia" value= <%= productoEditar.precioDia%> >
         </div>
         
         <div >

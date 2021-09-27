@@ -7,11 +7,14 @@ const User = require("../models/User");
 const bcryptjs = require("bcryptjs");
 
 //BASE DE DATOS
-const db = require("../../database/models")
+const db = require("../../database/models");
+const { join } = require('path');
 const Op = db.Sequelize.Op; // o const {Op} = require("sequelize");
 
 const productosFilePath = path.join(__dirname, '../data/productos.json');
 const productos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
+
+const fotosAutos = path.join(__dirname, '../../public/img');
 
 
 const controlador =
@@ -62,7 +65,7 @@ const controlador =
         .catch(function(e){
         res.send(e)
         })
-        console.log( "producto 2 =" + productoEncontrado)
+        
         /*
 
         
@@ -80,19 +83,48 @@ const controlador =
         //res.redirect('/');
     },
     editarProducto: (req, res) => {
+
         let idProducto = req.params.idProd;
         let prodToEdit;
-        
-        for (let p of productos){
-            if (p.id == idProducto){
-                prodToEdit = p; 
-                break;
-            }
-        }
-        res.render ("./products/editar-producto.ejs", {productoEditar: prodToEdit});
-    },    
+             
+        db.Productos.findByPk(req.params.idProd).then(function(prodToEdit) {
+            res.render ("./products/editar-producto.ejs", {productoEditar: prodToEdit});
+        })       
+        .catch(function(e){
+        res.send(e)
+        })
+        },    
     updateProducto: (req,res) => {
-        let idProducto = req.params.idProd;
+
+        //let idProducto = req.params.idProd;
+        let imagenABorrar   
+        db.Productos.update({ 
+            marca: req.body.marca,
+            modelo: req.body.modelo,
+            categoria: req.body.claseDeVehiculo,
+            año:req.body.ano,
+            precioDia:req.body.precioPorDia,
+            KmInicio:100,
+            fechaInicioDisp: req.body.fechaInicioDisp,
+            fechaFinDisp: req.body.fechaFinDisp,
+            
+
+            foto: req.file.filename
+
+        }, {
+            where:{
+
+             id: req.params.idProd
+            }})     
+        .catch(function(e){
+        res.send(e)
+        })
+
+
+
+
+        //DESDE ACA ES EL VIEJO  
+        /*
         let prodToEdit;
         console.log(idProducto)
         let imagenABorrar;
@@ -114,10 +146,10 @@ const controlador =
                     
                 }
                 break;
-            }}    
-
-        fs.writeFileSync(productosFilePath, JSON.stringify(productos, null, " ")),
-        console.log(imagenABorrar)
+            }}    */
+            //    HASTA ACA 
+        //fs.writeFileSync(productosFilePath, JSON.stringify(productos, null, " ")),
+        
         
                    
         res.redirect('/');  
@@ -141,7 +173,7 @@ const controlador =
             KmInicio:100,
             fechaInicioDisp: req.body.fechaInicioDisp,
             fechaFinDisp: req.body.fechaFinDisp,
-            //imagen: nombreImagen
+            foto: req.file.filename
         }) 
         .then(function(data){
             res.redirect('/')
@@ -149,7 +181,7 @@ const controlador =
         .catch(function(e){
             res.send(e)
         })
-        //res.redirect('/')
+        
 
 
 
