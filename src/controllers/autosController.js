@@ -83,46 +83,41 @@ const controlador =
         //res.redirect('/');
     },
     editarProducto: (req, res) => {
-
-        let idProducto = req.params.idProd;
-        let prodToEdit;
-             
+                            
         db.Productos.findByPk(req.params.idProd).then(function(prodToEdit) {
             res.render ("./products/editar-producto.ejs", {productoEditar: prodToEdit});
         })       
         .catch(function(e){
         res.send(e)
         })
+    
         },    
     updateProducto: (req,res) => {
-
-        //let idProducto = req.params.idProd;
-        let imagenABorrar   
+        let  imagenABorrar
+        db.Productos.findByPk(req.params.idProd).then(function(prodToEdit) {
+            imagenABorrar = prodToEdit.foto;
+            fs.unlinkSync(path.join(__dirname, '../../public/img/', imagenABorrar));
+            })       
+            .catch(function(e){
+            res.send(e)
+            }),
         db.Productos.update({ 
             marca: req.body.marca,
             modelo: req.body.modelo,
             categoria: req.body.claseDeVehiculo,
             año:req.body.ano,
-            precioDia:req.body.precioPorDia,
+            precioDia:req.body.precioDia,
             KmInicio:100,
             fechaInicioDisp: req.body.fechaInicioDisp,
             fechaFinDisp: req.body.fechaFinDisp,
-            
-
             foto: req.file.filename
-
         }, {
             where:{
-
              id: req.params.idProd
             }})     
         .catch(function(e){
         res.send(e)
         })
-
-
-
-
         //DESDE ACA ES EL VIEJO  
         /*
         let prodToEdit;
@@ -130,8 +125,7 @@ const controlador =
         let imagenABorrar;
 		for (let s of productos){
 			if(idProducto==s.id){   
-                
-				s.modelo= req.body.modelo,
+                s.modelo= req.body.modelo,
 				s.categoria= req.body.category,
                 s.ano= req.body.ano,
 				s.precio= req.body.precio,
