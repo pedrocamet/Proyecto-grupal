@@ -42,15 +42,24 @@
             <p class="texto-2"> Nuevos modelos este mes </p>
             <section class="flex-container">
                 <% for(let producto of productoDetalle) { %>
-                <% if(producto.id <= 7) { %>
+                <% if(producto.id <= 10) { %>
+                    <% if(producto.id == 1 || producto.id == 4 || producto.id == 6 || producto.id == 8) { %>
+                        <% } else { %>
+                <div class="espacio-foto-T">   </div>
+                    <% } %>
                 <div class="caja1-home-T">
                     <a href="/detalle-producto/<%=producto.id %>">
                         <img src="/img/<%=producto.foto %>" class="foto-producto">
                         <article class="recuadro-T">
-                            <div class="precio-descuento"> 
-                                <p class="nombre-marca-T"><%=producto.marca %></p>
-                                <p class="nombre-modelo-T"><%=producto.modelo %></p>
-                                <h2>$<%=producto.precioDia %></h2>
+                            <div class="precio-descuento-T"> 
+                                <div class="marca-modelo-T">
+                                    <p class="nombre-marca-T"><%=producto.marca %></p>
+                                    <p class="nombre-modelo-T"><%=producto.modelo %></p>
+                                </div>
+                                <div class="precio-dia-T">
+                                    <h2>$<%=producto.precioDia %></h2>
+                                    <p class="por-dia-T"> Por día </p>
+                                </div>
                             </div>
                         </article>
                         <div class="espacio-recuadros"></div>
