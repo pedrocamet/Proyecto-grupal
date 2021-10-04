@@ -20,10 +20,10 @@ const uploadFile = multer({storage: configuracionImagen});
 /*********** REGISTRO **********************/
 
 const validaciones =[
-  body("nombre").notEmpty().withMessage("Completar el campo").bail(),
-  body("apellido").notEmpty().withMessage("Completar el campo").bail(),
+  body("nombre").notEmpty().isLength({min:3}).withMessage("Completar el campo").bail(),
+  body("apellido").notEmpty().isLength({min:3}).withMessage("Completar el campo").bail(),
   body("email").notEmpty().isEmail().withMessage("Complete el campo con un email válido").bail(),
-  body("password").notEmpty().withMessage("Completar el campo"),
+  body("password").notEmpty().isLength({min:7}).withMessage("Completar el campo"),
   body("fotoPerfil").custom((value, {req}) => {
     let file = req.file;
     if(!file){
@@ -32,9 +32,9 @@ const validaciones =[
     return true;
   })
 ];
-router.get("/registro", usuariosController.creacionUsuario);
 
 router.post("/registro", uploadFile.single("fotoPerfil"), validaciones, usuariosController.procesarRegistro);
+router.get("/registro", usuariosController.creacionUsuario);
 
 // cruce de datos para login
 
