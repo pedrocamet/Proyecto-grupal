@@ -63,5 +63,29 @@
   "email": "pedro@gmail.com",
   "password": "$2a$10$XDh9yaRNW5Wb33lxM/d/Q.v77T/.Vas3G25BSSOiS9GARRez2gxeK",
   "fotoPerfil": "1632275088419Olas.jpg"
+ },
+ {
+  "id": 9,
+  "nombre": "ds",
+  "apellido": "dds",
+  "email": "dsf@fsknads.com",
+  "password": "$2a$10$SL1rsd2dmaC5GITn.cY7EeW4nLCEAlS5clAkvJAMNuYQ1H64wOBem",
+  "fotoPerfil": "16332995356609-Ford-Mondeo.jpg"
+ },
+ {
+  "id": 10,
+  "nombre": "sfd",
+  "apellido": "dsfd",
+  "email": "dsfsd@h.com",
+  "password": "$2a$10$CA.Heg0LC53kXIly4S/Jru.HxavUP27o4.22w3Q3ErlBYYRZAF62y",
+  "fotoPerfil": "16333048456848-Volkswagen-Amarok.jpg"
+ },
+ {
+  "id": 11,
+  "nombre": "dfd",
+  "apellido": "dsadasd",
+  "email": "dfs@hos.com",
+  "password": "$2a$10$u6ZjwvFdYTOvUdNnkyhDOOlS8uuwfDdE9eYQCkLrdi1NA86RMG.5m",
+  "fotoPerfil": "163330603976210-Peugeot-Partner.jpg"
  }
 ]

@@ -528,7 +528,7 @@ h4{
 .foto-fondo-registro-P {
   height: 133vh;
   width: 100%;
-  background-image: url(/img/paisaje-registro.jpeg);
+  background-image: url(/img/FPSPLRS3U7MKJL6G6UI24DPANU.jpg);
   background-size: contain;
 }
 
@@ -1182,3 +1182,9 @@ font-size: 5vw ;
 
 /********************************  FIN VISTA CUENTA   ******************************************/
 /********************************  FIN VISTA CUENTA   ******************************************/
+
+
+.errores{
+  font-size: 20px;
+  color: red;
+}

@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Registro</title>
-        <link href="/css/styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="/css/styles.css">
         <link href="https://fontawesome.com/" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,17 +25,19 @@
                 <form action="/usuario/registro" method="POST" enctype="multipart/form-data">
                     <div class="texto-alineado-P">
                         <div class="form-group-P">
+                            <div class="errores">
+                            </div>
                             <div class="input-group-P" id="username">
-                                <input autofocus class="form-control-P" id="username" name="nombre" placeholder="Nombre" required type="text" value>
+                                <input class="form-control-P" id="nombre" name="nombre" placeholder="Nombre" required type="text">
                             </div>
                         </div>
                         <div class="form-group-P">
                             <div class="input-group-P" id="username">
-                                <input autofocus class="form-control-P" id="username" name="apellido" placeholder="Apellido" required type="text" value>
+                                <input autofocus class="form-control-P" id="apellido" name="apellido" placeholder="Apellido" required type="text" value>
                             </div>
                         </div>
                         <div class="form-group-P">
-                            <div class="input-group-P" id="email">
+                            <div class="input-group-P" id="username">
                                 <input autofocus class="form-control-P" id="email" name="email" placeholder="Correo electronico" required type="text" value>
                             </div>
                         </div>
@@ -49,7 +51,7 @@
                         </label>
                         <div class="footer-P">
                             <div>
-                                <button type="submit"> Crear cuenta </button>
+                                <button type="submit" id="botonRegistro"> Crear cuenta </button>
                             </div>
                         </div>
                         <p> O </p>
@@ -67,5 +69,7 @@
         <footer>  
             <%- include("../partials/footer") %>
         </footer> 
+
+        <script src="/js/registro.js"></script>
     </body> 
 </html>
