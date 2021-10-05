@@ -544,16 +544,16 @@ h4{
 }
 
 .foto-fondo-P {
-  height: 120vh;
+  height: 110vh;
   width: 100%;
-  background-image: url(/img/paisaje.jpeg);
+  background-image: url(/img/Fondo-Login.jpeg);
   background-position: top;
 }
 
 .foto-fondo-registro-P {
-  height: 133vh;
+  height: 105vh;
   width: 100%;
-  background-image: url(/img/FPSPLRS3U7MKJL6G6UI24DPANU.jpg);
+  background-image: url(/img/Fondo-Registro.jpeg);
   background-size: contain;
 }
 
@@ -1212,4 +1212,14 @@ font-size: 5vw ;
 .errores{
   font-size: 20px;
   color: red;
+}
+
+/********************************  STYLES CAJA DE LOGIN   ******************************************/
+
+.contenedor-Login{
+  --primary: 146, 37,218;
+  --color: 44, 62, 88;
+  display: flex;
+  align-items: center;
+  
 }
