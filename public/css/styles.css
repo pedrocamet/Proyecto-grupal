@@ -29,7 +29,7 @@
 
 .foto-logo {
   width: 10vw;
-  height: 10vh;
+  height: 14vh;
   padding-top: 15px;
 }
 
@@ -221,7 +221,7 @@
 
 .foto-logo2 {
   width: 15vw;
-  height: 15vh;
+  height: 20vh;
   padding-top:20px;
 }
 
@@ -1221,5 +1221,5 @@ font-size: 5vw ;
   --color: 44, 62, 88;
   display: flex;
   align-items: center;
-  
+
 }
