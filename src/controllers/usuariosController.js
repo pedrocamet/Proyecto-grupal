@@ -18,7 +18,7 @@ let usuarioAModificar ;
 const userControlador = 
 {
   creacionUsuario: (req, res) => {
-    res.render ("./users/registro.ejs");
+   res.render ("users/registro.ejs");
   },
 
   // login y cruce de datos
@@ -28,9 +28,30 @@ const userControlador =
   },
   
   procesarLogin: (req, res) => {
-
- 
-     let errors = validationResult(req);
+    let usuarioLoguedo
+    db.Clientes.findOne({
+      where: {
+        mail: req.body.mail
+      }
+    }).then((resultado) => {
+      if (resultado !=null && (bcryptjs.compareSync(req.body.password, resultado.dataValues.contraseña))){
+         usuarioLogueado = resultado.dataValues;
+         console.log(usuarioLogueado)
+         res.render("users/datosPersonales",{usuarioAEditar: usuarioLogueado})
+    }
+    }).catch(function(e){
+      res.send(e)
+  })
+  },
+   // if (resultado != null){
+      // && (bcryptjs.compareSync(req.body.password, resultado.dataValues.contraseña))
+       
+       //res.render("users/datosPersonales",{usuarioAEditar: usuarioLogueado}); 
+      // res.render("/")
+      
+/*
+ //
+     //let errors = validationResult(req);
     
      let usuarioALoguearse;
  
@@ -55,11 +76,30 @@ const userControlador =
        console.log(usuarioAModificar)
        res.render("users/datosPersonales",{usuarioAEditar: usuarioAModificar});
      },
-
+*/
   // fin login y cruce de datos
 
   procesarRegistro: (req,res) => {
+    
+      //let nombreImagen =req.file.filename;
+          db.Clientes.create({            
+          nombre: req.body.nombre,
+          apellido: req.body.apellido,
+          cuit: req.body.cuit,
+          celular: req.body.celular,
+          mail: req.body.email,
+          foto: req.file.filename,
+          contraseña: bcryptjs.hashSync(req.body.password, 10)          
+      }) 
+      .then(function(data){
+          res.redirect('/')
+      })
+      .catch(function(e){
+          res.send(e)
+      })
+      
 
+    /*
     const resultValidation = validationResult(req);
     const lastUser = usuarios.length;
   
@@ -73,18 +113,13 @@ const userControlador =
         password: bcryptjs.hashSync(req.body.password, 10),
         fotoPerfil: req.file.filename
       }
-
-      
+     
       usuarios.push(userToCreate);
       fs.writeFileSync(usuariosFilePath, JSON.stringify(usuarios, null, " "))
       return res.redirect ("/");
-
-
-
     }
 
-    
-   /* if(resultValidation.errors.length > 0){
+       /* if(resultValidation.errors.length > 0){
         return res.render("./users/registro", {
         errors: resultValidation.mapped(),
         oldData: req.body
