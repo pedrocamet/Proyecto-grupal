@@ -34,11 +34,15 @@ const userControlador =
         mail: req.body.mail
       }
     }).then((resultado) => {
+       
       if (resultado !=null && (bcryptjs.compareSync(req.body.password, resultado.dataValues.contraseña))){
          usuarioLogueado = resultado.dataValues;
          console.log(usuarioLogueado)
          res.render("users/datosPersonales",{usuarioAEditar: usuarioLogueado})
-    }
+        } else {
+          
+          res.render("login", { mensaje: ("las credenciales son invalidas")})
+        }
     }).catch(function(e){
       res.send(e)
   })
@@ -78,6 +82,50 @@ const userControlador =
      },
 */
   // fin login y cruce de datos
+  updateUser: (req,res) => {
+      
+    
+
+
+
+
+
+
+
+
+
+
+    
+    console.log(usuarioAModificar)
+      let idUser = usuarioAModificar.id;
+      let userToEdit;
+      console.log(idUser)
+      let imagenPerfilABorrar;
+  for (let u of usuarios){
+    if(idUser==u.id){                 
+      u.nombre= req.body.nombre,
+      u.apellido= req.body.apellido,
+      u.email= req.body.email
+      let validacion;
+      console.log(u.password)
+      if (validacion = bcryptjs.compareSync(req.body.passwordAnterior, u.password)){
+      u.password= bcryptjs.hashSync(req.body.passwordNueva,10)  
+        if(req.file != undefined){
+                  imagenPerfilABorrar= u.fotoPerfil;
+                  u.fotoPerfil=req.file.filename
+                  fs.unlinkSync(path.join(__dirname, '../../public/img/', imagePerfilABorrar));
+              } else {
+                  u.fotoPerfil=u.fotoPerfil                 
+              }}
+              break;
+          }}    
+
+      fs.writeFileSync(usuariosFilePath, JSON.stringify(usuarios, null, " ")),
+      console.log(imagenPerfilABorrar)
+      
+                 
+      res.redirect('/'); 
+        },
 
   procesarRegistro: (req,res) => {
     
@@ -103,7 +151,7 @@ const userControlador =
     const resultValidation = validationResult(req);
     const lastUser = usuarios.length;
   
-    if(resultValidation.isEmpty()){
+    if(resultValidation.isEmpty(){
 
       let userToCreate = {
         id: lastUser,
@@ -136,39 +184,7 @@ const userControlador =
   res.send(e)
   })
 
-  },
-
-  updateUser: (req,res) => {
-    console.log(usuarioAModificar)
-      let idUser = usuarioAModificar.id;
-      let userToEdit;
-      console.log(idUser)
-      let imagenPerfilABorrar;
-  for (let u of usuarios){
-    if(idUser==u.id){                 
-      u.nombre= req.body.nombre,
-      u.apellido= req.body.apellido,
-      u.email= req.body.email
-      let validacion;
-      console.log(u.password)
-      if (validacion = bcryptjs.compareSync(req.body.passwordAnterior, u.password)){
-      u.password= bcryptjs.hashSync(req.body.passwordNueva,10)  
-        if(req.file != undefined){
-                  imagenPerfilABorrar= u.fotoPerfil;
-                  u.fotoPerfil=req.file.filename
-                  fs.unlinkSync(path.join(__dirname, '../../public/img/', imagePerfilABorrar));
-              } else {
-                  u.fotoPerfil=u.fotoPerfil                 
-              }}
-              break;
-          }}    
-
-      fs.writeFileSync(usuariosFilePath, JSON.stringify(usuarios, null, " ")),
-      console.log(imagenPerfilABorrar)
-      
-                 
-      res.redirect('/');  
-      
+     
   },  
 
 /*

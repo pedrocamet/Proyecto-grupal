@@ -3,10 +3,20 @@
     <head>
         <%- include("./partials/head") %>
     </head>
+    
+        
+      
     <body>
+            <div>
+                <% if (locals.mensaje){ %>
+                <p><%= locals.mensaje %> </p>
+            <% } %>
+            </div>
         <header>
         <%- include("./partials/header") %>
         </header>   
+      
+        
 
         <div class="foto-fondo-P">
             <nav class="navbar-P">
