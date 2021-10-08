@@ -54,9 +54,17 @@ const userControlador =
        let usuarioAModificar = req.session.usuarioLogueado;
        console.log(usuarioAModificar)
        res.render("users/datosPersonales",{usuarioAEditar: usuarioAModificar});
+      
+       /* Para que cuenta no se vea en el header */
+       /*
+       let conectado;
+       if(req.session.usuarioLogueado == usuarioALoguearse){
+        conectado = true;
+       }
+       */
      },
 
-  // fin login y cruce de datos
+     // fin login y cruce de datos
 
   procesarRegistro: (req,res) => {
 
