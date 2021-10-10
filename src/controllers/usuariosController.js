@@ -164,7 +164,7 @@ const userControlador =
      
       usuarios.push(userToCreate);
       fs.writeFileSync(usuariosFilePath, JSON.stringify(usuarios, null, " "))
-      return res.redirect ("/");
+      return res.redirect      ("/");
     }
 
        /* if(resultValidation.errors.length > 0){
