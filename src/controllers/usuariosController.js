@@ -45,57 +45,19 @@ const userControlador =
         }
     }).catch(function(e){
       res.send(e)
-  })
-  },
-   // if (resultado != null){
-      // && (bcryptjs.compareSync(req.body.password, resultado.dataValues.contraseña))
-       
-       //res.render("users/datosPersonales",{usuarioAEditar: usuarioLogueado}); 
-      // res.render("/")
-      
-/*
- //
-     //let errors = validationResult(req);
-    
-     let usuarioALoguearse;
- 
-     if (errors.isEmpty()){
+    })
+      // fin login y cruce de datos
 
-       for (let i = 0; i < usuarios.length; i++) {
-         if ((usuarios[i].email == req.body.email) && (bcryptjs.compareSync(req.body.password, usuarios[i].password))) {
-            usuarioALoguearse = usuarios[i];
-           break;
-         }}
-       } []
-       if (usuarioALoguearse == undefined) {
-         return res.render("login", {errors: [
-           {msg: "Credenciales invalidas"}
-         ]});
+      /* Para que cuenta no se vea en el header */
+       /*
+       let conectado;
+       if(req.session.usuarioLogueado == usuarioALoguearse){
+        conectado = true;
        }
-       
-       
-       req.session.usuarioLogueado = usuarioALoguearse;
-       
-       let usuarioAModificar = req.session.usuarioLogueado;
-       console.log(usuarioAModificar)
-       res.render("users/datosPersonales",{usuarioAEditar: usuarioAModificar});
-     },
-*/
-  // fin login y cruce de datos
+       */
+  },  
   updateUser: (req,res) => {
-      
-    
-
-
-
-
-
-
-
-
-
-
-    
+          
     console.log(usuarioAModificar)
       let idUser = usuarioAModificar.id;
       let userToEdit;
@@ -202,3 +164,8 @@ const userControlador =
 }
 
 module.exports = userControlador;
+     
+
+
+     
+        

@@ -761,6 +761,7 @@ display: flex;
 }
 .botonEleccionf{
   padding: 20px;
+  margin-left: 20px;
   background-color: #047AC2;
   border-radius: 5px;
   font-size: 0.5em;

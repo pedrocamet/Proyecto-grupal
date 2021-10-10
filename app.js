@@ -40,7 +40,6 @@ app.use(express.static(publicPath2));
 */
 
 
-
 //*************** LEVANTAR SERVIDOR ******************/
 
 app.listen(process.env.PORT || 3005, () => {
