@@ -20,8 +20,10 @@ if (prodComprado.length == 0) {
   prodComprado.push(prodCompMarca);
   prodComprado.push(prodCompModelo);
   prodComprado.push(prodCompPrecio);
-  listaNombreProds.push(prodComprado)
-
+  listaNombreProds.push(prodComprado);
+  
+  //localStorage.setItem("carrito", listaNombreProds)
+  //console.log(localStorage.getItem("carrito"))
 }else{
  
   alert("Usted no puede alquilar más de un Auto por operación")

@@ -18,7 +18,7 @@ let usuarioAModificar ;
 const userControlador = 
 {
   creacionUsuario: (req, res) => {
-    res.render ("./users/registro.ejs");
+   res.render ("users/registro.ejs");
   },
 
   // login y cruce de datos
@@ -28,90 +28,36 @@ const userControlador =
   },
   
   procesarLogin: (req, res) => {
+    let usuarioLoguedo
+    db.Clientes.findOne({
+      where: {
+        mail: req.body.mail
+      }
+    }).then((resultado) => {
+       
+      if (resultado !=null && (bcryptjs.compareSync(req.body.password, resultado.dataValues.contraseña))){
+         usuarioLogueado = resultado.dataValues;
+         console.log(usuarioLogueado)
+         res.render("users/datosPersonales",{usuarioAEditar: usuarioLogueado})
+        } else {
+          
+          res.render("login", { mensaje: ("las credenciales son invalidas")})
+        }
+    }).catch(function(e){
+      res.send(e)
+    })
+      // fin login y cruce de datos
 
- 
-     let errors = validationResult(req);
-    
-     let usuarioALoguearse;
- 
-     if (errors.isEmpty()){
-
-       for (let i = 0; i < usuarios.length; i++) {
-         if ((usuarios[i].email == req.body.email) && (bcryptjs.compareSync(req.body.password, usuarios[i].password))) {
-            usuarioALoguearse = usuarios[i];
-           break;
-         }}
-       } []
-       if (usuarioALoguearse == undefined) {
-         return res.render("login", {errors: [
-           {msg: "Credenciales invalidas"}
-         ]});
-       }
-       
-       
-       req.session.usuarioLogueado = usuarioALoguearse;
-       
-       let usuarioAModificar = req.session.usuarioLogueado;
-       console.log(usuarioAModificar)
-       res.render("users/datosPersonales",{usuarioAEditar: usuarioAModificar});
-      
-       /* Para que cuenta no se vea en el header */
+      /* Para que cuenta no se vea en el header */
        /*
        let conectado;
        if(req.session.usuarioLogueado == usuarioALoguearse){
         conectado = true;
        }
        */
-     },
-
-     // fin login y cruce de datos
-
-  procesarRegistro: (req,res) => {
-
-    const resultValidation = validationResult(req);
-    const lastUser = usuarios.length;
-  
-    if(resultValidation.isEmpty()){
-
-      let userToCreate = {
-        id: lastUser,
-        nombre: req.body.nombre,
-        apellido: req.body.apellido,
-        email: req.body.email,
-        password: bcryptjs.hashSync(req.body.password, 10),
-        fotoPerfil: req.file.filename
-      }
-
-      
-      usuarios.push(userToCreate);
-      fs.writeFileSync(usuariosFilePath, JSON.stringify(usuarios, null, " "))
-      return res.redirect ("/");
-
-
-
-    }
-
-    
-   /* if(resultValidation.errors.length > 0){
-        return res.render("./users/registro", {
-        errors: resultValidation.mapped(),
-        oldData: req.body
-    });  
-}
-    
-*/
-},
- datosPersonales:(req,res) => {   
-  db.Clientes.findByPk(req.params.id).then(function(productoEncontrado) {
-  res.render("./users/datosUsuarios.ejs",{productoDetalle: productoEncontrado});
-  })     
-  .catch(function(e){
-  res.send(e)
-  })
-
-  },
-
+  },  
   updateUser: (req,res) => {
+          
     console.log(usuarioAModificar)
       let idUser = usuarioAModificar.id;
       let userToEdit;
@@ -140,8 +86,67 @@ const userControlador =
       console.log(imagenPerfilABorrar)
       
                  
-      res.redirect('/');  
+      res.redirect('/'); 
+        },
+
+  procesarRegistro: (req,res) => {
+    
+      //let nombreImagen =req.file.filename;
+          db.Clientes.create({            
+          nombre: req.body.nombre,
+          apellido: req.body.apellido,
+          cuit: req.body.cuit,
+          celular: req.body.celular,
+          mail: req.body.email,
+          foto: req.file.filename,
+          contraseña: bcryptjs.hashSync(req.body.password, 10)          
+      }) 
+      .then(function(data){
+          res.redirect('/')
+      })
+      .catch(function(e){
+          res.send(e)
+      })
       
+
+    /*
+    const resultValidation = validationResult(req);
+    const lastUser = usuarios.length;
+  
+    if(resultValidation.isEmpty(){
+
+      let userToCreate = {
+        id: lastUser,
+        nombre: req.body.nombre,
+        apellido: req.body.apellido,
+        email: req.body.email,
+        password: bcryptjs.hashSync(req.body.password, 10),
+        fotoPerfil: req.file.filename
+      }
+     
+      usuarios.push(userToCreate);
+      fs.writeFileSync(usuariosFilePath, JSON.stringify(usuarios, null, " "))
+      return res.redirect ("/");
+    }
+
+       /* if(resultValidation.errors.length > 0){
+        return res.render("./users/registro", {
+        errors: resultValidation.mapped(),
+        oldData: req.body
+    });  
+}
+    
+*/
+},
+ datosPersonales:(req,res) => {   
+  db.Clientes.findByPk(req.params.id).then(function(productoEncontrado) {
+  res.render("./users/datosUsuarios.ejs",{productoDetalle: productoEncontrado});
+  })     
+  .catch(function(e){
+  res.send(e)
+  })
+
+     
   },  
 
 /*
@@ -159,3 +164,8 @@ const userControlador =
 }
 
 module.exports = userControlador;
+     
+
+
+     
+        
