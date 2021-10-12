@@ -50,7 +50,7 @@ check("password").isLength({min: 10}).withMessage("La contraseña debe contener 
 
 /***********EDITAR DATOS PERSONALES    ************/
 
-router.get("/datos/:id", usuariosController.datosPersonales);
-router.post("/datosPersonales", usuariosController.updateUser);
+//router.get("/datos/:id", usuariosController.datosPersonales);
+router.post("/datosPersonales",uploadFile.single("imageUser"), usuariosController.updateUser);
 
 module.exports = router;
