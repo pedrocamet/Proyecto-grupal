@@ -178,10 +178,8 @@ const userControlador =
     });  
 }
     
-*/
-
-     
-  },  
+*/},
+   
 
 /*
   registrarse: function(req, res, next){

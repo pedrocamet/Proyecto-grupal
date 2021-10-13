@@ -49,9 +49,13 @@ const controlador =
     },
 
     carrito: (req, res) => {
-        res.render ("carrito");
+        let productoComprado = localStorage.getItem("carrito")
+        res.render("./users/carrito.ejs",{productoComprado: productoComprado});
+        //res.render ("carrito", );
 
     },
+       
+    
 
     registro: (req, res) => {
         res.render ("./users/registro");    
