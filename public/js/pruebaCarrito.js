@@ -21,9 +21,11 @@ if (prodComprado.length == 0) {
   prodComprado.push(prodCompMarca);
   prodComprado.push(prodCompModelo);
   prodComprado.push(prodCompPrecio);
-  listaNombreProds.push(prodComprado);
+  
   console.log(prodComprado)
-  localStorage.setItem("carrito", prodComprado)
+  localStorage.setItem("carrito", JSON.stringify(prodComprado));
+
+  //localStorage.setItem("carrito", prodComprado)
   //console.log(localStorage.getItem("carrito"))
 }else{
  
