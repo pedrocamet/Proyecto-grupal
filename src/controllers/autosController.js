@@ -50,9 +50,12 @@ const controlador =
     },
 
     carrito: (req, res) => {
+      
         res.render ("carrito");
 
     },
+       
+    
 
     registro: (req, res) => {
         res.render ("./users/registro");    

@@ -55,6 +55,8 @@ router.post("/login", [
  check("email").isEmail(),
 ], autosController.procesLogin);
 
+
+
 // +++++++++++++++++++++++++ RUTAS SOBRE LA BASE DE DATOS +++++++++++++++++++++++++ //
 router.get("/listado", autosController.list);
 

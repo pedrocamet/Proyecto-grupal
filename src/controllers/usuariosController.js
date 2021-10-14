@@ -8,13 +8,15 @@ const {body} = require ("express-validator");
 
 
 //BASE DE DATOS
-const db = require("../../database/models")
+const db = require("../../database/models");
+const { producto } = require('./autosController');
 const Op = db.Sequelize.Op; // o const {Op} = require("sequelize");
 
 const usuariosFilePath = path.join(__dirname, '../data/usuarios.json');
 const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, 'utf-8'));
 let usuarioAModificar ;
-
+let usuarioLogueado
+let usuarioAEditar
 const userControlador = 
 {
   creacionUsuario: (req, res) => {
@@ -28,7 +30,7 @@ const userControlador =
   },
   
   procesarLogin: (req, res) => {
-    let usuarioLoguedo
+   
     db.Clientes.findOne({
       where: {
         mail: req.body.mail
@@ -38,7 +40,7 @@ const userControlador =
        
       if (resultado !=null && (bcryptjs.compareSync(req.body.password, resultado.dataValues.contraseña))){
          usuarioLogueado = resultado.dataValues;
-         console.log(usuarioLogueado)
+         
          res.render("users/datosPersonales",{usuarioAEditar: usuarioLogueado})
         } else {
           
@@ -47,16 +49,51 @@ const userControlador =
     }).catch(function(e){
       res.send(e)
     })
-      // fin login y cruce de datos
-
-      /* Para que cuenta no se vea en el header */
-       
-     
+      // fin login y cruce de datos     
        
   },  
+  //ESTO ESTA SIN  USO REAL 
+  datosPersonales:(req,res) => {   
+    db.Clientes.findByPk(req.params.id).then(function(productoEncontrado) {
+    res.render("./users/datosUsuarios.ejs",{productoDetalle: productoEncontrado});
+    console.log("EL USUARIO ENCONTRADO ES " + productoEncontrado)
+    })     
+    .catch(function(e){
+    res.send(e)
+    })
+  },
+
   updateUser: (req,res) => {
-          
-    console.log(usuarioAModificar)
+    let userUpdateId = usuarioLogueado.id
+    console.log(userUpdateId)
+   
+    let imagenABorrar = usuarioLogueado.foto
+    console.log("foto a borrar "  + imagenABorrar)
+  
+    fs.unlinkSync(path.join(__dirname, '../../public/img/perfil', imagenABorrar));                    
+        
+    db.Clientes.update({ 
+        nombre: req.body.nombre,
+        apellido: req.body.apellido,
+        email:req.body.email,
+       // passwordAnterior:req.body.passwordAnterior,
+        contraseña: bcryptjs.hashSync(req.body.passwordNueva, 10),   
+        foto: req.file.filename
+    }, {
+        where:{
+         id: userUpdateId
+        }})     
+    .catch(function(e){
+    res.send(e)
+    })  
+    res.redirect('/');  
+      
+  },
+
+
+
+
+ /*   console.log(usuarioAModificar)
       let idUser = usuarioAModificar.id;
       let userToEdit;
       console.log(idUser)
@@ -86,7 +123,7 @@ const userControlador =
                  
       res.redirect('/'); 
         },
-
+*/
   procesarRegistro: (req,res) => {
     
       //let nombreImagen =req.file.filename;
@@ -124,7 +161,7 @@ const userControlador =
      
       usuarios.push(userToCreate);
       fs.writeFileSync(usuariosFilePath, JSON.stringify(usuarios, null, " "))
-      return res.redirect ("/");
+      return res.redirect      ("/");
     }
 
        /* if(resultValidation.errors.length > 0){
@@ -134,18 +171,8 @@ const userControlador =
     });  
 }
     
-*/
-},
- datosPersonales:(req,res) => {   
-  db.Clientes.findByPk(req.params.id).then(function(productoEncontrado) {
-  res.render("./users/datosUsuarios.ejs",{productoDetalle: productoEncontrado});
-  })     
-  .catch(function(e){
-  res.send(e)
-  })
-
-     
-  },  
+*/},
+   
 
 /*
   registrarse: function(req, res, next){
