@@ -34,6 +34,7 @@ const userControlador =
         mail: req.body.mail
       }
     }).then((resultado) => {
+
        
       if (resultado !=null && (bcryptjs.compareSync(req.body.password, resultado.dataValues.contraseña))){
          usuarioLogueado = resultado.dataValues;
@@ -49,12 +50,9 @@ const userControlador =
       // fin login y cruce de datos
 
       /* Para que cuenta no se vea en el header */
-       /*
-       let conectado;
-       if(req.session.usuarioLogueado == usuarioALoguearse){
-        conectado = true;
-       }
-       */
+       
+     
+       
   },  
   updateUser: (req,res) => {
           

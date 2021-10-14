@@ -21,6 +21,7 @@ const controlador =
 {
     home: (req, res) => {
 
+
         db.Productos.findAll(req.params.id).then(function(productoEncontrado) {
         res.render("home.ejs",{productoDetalle: productoEncontrado});
         })     

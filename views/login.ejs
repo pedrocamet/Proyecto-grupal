@@ -2,27 +2,20 @@
 <html>
     <head>
         <%- include("./partials/head") %>
-    </head>
-    
-        
-      
+    </head>   
     <body>
-            <div>
-                <% if (locals.mensaje){ %>
-                <p><%= locals.mensaje %> </p>
+        <div>
+            <% if (locals.mensaje){ %>
+            <p><%= locals.mensaje %> </p>
             <% } %>
-            </div>
+        </div>
         <header>
-        <%- include("./partials/header") %>
-        </header>   
-      
-        
-
+            <%- include("./partials/header")  %>
+        </header> 
         <div class="foto-fondo-P">
-            <nav class="navbar-P">
-            </nav>
-            <div class="container-P"></div>
             <div class="container-P mt-3-P">
+                <br>
+                <br>  
                 <h1 class="texto-alineado-P"> <strong> Iniciar sesion en tu cuenta de Rental Auto </strong></h1>
                 <br>
                 <!--
