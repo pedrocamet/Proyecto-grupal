@@ -1231,6 +1231,11 @@ font-size: 5vw ;
   color: red;
 }
 
+.erroresMail{
+  font-size: 20px;
+  color: red;
+}
+
 /********************************  STYLES CAJA DE LOGIN   ******************************************/
 
 .contenedor-Login{

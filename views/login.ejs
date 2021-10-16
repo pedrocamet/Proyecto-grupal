@@ -20,18 +20,22 @@
                 <br>
                 <form class="texto-alineado-P" action="/usuario/login" method="POST">
                     <div class="form-group-P">
+                        
                         <div class="input-group-P" id="username">
-                            <input autofocus class="form-control-P" id="username" name="mail" placeholder="Correo electronico" required type="text" value>
+                            <input autofocus class="form-control-P" id="mail" name="mail" placeholder="Correo electronico" required type="email">
                         </div>
+                        <div class="erroresMail"></div>
                     </div>
                     <div class="form-group-P">
                         <div class="input-group-P" id="show_hide_password">
-                            <input autofocus class="form-control-P" id="password" name="password" placeholder="Contraseña" required type="password" value>
+                            <input autofocus class="form-control-P" id="password" name="password" placeholder="Contraseña" required type="password">
                         </div>
+                        <div class="errores"></div>
+
                         <a href=""> ¿Se te olvido tu contraseña? </a> 
                     </div>
                     <div class="footer-P">
-                        <button type="submit" value="Login"> Iniciar sesión </button>
+                        <button type="submit" value="Login" id="botonLogin" onclick="validarMail(campoEmail.value)"> Iniciar sesión </button>
                         <p> O </p>
                         <a href="https://www.facebook.com/"> Continuar con facebook </a>
                         <br>
@@ -47,5 +51,9 @@
         <footer>  
             <%- include("./partials/footer") %>
         </footer> 
+
+        <script src="/js/login.js"></script>
+        <script src="/js/validacionMail.js"></script>
+        
     </body> 
 </html>
