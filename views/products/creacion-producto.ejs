@@ -27,26 +27,36 @@
      </div>
       <main class="cuerpocargarprodf">
         <form action="./creacion-producto" method="POST" enctype="multipart/form-data">
-         <div class="modelovehiculof">
+         <!--
+          <div class="modelovehiculof">
           <label class="modelovehiculofl"> Elija categoría del nuevo vehículo:</label>
           <select name="claseDeVehiculo" class="selectmodelovehiculof">
               <option value="autoPequeño" name="s">Auto Pequeño</option>
               <option value="autoMediano" name="m"> Auto Mediano</option>
           </select>
+        -->
+
+        <div class="errores"></div>
         </div>
         <div class="nombremodelof">
-          <label>Marca y modelo  </label>
-          <input type="text" name="marca">
-          <input type="text" name="modelo">
+          <label> Marca </label>
+          <input type="text" name="marca" id="marca-creacion-F">
+
+          <label> Modelo  </label>
+          <input type="text" name="modelo" id="modelo-creacion-F">
         </div>
+
         <div class="anodelvehiculof">
-          <label> Año del vehículo</label>
-          <input type="number" name="ano" id="">
+          <label> Año del vehículo </label>
+          <input type="number" name="ano" id="anio-creacion-F">
         </div>
+        
         <div class="imagenvehiculof">
           <label for="imageProduct" class="form-label">Seleccionar Imagen:</label>
           <input type="file" name= "imageProduct">
         </div>
+
+        <!--
         <div class="fechadisponiblef">
           <label > Fecha de disponibilidad</label>
           <div class="calendarios">
@@ -56,13 +66,15 @@
             <input type="date" name="fechaFinDisp">
           </div>
         </div>
+        -->
+
         <div class="preciopordiainiciof">
           <label> Precio por día</label>
-          <input type="number" name="precioPorDia" >
+          <input type="number" name="precioPorDia" id="precio-creacion-F">
         </div>
         
         <div class="botonesEleccion">
-          <button type="submit">Cargar producto</button>
+          <button type="submit" id="boton-creacion-F">Cargar producto</button>
         </div>
         <div>
 
@@ -71,7 +83,7 @@
       </form>
       </main>
 
-      
+      <script src="/js/creacionProducto.js"></script>
     </body>
     <%- include ('../partials/footer.ejs')%>
 
