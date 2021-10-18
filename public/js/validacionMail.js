@@ -8,7 +8,7 @@ function validarMail(campoEmail){
 
     if (esValido == false) {
         alert("Tu correo electrónico no es válido");
-        erroresMail.push("Tu correo electrónico no es válido");
+        erroresMail.push(" / Tu correo electrónico no es válido / ");
         
     }
 

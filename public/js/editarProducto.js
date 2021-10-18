@@ -11,21 +11,21 @@ window.addEventListener("load", function(){
         let campoModelo = document.querySelector("#modeloF");
         let campoPrecio = document.querySelector("#precioF");
         let campoAnio = document.querySelector("#anioF");
-        console.log(campoAnio)
+
         
         if(campoMarca.value.length < 3){
-            errores.push("La marca debe tener al menos 3 caracteres");
+            errores.push(" / La marca debe tener al menos 3 caracteres / ");
         }
 
         else if (campoModelo.value.length < 3){
-            errores.push("El modelo debe tener al menos 3 caracteres");
+            errores.push(" / El modelo debe tener al menos 3 caracteres / ");
         }
 
         else if(campoAnio.value.length != 4 ){
-            errores.push("El año del auto debe tener 4 cifras");
+            errores.push(" / El año del auto debe tener 4 cifras / ");
         }
         else if(campoPrecio.value.length < 3){
-            errores.push("El valor del precio debe tener al menos 3 cifras");
+            errores.push(" / El valor del precio debe tener al menos 3 cifras / ");
         }
         
         if (errores.length > 0) {

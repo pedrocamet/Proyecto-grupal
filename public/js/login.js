@@ -11,7 +11,7 @@ window.addEventListener("load", function(){
 
 
         if (campoPassword.value.length < 10){
-            errores.push("Tu contraseña tiene " + campoPassword.value.length + " caracteres, debe tener al menos 10");
+            errores.push(" / Tu contraseña tiene " + campoPassword.value.length + " caracteres, debe tener al menos 10 / ");
         }
         
         
