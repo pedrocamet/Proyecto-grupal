@@ -1,15 +1,17 @@
 
 
 window.onload = function (){
- 
-
- 
-
   var carrito =  JSON.parse(localStorage.getItem("carrito"));
   var pr2 = document.querySelector(".pr2");
   pr2.innerHTML= carrito[0];
   console.log(pr2)
   console.log(localStorage)
+  var modeloCarrito = document.querySelector(".modeloCarrito");
+  modeloCarrito.innerHTML = carrito[1];
+  var precioPorDiaCarrito = document.querySelector(".precioPorDiaoCarrito");
+  precioPorDiaCarrito.innerHTML = carrito[2]; 
+
+
 
 
   //var idProdComp = req.params.id

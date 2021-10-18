@@ -13,69 +13,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alquila tu auto por hora ! </title>
   </head>
-  <body class="bodyf">
-    <script src="/js/pr2.js"></script>
+  <body>
     <header>
       <%- include("./partials/header") %>
     </header>
-    <div class="agregarproductof">
-      <i class="fas fa-cart-plus" id="bodyheaderif"></i>
-      <a href="creacion-producto"><button class="botonagregarproductof"> Agregar producto</button>   </a>
-    </div>
-    <div class="reservaspendientesdiv">
-      <h2 class="reservaspendientes">Tu reserva:</h2>
-    </div>
-    <main class="bodymainf">
-      <article class="producto-reservado">
-          <div class="descripcion-producto">
-            <h3>Categoría de auto </h3>
-            <p>Fecha y hora de retiro:</p>
-
-            <p class="pr2">  </p>
-            <p>modelo: </p>
-
-
-            <p>Fecha y hora de entrega:</p>
-            <p>Lugar de retiro:</p>
-            <p>Lugar de entrega:</p>
-            <div class="precioyboton">
-              <p class="precio-articulo"> $ 0000,00 </p>
-              <button class="botoncancelarf">CANCELAR</button> 
-            </div>
-          </div>
-          <div class="imagenproducto">
-            <img src="./img/automediano.jpg" alt="">
-          </div> 
-        </article>
-        <article class="producto-reservado">
-          <div class="descripcion-producto">
-            <h3>Categoría de auto </h3>
-            <p>Fecha y hora de retiro:</p>
-            <p>Fecha y hora de entrega:</p>
-            
-            <p>Lugar de retiro:</p>
-            <p>Lugar de entrega:</p>
-            <div class="precioyboton">
-              <p class="precio-articulo"> $ 0000,00 </p>
-              <button class="botoncancelarf">CANCELAR</button> 
-            </div>
-          </div>
-          <div class="imagenproducto">
-            <img src="./img/categoriachico.jpg" alt="">
-          </div> 
-        </article>
-        <div class="aclaracion">
-          <p class="notaaclaratoria">
-          *Importante: Nuestros autos sólo pueden ser utilizados dentro de AMBA. NO TIENEN LIMITE DE KILÓMETROS. 
-          </p>
-          <input type="checkbox" class="tildeaclaracion">
+    <div class="foto-fondo-3-P">
+      <script src="/js/pr2.js"></script>
+      <div class="boton-agregar-producto">
+        <i class="fas fa-cart-plus"></i>
+        <a href="creacion-producto"><button>Agregar producto</button></a>
       </div>
+      <div class="reservaspendientesdiv">
+        <h2 class="reservaspendientes">Tu reserva</h2>
+      </div>
+      <br>
+      <br>
+      <main>
+        <article class="producto-reservado">
+            <div class="descripcion-producto">
+              <h3>Categoría de auto </h3>
+              <p>Fecha y hora de retiro:</p>
+  
+              <p class="pr2">  </p>
+              <p>modelo: </p>
+  
+  
+              <p>Fecha y hora de entrega:</p>
+              <p>Lugar de retiro:</p>
+              <p>Lugar de entrega:</p>
+              <div class="precioyboton">
+                <p class="precio-articulo"> $ 0000,00 </p>
+                <button class="botoncancelarf">CANCELAR</button> 
+              </div>
+            </div>
+            <div class="imagenproducto">
+              <img src="./img/automediano.jpg" alt="">
+            </div> 
+          </article>
+          <article class="producto-reservado">
+            <div class="descripcion-producto">
+              <h3>Categoría de auto </h3>
+              <p>Fecha y hora de retiro:</p>
+              <p>Fecha y hora de entrega:</p>
+              
+              <p>Lugar de retiro:</p>
+              <p>Lugar de entrega:</p>
+              <div class="precioyboton">
+                <p class="precio-articulo"> $ 0000,00 </p>
+                <button class="botoncancelarf">CANCELAR</button> 
+              </div>
+            </div>
+            <div class="imagenproducto">
+              <img src="./img/categoriachico.jpg" alt="">
+            </div> 
+          </article>
+          <br>
+          <br>
+          <div class="aclaracion">
+            <p class="notaaclaratoria">
+            *Importante: Nuestros autos sólo pueden ser utilizados dentro de AMBA. NO TIENEN LIMITE DE KILÓMETROS. 
+            </p>
+        </div>
+        <br>
         <div class="finalcarrito">
           <p> Total a pagar: </p>
-          <p>  $ 0000,00</p>
+          <p>$00000</p>
+          <br>
           <button class="botonconfirmarf"> CONFIRMAR </button>
         </div>
-    </main>
+      </main>
+    </div>
     <Footer>
       <%- include("./partials/footer") %>
     </Footer>
