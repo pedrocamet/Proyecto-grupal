@@ -12,12 +12,6 @@
 
 /* HOME */
 
-.header-detalles{
-  background-color: white; 
-  width: 100%;
-  display: flex;
-}
-
 .main-detalles{
   text-align: center;
   height: 100%;
@@ -364,10 +358,6 @@
       border-top-right-radius: 0px;
     }
 }
-
-
-
-
 
 /* DESCRIPCIÓN PRODUCTO */
 
@@ -1145,16 +1135,14 @@ font-size: 5vw ;
   margin-right: auto;
 }
 
-
-
-
-
-
-
-
-
 /********************************  FIN DATOS PERSONALES  ******************************************/
 /********************************  BARRA DE NAVEGACION ******************************************/
+
+.header-detalles{
+  background-color: white; 
+  width: 100%;
+  display: flex;
+}
 
 .barra-superior{
   position: relative;
@@ -1198,28 +1186,31 @@ font-size: 5vw ;
 /********************************  VISTA CUENTA   ******************************************/
 
 
-.foto-fondo-2-P {
-  height: 120vh;
-  width: 100%;
-  background-image: url(/img/paisaje-cuenta.jpeg);
-  background-position: center;
+@media (max-width:1177px){
+  .foto-fondo-2-P {
+    height: 120vh;
+    width: 100%;
+    background-image: url(/img/paisaje-cuenta.jpeg);
+    background-position: center;
+  }
+  
+  .contenedor-cuenta-P{
+    text-align: center;
+    color: black;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .contenedor-cuenta-2-P{
+    text-align: center;
+    color: black;
+    border: 1px solid black;
+    margin-left: 120px;
+    margin-right: 120px;
+    background-color: rgba(190, 184, 184, 0.637);
+  }
 }
 
-.contenedor-cuenta-P{
-  text-align: center;
-  color: black;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.contenedor-cuenta-2-P{
-  text-align: center;
-  color: black;
-  border: 1px solid black;
-  margin-left: 120px;
-  margin-right: 120px;
-  background-color: rgba(190, 184, 184, 0.637);
-}
 
 
 /********************************  FIN VISTA CUENTA   ******************************************/
