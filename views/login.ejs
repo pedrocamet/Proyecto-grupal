@@ -31,21 +31,27 @@
                             <input autofocus class="form-control-P" id="password" name="password" placeholder="Contraseña" required type="password">
                         </div>
                         <div class="errores"></div>
-
-                        <a href=""> ¿Se te olvido tu contraseña? </a> 
+                        <div class="hipervinculo-p">
+                            <a href=""> ¿Se te olvido tu contraseña? </a> 
+                        </div> 
                     </div>
                     <div class="footer-P">
-                        <button type="submit" value="Login" id="botonLogin" onclick="validarMail(campoEmail.value)"> Iniciar sesión </button>
-                        <p> O </p>
-                        <a href="https://www.facebook.com/"> Continuar con facebook </a>
+                        <button class="btn-login" type="submit" value="Login" id="botonLogin" onclick="validarMail(campoEmail.value)"> Iniciar sesión </button>
                         <br>
-                        <a href="https://www.google.com/"> Continuar con Google </a>
+                        <div>
+                            <a href="https://www.facebook.com/" class="hipervinculo-p"> Continuar con facebook </a>
+                            <br>
+                            <br>
+                            <a href="https://www.google.com/" class="hipervinculo-p"> Continuar con Google </a>
+                        </div>
                     </div>
                     <br>
-                </form>    
-                <p class="texto-alineado-P"> ¿Nuevo en Rental Auto? 
-                    <a href="/usuario/registro"> Crea una cuenta. </a>
-                </p>
+                </form>
+                <div>
+                    <p class="texto-alineado-P"> ¿Nuevo en Rental Auto? 
+                        <a href="/usuario/registro" class="hipervinculo-p"> Crea una cuenta. </a>
+                    </p>
+                </div>    
             </div>  
         </div>
         <footer>  
