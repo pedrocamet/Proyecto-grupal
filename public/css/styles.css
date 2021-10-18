@@ -676,16 +676,20 @@ h4{
   }
 .producto-reservado{
   display: flex;
-  justify-content: space-around;
-  }
+  justify-content: center;
+  width: fit-content;
+  margin: 0 auto;
+  border-bottom: 2px solid black;
+}
+
 .descripcion-producto {
 font-size: 2vw;
 order: 1;
-padding-left: 5px;
-padding-right: 5px;
 justify-content: flex-start;
 text-align: left;
+margin: 0 auto;
 }
+
 .imagenproducto{
   display: flex;
   order: 3;
@@ -824,6 +828,7 @@ display: flex;
 
 .boton-agregar-producto{
   margin-left: 15%;
+  font-size: 3vw;
 }
 
 /* CREACION NUEVO PRODUCTO ------CREACION NUEVO PRODUCTO ------CREACION NUEVO PRODUCTO ------CREACION NUEVO PRODUCTO ------*/
