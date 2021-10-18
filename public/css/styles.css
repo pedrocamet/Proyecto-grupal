@@ -12,12 +12,6 @@
 
 /* HOME */
 
-.header-detalles{
-  background-color: white; 
-  width: 100%;
-  display: flex;
-}
-
 .main-detalles{
   text-align: center;
   height: 100%;
@@ -66,6 +60,22 @@
   height: 120vh;
   width: 100%;
   background-position: top right;
+}
+
+.banners-T{
+  display:flex;
+}
+
+.banner-T-2{
+  width: 25%;
+}
+
+.banner-T{
+  width: 50%;
+}
+
+.banner-verde{
+  width: 100%;
 }
 
 
@@ -149,7 +159,7 @@
 .foto-producto:hover{
   width: 30vw;
   height: 20vw;
-  box-shadow : 0px 0px 5px rgb(100,100,100);
+  box-shadow : 0px 0px 5px rgb(77, 6, 243);
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
@@ -173,7 +183,7 @@
 
 .recuadro-T{
   border-top: solid 1px rgba(0,0,0,.50);
-  box-shadow : 0px 0px 10px rgb(100,100,100);
+  box-shadow : 0px 0px 10px rgb(100, 100, 100);
   background-color: rgb(225, 195, 236);
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -365,10 +375,6 @@
     }
 }
 
-
-
-
-
 /* DESCRIPCIÓN PRODUCTO */
 
 .recuadro-total{
@@ -503,6 +509,13 @@ h4{
 
 
 /* aca van a ir los styles de carrito */
+.foto-fondo-3-P {
+  height: 120vh;
+  width: 100%;
+  background-image: url(/img/paisaje-natural.jpeg);
+  background-position: center;
+}
+
 .titulo-1-carrito {
   font-size: 50px;
 }
@@ -603,6 +616,15 @@ h4{
   width: 100%;
 }
 
+.hipervinculo-p{
+  background-color: rgb(179, 225, 240);
+  width: fit-content;
+  text-align: center;
+  color: black;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+
 .footer-P {
   padding-top: 50px;
 }
@@ -637,14 +659,15 @@ h4{
 }
 .reservaspendientes {
   font-size: 4vw;
-  border-bottom: solid 3px #047AC2; 
-  border-top: solid 3px #047AC2;
+  border: solid 3px #047AC2; 
   text-align: center;
+  width: fit-content;
   background-color: #F8F9F9;
   align-items: center;
   font-family: 'Nunito sans';
   margin-top: 30px;
   margin-bottom: 30px;
+  margin: 0 auto;
   
   }
 .precioyboton{
@@ -653,16 +676,20 @@ h4{
   }
 .producto-reservado{
   display: flex;
-  justify-content: space-around;
-  }
+  justify-content: center;
+  width: fit-content;
+  margin: 0 auto;
+  border-bottom: 2px solid black;
+}
+
 .descripcion-producto {
 font-size: 2vw;
 order: 1;
-padding-left: 5px;
-padding-right: 5px;
 justify-content: flex-start;
 text-align: left;
+margin: 0 auto;
 }
+
 .imagenproducto{
   display: flex;
   order: 3;
@@ -694,40 +721,47 @@ text-align: left;
 .reservaspendientes {
   color: #575556 ;  
 }
+
 .bodymainf {
  padding-left: 3vw;
  padding-right: 2vw;
  background-color: #F8F9F9;
 }
+
 .bodyheaderimgf{
    width: 20vw;
    max-width: 25vw;
    margin-top: 3vh;
    align-self: center;
-   } 
+} 
+
 .finalcarrito{
  display: flex;
- justify-content: flex-end;
+ justify-content: center;
+ font-size: 2vw;
  
 }
+
 .aclaracion{
 color: #C52D07;
 display: flex;
+width: fit-content;
 font-weight: 600;
 align-items: center;
 border: #C52D07 solid 1px;
 background-color: #DEFCE9;
-margin: 2vw 4vw;
+margin: 0 auto;
 }
+
 .notaaclaratoria{
   display: flex;
-  width: 80%;
-  text-align: justify;
+  width: fit-content;
+  text-align: center;
   margin: 0px;
   padding: 0px;
   font-weight: 600;
-  
-  }
+}
+
 .tildeaclaracion{
   display: flex;
   width: 20%;
@@ -753,6 +787,7 @@ margin: 2vw 4vw;
   color: #047AC2;
   height: auto;
   width: auto;
+  text-align: center;
 }
 .botoncancelarf{
   border-radius: 3px;
@@ -789,6 +824,11 @@ display: flex;
 }
 .imgEditarProdf{
   width: 200px;
+}
+
+.boton-agregar-producto{
+  margin-left: 15%;
+  font-size: 3vw;
 }
 
 /* CREACION NUEVO PRODUCTO ------CREACION NUEVO PRODUCTO ------CREACION NUEVO PRODUCTO ------CREACION NUEVO PRODUCTO ------*/
@@ -1145,16 +1185,14 @@ font-size: 5vw ;
   margin-right: auto;
 }
 
-
-
-
-
-
-
-
-
 /********************************  FIN DATOS PERSONALES  ******************************************/
 /********************************  BARRA DE NAVEGACION ******************************************/
+
+.header-detalles{
+  background-color: white; 
+  width: 100%;
+  display: flex;
+}
 
 .barra-superior{
   position: relative;
@@ -1198,28 +1236,31 @@ font-size: 5vw ;
 /********************************  VISTA CUENTA   ******************************************/
 
 
-.foto-fondo-2-P {
-  height: 120vh;
-  width: 100%;
-  background-image: url(/img/paisaje-cuenta.jpeg);
-  background-position: center;
+@media (max-width:1177px){
+  .foto-fondo-2-P {
+    height: 120vh;
+    width: 100%;
+    background-image: url(/img/paisaje-cuenta.jpeg);
+    background-position: center;
+  }
+  
+  .contenedor-cuenta-P{
+    text-align: center;
+    color: black;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .contenedor-cuenta-2-P{
+    text-align: center;
+    color: black;
+    border: 1px solid black;
+    margin-left: 120px;
+    margin-right: 120px;
+    background-color: rgba(190, 184, 184, 0.637);
+  }
 }
 
-.contenedor-cuenta-P{
-  text-align: center;
-  color: black;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.contenedor-cuenta-2-P{
-  text-align: center;
-  color: black;
-  border: 1px solid black;
-  margin-left: 120px;
-  margin-right: 120px;
-  background-color: rgba(190, 184, 184, 0.637);
-}
 
 
 /********************************  FIN VISTA CUENTA   ******************************************/

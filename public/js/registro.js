@@ -13,15 +13,15 @@ window.addEventListener("load", function(){
         
         if (campoNombre.value.length < 3) {
 
-            errores.push("El nombre debe tener al menos 3 caracteres");
+            errores.push(" / El nombre debe tener al menos 3 caracteres / ");
 
         } else if (campoApellido.value.length < 3){
 
-            errores.push("El apellido debe tener al menos 3 caracteres");
+            errores.push(" / El apellido debe tener al menos 3 caracteres / ");
 
-        } else if (campoPassword.value.length < 7){
+        } else if (campoPassword.value.length < 10){
 
-            errores.push("La contraseña debe tener al menos 7 caracteres");
+            errores.push(" / La contraseña debe tener al menos 10 caracteres / ");
 
         }
 

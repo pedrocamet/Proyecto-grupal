@@ -1,75 +1,90 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Creación producto </title>
-        <link href="/css/styles.css" rel="stylesheet">
-        <link href="https://fontawesome.com/" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="/public/css/normalize.css">
-    </head>
-    <body class="todocargarprod">
-      <header>
-        <%- include("../partials/header") %>
-      </header> 
-      <div class="reservaspendientesdiv">
-        <h2 class="reservaspendientes">Editar Producto</h2>
-      </div>
-      <main class="cuerpocargarprodf">
-        <form action="/editar-producto/<%=productoEditar.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
-          <div class="modelovehiculof">
-            <label class="modelovehiculofl"> Elija categoría del nuevo vehículo:</label>
-            <select name="categoria" class="selectmodelovehiculof">
-              <% if(productoEditar.categoria == "autoPequeño"){ %>
-              <option value="autoPequeño" name="autoPequeño" selected>Auto Pequeño</option>
-              <option value="autoMediano" name="autoMediano"> Auto Mediano</option>
-              <%}else {%>
-              <option value="autoPequeño" name="autoPequeño" >Auto Pequeño</option>
-              <option value="autoMediano" name="autoMediano" selected> Auto Mediano</option>
-              <%};%>
-            </select>
-          </div>
-          <div class="nombremodelof">
-            <label>Marca y modelo  </label>
-            <input type="text" name="marca" value= <%= productoEditar.marca%> >
-            <input type="text" name="modelo" value= <%= productoEditar.modelo%>>
-          </div>
-          <div class="anodelvehiculof">
-            <label> Año del vehículo</label>
-            <input type="date" name="ano" value= <%= productoEditar.año%>>
-          </div>
-          <div class="imagenvehiculof">
-            <img src="/img/<%=productoEditar.imagen%>"class="imgEditarProdf" alt="">
-          </div >
-          <div>
-            <label for="imageProduct" class="seleccionarImagenf">Seleccionar Imagen:</label>
-            <input type="file" name= "imageProduct">
-          </div>
-          <div class="fechadisponiblef">
-            <label > Fecha de disponibilidad</label>
-            <div class="calendarios">
-              <label> Desde</label>
-              <input type="date" name="fechaInicioDisp" value=<%= productoEditar.fechaInicioDisp%>>
-              <label> Hasta</label> 
-              <input type="date" name="fechaFinDisp" value=<%= productoEditar.fechaFinDisp%>>
-            </div>
-          </div>
-          <div class="preciopordiainiciof">
-            <label> Precio por día</label>
-            <input type="number" name="precioDia" value= <%= productoEditar.precioDia%> >
-          </div>
-          <div >
-            <button type="submit" class="botonEleccionf">Cargar producto</button>
-          </div>
-        </form>
-      </main>
-      <footer>  
-        <%- include("../partials/footer") %>
-      </footer>  
-    </body>
-</html>
+ <html>
+     <head>
+         <meta charset="utf-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+         <title>Creación producto </title>
+         <link href="/css/styles.css" rel="stylesheet">
+         <link href="https://fontawesome.com/" rel="stylesheet">
+         <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+         <link rel="stylesheet" href="/public/css/normalize.css">
+     </head>
+     <body class="todocargarprod">
+       <header>
+         <%- include("../partials/header") %>
+       </header> 
+       <div class="reservaspendientesdiv">
+         <h2 class="reservaspendientes">Editar Producto</h2>
+       </div>
+       <main class="cuerpocargarprodf">
+         <form action="/editar-producto/<%=productoEditar.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
+           <div class="modelovehiculof">
  
+             <!--
+             <label class="modelovehiculofl"> Elija categoría del nuevo vehículo:</label>
+             <select name="categoria" class="selectmodelovehiculof">
+               <% if(productoEditar.categoria == "autoPequeño"){ %>
+               <option value="autoPequeño" name="autoPequeño" selected>Auto Pequeño</option>
+               <option value="autoMediano" name="autoMediano"> Auto Mediano</option>
+               <%}else {%>
+               <option value="autoPequeño" name="autoPequeño" >Auto Pequeño</option>
+               <option value="autoMediano" name="autoMediano" selected> Auto Mediano</option>
+               <%};%>
+             </select>
+           </div>
+         -->
+         <div class="errores"></div>
+           <div class="nombremodelof">
+             <label> Marca </label>
+               <input id="marcaF" type="text" name="marca" value= <%= productoEditar.marca%>>
+                   
+ 
+             <label> Modelo </label>
+               <input id="modeloF" type="text" name="modelo" value= <%= productoEditar.modelo%>>
+                   
+           </div>
+           <div class="anodelvehiculof">
+             <label> Año del vehículo</label>
+               <input id="anioF" name="ano" type="number" value= <%= productoEditar.año%>>
+                 
+           </div>
+           <div class="imagenvehiculof">
+             <img src="/img/<%=productoEditar.imagen%>"class="imgEditarProdf" alt="">
+           </div >
+           <div>
+             <label for="imageProduct" class="seleccionarImagenf">Seleccionar Imagen:</label>
+             <input type="file" name= "imageProduct">
+           </div>
+ 
+           <!--
+           <div class="fechadisponiblef">
+             <label> Fecha de disponibilidad</label>
+             <div class="calendarios">
+               <label> Desde</label>
+               <input type="date" name="fechaInicioDisp" value=<%= productoEditar.fechaInicioDisp%>>
+               <label> Hasta</label> 
+               <input type="date" name="fechaFinDisp" value=<%= productoEditar.fechaFinDisp%>>
+             </div>
+           </div>
+           -->
+ 
+           <div class="preciopordiainiciof">
+             <label> Precio por día</label>
+               <input id="precioF" type="number" name="precioDia" value= <%= productoEditar.precioDia%> >
+             
+           </div>
+           <div >
+             <button type="submit" class="botonEleccionf">Cargar producto</button>
+           </div>
+         </form>
+       </main>
+       <footer>  
+         <%- include("../partials/footer") %>
+       </footer>  
+ 
+       <script src="/js/editarProducto.js"></script>
+     </body>
+ </html>
