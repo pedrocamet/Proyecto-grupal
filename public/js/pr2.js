@@ -8,7 +8,7 @@ window.onload = function (){
   console.log(localStorage)
   var modeloCarrito = document.querySelector(".modeloCarrito");
   modeloCarrito.innerHTML = carrito[1];
-  var precioPorDiaCarrito = document.querySelector(".precioPorDiaoCarrito");
+  var precioPorDiaCarrito = document.querySelector(".precioPorDiaCarrito");
   precioPorDiaCarrito.innerHTML = carrito[2]; 
 
 
