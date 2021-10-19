@@ -13,6 +13,7 @@ function productosData(sequelize, Datatypes){
         fechaInicioDisp: {type: Datatypes.DATE},
         fechaFinDisp: {type: Datatypes.DATE},
         foto: {type: Datatypes.STRING(150)},
+        descripcion: {type: Datatypes.STRING(300)},
     };
     
     config = {timestamps:false};
