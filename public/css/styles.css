@@ -658,17 +658,15 @@ h4{
   background-color: #F8F9F9;  
 }
 .reservaspendientes {
-  font-size: 4vw;
-  border: solid 3px #047AC2; 
+  font-size: 4vw;;
   text-align: center;
   width: fit-content;
-  background-color: #F8F9F9;
   align-items: center;
   font-family: 'Nunito sans';
   margin-top: 30px;
   margin-bottom: 30px;
   margin: 0 auto;
-  
+  color: #fff;
   }
 .precioyboton{
   font-size: 3vw;
@@ -717,10 +715,6 @@ margin: 0 auto;
 .nombrecompleto{
     align-self: center;
   }
-
-.reservaspendientes {
-  color: #575556 ;  
-}
 
 .bodymainf {
  padding-left: 3vw;
@@ -834,7 +828,7 @@ display: flex;
 /* CREACION NUEVO PRODUCTO ------CREACION NUEVO PRODUCTO ------CREACION NUEVO PRODUCTO ------CREACION NUEVO PRODUCTO ------*/
 
 .todocargarprod{
-  background-color: #F8F9F9 ;
+  background-color: rgb(50, 135, 205);;
 }
 .cuerpocargarprodf {
   background-color: #F8F9F9 ;
@@ -844,17 +838,27 @@ display: flex;
   padding: 30px;
   font-size: 2vw;
   font-weight:600;
-  };
+  text-align: center;
+  justify-content: center;
+  border: 2px solid black;
+  margin: auto;
+  width: fit-content;
+  border-radius: 15px;
+}
+
 .modelovehiculofl{
 padding: 30px;
 }
-*/
+
+
 .selectmodelovehiculof{
 font-size: 5vw ;
 
 }
 .nombremodelof{
   padding: 20px;
+  text-align: center;
+  margin: 0 auto;
 }
 .modelovehiculofl{
   padding: 20px;
