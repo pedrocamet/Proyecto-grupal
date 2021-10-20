@@ -904,16 +904,20 @@ font-size: 5vw ;
 
 .detalle-producto-foto-T{
   width: 70%;
-  box-shadow: 0px 0px 10px rgb(100,100,100);
+  box-shadow: 0px 0px 10px rgb(125, 125, 126);
+  border-radius: 8px;
 }
 
 .detalle-producto-descripcion-T{
+  font-family: "Nunito Sans", sans-serif;
   display:flex;
   width: 80%;
   padding: 15px;
-  font-size: 20px;
+  font-size: 15px;
   line-height: 1.5;
-
+  font-weight: bold;
+  font-style: italic;
+  text-align:justify;
 }
 
 .detalle-producto-caracteristicas-T{
