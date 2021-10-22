@@ -39,8 +39,8 @@ router.post("/creacion-producto", uploadFile.single("imageProduct"),  autosContr
 /*********** DETALLE DE UN PRODUCTO ************/
 router.get("/detalle-producto/:id", autosController.detalleProducto); 
 
-/***********lISTADO DE PRODUCTOS  ************/
-router.get("/listado-productos", autosController.listadoProducto); 
+/*********** LISTADO DE PRODUCTOS (API) ************/
+router.get("/productos-totales", autosController.autosAPI); 
 
 /***********EDIT A PRODUCT    ************/
 router.get("/editar-producto/:idProd", autosController.editarProducto); //formulario de edicion de productos 

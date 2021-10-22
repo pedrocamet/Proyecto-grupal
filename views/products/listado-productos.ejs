@@ -30,6 +30,23 @@
                             <li>Auto alta gama <input type="checkbox"></li>
                         </ul>
                     </div>
+
+
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <% for(let auto of Allautos) { %>
+                            <p> -------------------------------- </p>
+                            <h3> Marca: <%=auto.marca%>  </h3>
+                            <h3> Modelo: <%=auto.modelo %>  </h3>
+                            <h3> Año: <%=auto.año %>  </h3>
+                            <h3> Precio: <%=auto.precioDia %>  </h3>
+                            <h3> Descripcion: <%=auto.descripcion %>  </h3>
+                            <p> -------------------------------- </p>
+                            <% } %>
+                    </div>
+
+
+
+
                     <br>
                     <h4>Caracteristicas del auto</h4>
                     <div class="navegador2-P">

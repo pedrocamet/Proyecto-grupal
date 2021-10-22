@@ -31,6 +31,33 @@ const controlador =
 
     },
 
+    autosAPI: (req, res) => {
+
+        db.Productos.findAll(req.params.id)
+            .then((autos) =>{
+
+                let listaAutos = [];
+
+                for (auto of autos){
+
+                    let objaux={
+                        marca:  auto.marca,
+                        modelo:  auto.modelo,
+                        año: auto.año,
+                        precio: auto.precioDia,
+                        descripcion: auto.descripcion
+                    }
+
+                    listaAutos.push(objaux);
+                }
+
+                res.json({
+                    datosPedidos: "Listado de autos",
+                    codigo: 200,
+                    data: listaAutos})
+    })
+},
+    
     login: (req, res) => {
         res.render ("login");
     },
