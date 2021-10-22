@@ -72,6 +72,19 @@ const controlador =
             })
 },
 
+// EN PROCES0... 
+guardarAuto: (req, res) => {
+
+   db.Productos.create(req.body)
+      .then((auto) =>{
+            
+          res.json({
+              datosPedidos: "Auto",
+              codigo: 200,
+              data: auto})
+       })
+},
+
 //----------------------------------  FIN APIS ---------------------------------------- //
     
     login: (req, res) => {
