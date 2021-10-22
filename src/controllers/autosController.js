@@ -31,6 +31,8 @@ const controlador =
 
     },
 
+    //---------------------------------- APIS ---------------------------------------- //
+
     autosAPI: (req, res) => {
 
         db.Productos.findAll(req.params.id)
@@ -57,6 +59,20 @@ const controlador =
                     data: listaAutos})
     })
 },
+
+    show: (req, res) => {
+
+        db.Productos.findByPk(req.params.id)
+            .then((auto) =>{
+                
+                res.json({
+                    datosPedidos: "Auto",
+                    codigo: 200,
+                    data: auto})
+            })
+},
+
+//----------------------------------  FIN APIS ---------------------------------------- //
     
     login: (req, res) => {
         res.render ("login");

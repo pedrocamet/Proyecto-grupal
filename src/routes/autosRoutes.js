@@ -42,6 +42,9 @@ router.get("/detalle-producto/:id", autosController.detalleProducto);
 /*********** LISTADO DE PRODUCTOS (API) ************/
 router.get("/productos-totales", autosController.autosAPI); 
 
+/*********** PRODUCTO INDIVIDUAL (API) *************/
+router.get("/show/:id", autosController.show); 
+
 /***********EDIT A PRODUCT    ************/
 router.get("/editar-producto/:idProd", autosController.editarProducto); //formulario de edicion de productos 
 router.put("/editar-producto/:idProd", uploadFile.single('imageProduct'), autosController.updateProducto);// edicion y almacenamiento de producto 
