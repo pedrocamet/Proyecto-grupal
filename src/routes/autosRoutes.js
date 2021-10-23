@@ -44,6 +44,7 @@ router.get("/productos-totales", autosController.autosAPI);
 router.get("/show/:id", autosController.show); 
 router.post("/", autosController.guardarAuto); 
 router.get("/buscar", autosController.buscar);
+router.get("/count", autosController.count);
 
 
 

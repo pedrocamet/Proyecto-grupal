@@ -58,6 +58,7 @@ router.get("/clientes-totales", usuariosController.clientesAPI);
 router.get("/mostrar/:id", usuariosController.mostrar); 
 router.post("/guardar", usuariosController.guardarCliente); 
 router.get("/buscar", usuariosController.buscar);
+router.get("/count", usuariosController.count);
 
 
 

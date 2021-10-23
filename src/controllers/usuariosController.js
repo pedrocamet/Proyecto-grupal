@@ -232,6 +232,35 @@ clientesAPI: (req, res) => {
         })
 },
 
+// CANTIDAD DE USUARIOS
+count: (req, res) => {
+
+  db.Clientes.findAll(req.params.id)
+      .then((clientes) =>{
+
+          let listaClientes = [];
+
+          for (cliente of clientes){
+
+              let objaux={
+                  nombre:  cliente.nombre,
+                  apellido:  cliente.apellido,
+                  mail: cliente.mail,
+                  celular: cliente.celular,
+                  cuit: cliente.cuit
+              }
+
+              listaClientes.push(objaux);
+          }
+
+          res.json({
+              datosPedidos: "Cantidad de usuarios registrados",
+              codigo: 200,
+              data: listaClientes.length})
+})
+},
+
+
 //GUARDA CLIENTE NUEVO
 
 guardarCliente: (req, res) => {
