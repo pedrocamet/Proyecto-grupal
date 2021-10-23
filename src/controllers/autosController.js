@@ -31,8 +31,9 @@ const controlador =
 
     },
 
-    //---------------------------------- APIS ---------------------------------------- //
+//---------------------------------- APIS ---------------------------------------- //
 
+// MUESTRA TODOS LOS AUTOS
     autosAPI: (req, res) => {
 
         db.Productos.findAll(req.params.id)
@@ -60,6 +61,7 @@ const controlador =
     })
 },
 
+//MUESTRA AUTO POR ID
     show: (req, res) => {
 
         db.Productos.findByPk(req.params.id)
@@ -72,18 +74,41 @@ const controlador =
             })
 },
 
-// EN PROCES0... 
+// GUARDA AUTO
 guardarAuto: (req, res) => {
 
-   db.Productos.create(req.body)
-      .then((auto) =>{
+    
+  db.Productos.create(req.body)
+     .then((auto) =>{
             
-          res.json({
-              datosPedidos: "Auto",
-              codigo: 200,
-              data: auto})
-       })
+         res.json({
+             datosPedidos: "Auto",
+             codigo: 200,
+             data: auto})
+    })
 },
+
+//BUSCA AUTO POR MARCA
+buscar: (req, res) => {
+
+    db.Productos.findAll({
+      where: {
+        marca: {[ Op.like ]: "%" + req.query.keyword + "%"}
+      }
+    })
+       .then((autos) =>{
+            if(autos.length > 0){
+              
+           res.json({
+               datosPedidos: "Auto",
+               codigo: 200,
+               data: autos})
+        } else {
+
+            res.json("No existen autos con esa marca")
+        }
+      })
+  },
 
 //----------------------------------  FIN APIS ---------------------------------------- //
     
