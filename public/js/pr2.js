@@ -1,15 +1,40 @@
 
 
 window.onload = function (){
+  var botonCancelar = document.getElementById("botoncancelarf"); 
   var carrito =  JSON.parse(localStorage.getItem("carrito"));
-  var pr2 = document.querySelector(".pr2");
-  pr2.innerHTML= carrito[0];
-  console.log(pr2)
-  console.log(localStorage)
+  
+  var marcaCarrito = document.querySelector(".marcaCarrito");
+  if (carrito.length != 0 ) {
+     marcaCarrito.innerHTML= carrito[0]; 
+     } else {
+        modeloCarrito.innerHTML = " ";
+  }
+    
   var modeloCarrito = document.querySelector(".modeloCarrito");
-  modeloCarrito.innerHTML = carrito[1];
+  
+  if (carrito.length != 0 ) {
+    modeloCarrito.innerHTML = carrito[1]; 
+  } else {
+    modeloCarrito.innerHTML = " ";
+  }
+  
   var precioPorDiaCarrito = document.querySelector(".precioPorDiaCarrito");
-  precioPorDiaCarrito.innerHTML = carrito[2]; 
+  if (carrito.length != 0 ) {
+    precioPorDiaCarrito.innerHTML = carrito[2]; 
+  } else {
+    modeloCarrito.innerHTML = " ";
+  }
+  
+
+
+  botonCancelar.addEventListener("click", function (){
+    prodComprado = [];
+   
+    localStorage.setItem("carrito", JSON.stringify(prodComprado));
+
+  })
+
 
 
 
