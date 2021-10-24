@@ -49,7 +49,7 @@ const controlador =
                         precio: auto.precioDia,
                         descripcion: auto.descripcion
                     }
-
+                    
                     listaAutos.push(objaux);
                 }
 
