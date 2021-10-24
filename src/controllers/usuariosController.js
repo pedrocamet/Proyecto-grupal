@@ -28,6 +28,9 @@ const userControlador =
   loginUsuario: (req, res) => {
     res.render ("login");
   },
+
+  
+
   
   procesarLogin: (req, res) => {
    
@@ -52,11 +55,10 @@ const userControlador =
       // fin login y cruce de datos     
        
   },  
-  //ESTO ESTA SIN  USO REAL 
+
   datosPersonales:(req,res) => {   
     db.Clientes.findByPk(req.params.id).then(function(productoEncontrado) {
     res.render("./users/datosUsuarios.ejs",{productoDetalle: productoEncontrado});
-    console.log("EL USUARIO ENCONTRADO ES " + productoEncontrado)
     })     
     .catch(function(e){
     res.send(e)
@@ -186,6 +188,120 @@ const userControlador =
     }
   }
   */
+
+/********************************* APIS ********************************************/
+
+// MUESTRA TODOS LOS CLIENTES
+clientesAPI: (req, res) => {
+
+  db.Clientes.findAll(req.params.id)
+      .then((clientes) =>{
+
+          let listaClientes = [];
+
+          for (cliente of clientes){
+
+              let objaux={
+                  nombre:  cliente.nombre,
+                  apellido:  cliente.apellido,
+                  mail: cliente.mail,
+                  celular: cliente.celular,
+                  cuit: cliente.cuit
+              }
+
+              listaClientes.push(objaux);
+          }
+
+          res.json({
+              datosPedidos: "Listado de clientes",
+              codigo: 200,
+              data: listaClientes})
+})
+},
+
+// MUESTRA CLIENTE PARTICULAR POR ID
+  mostrar: (req, res) => {
+
+    db.Clientes.findByPk(req.params.id)
+        .then((cliente) =>{
+            
+            res.json({
+                datosPedidos: "Cliente: ",
+                codigo: 200,
+                data: cliente})
+        })
+},
+
+// CANTIDAD DE USUARIOS
+count: (req, res) => {
+
+  db.Clientes.findAll(req.params.id)
+      .then((clientes) =>{
+
+          let listaClientes = [];
+
+          for (cliente of clientes){
+
+              let objaux={
+                  nombre:  cliente.nombre,
+                  apellido:  cliente.apellido,
+                  mail: cliente.mail,
+                  celular: cliente.celular,
+                  cuit: cliente.cuit
+              }
+
+              listaClientes.push(objaux);
+          }
+
+          res.json({
+              datosPedidos: "Cantidad de usuarios registrados",
+              codigo: 200,
+              data: listaClientes.length})
+})
+},
+
+
+//GUARDA CLIENTE NUEVO
+
+guardarCliente: (req, res) => {
+
+  db.Clientes.create(req.body)
+     .then((cliente) =>{
+            
+         res.json({
+             datosPedidos: "Cliente",
+             codigo: 200,
+             data: cliente})
+    })
+},
+
+//BUSCA CLIENTE POR NOMBRE
+
+buscar: (req, res) => {
+
+  db.Clientes.findAll({
+    where: {
+      nombre: {[ Op.like ]: "%" + req.query.keyword + "%"}
+    }
+  })
+     .then((clientes) =>{
+       if(clientes.length > 0){
+  
+         res.json({
+             datosPedidos: "Cliente",
+             codigo: 200,
+             data: clientes})
+         } else {
+
+          res.json("No existes clientes con ese nombre")
+         }
+    })
+},
+
+
+
+
+
 }
 
 module.exports = userControlador;
