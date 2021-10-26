@@ -116,7 +116,7 @@ valorTotal: (req, res) => {
             res.json({
                 datosPedidos: "Cantidad de autos publicados",
                 codigo: 200,
-                data: precioFinal})
+                data: "$" + precioFinal})
 })
 },
 
