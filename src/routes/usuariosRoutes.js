@@ -25,7 +25,7 @@ const validaciones =[
   body("email").notEmpty().isEmail().withMessage("Complete el campo con un email válido").bail(),
   body("password").notEmpty().isLength({min:4}).withMessage("Completar el campo"),
   body("fotoPerfil").custom((value, {req}) => {
-    let file = req.file;
+    let file = req.filename;
     if(!file){
       throw new Error ("Tenés que subir una foto de perfil");
     }
