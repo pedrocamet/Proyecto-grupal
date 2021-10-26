@@ -88,6 +88,38 @@ count: (req, res) => {
 })
 },
 
+// PRECIOS TOTALES
+
+valorTotal: (req, res) => {
+
+    db.Productos.findAll(req.params.id)
+        .then((autos) =>{
+
+            let listaAutos = [];
+            let precioFinal = 0;
+
+            for (auto of autos){
+
+                let objaux={
+                    precio: auto.precioDia,
+                }
+
+                listaAutos.push(objaux);
+            }
+
+
+            for(let i = 0; i < listaAutos.length; i++){
+
+                precioFinal = listaAutos[i].precio + precioFinal
+            }
+
+            res.json({
+                datosPedidos: "Cantidad de autos publicados",
+                codigo: 200,
+                data: precioFinal})
+})
+},
+
 
 
 //MUESTRA AUTO POR ID
