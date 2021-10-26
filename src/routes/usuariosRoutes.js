@@ -55,6 +55,7 @@ router.post("/datosPersonales",uploadFile.single("imageUser"), usuariosControlle
 
 /************ CLIENTES (API) ******************/
 router.get("/clientes-totales", usuariosController.clientesAPI); 
+router.get("/ultimo-cliente", usuariosController.ultimoClienteAPI); 
 router.get("/mostrar/:id", usuariosController.mostrar); 
 router.post("/guardar", usuariosController.guardarCliente); 
 router.get("/buscar", usuariosController.buscar);
