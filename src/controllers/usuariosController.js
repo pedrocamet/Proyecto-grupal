@@ -231,7 +231,7 @@ clientesAPI: (req, res) => {
                 data: cliente})
         })
 },
-// MUESTRA ULTIMO  CLIENTE PARTICULAR 
+// MUESTRA ULTIMO CLIENTE PARTICULAR 
 ultimoClienteAPI: (req, res) => {
 
   db.Clientes.findAll(req.params.id)

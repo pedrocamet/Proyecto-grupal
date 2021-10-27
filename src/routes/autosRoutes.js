@@ -41,6 +41,7 @@ router.get("/detalle-producto/:id", autosController.detalleProducto);
 
 /*********** LISTADO DE PRODUCTOS (API) ************/
 router.get("/productos-totales", autosController.autosAPI); 
+router.get("/ultimo-producto", autosController.ultimoProducto); 
 router.get("/show/:id", autosController.show); 
 router.post("/", autosController.guardarAuto); 
 router.get("/buscar", autosController.buscar);

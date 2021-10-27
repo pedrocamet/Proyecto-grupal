@@ -61,6 +61,7 @@ const controlador =
     })
 },
 
+//CANTIDAD DE AUTOS 
 count: (req, res) => {
 
     db.Productos.findAll(req.params.id)
@@ -170,6 +171,40 @@ buscar: (req, res) => {
         }
       })
   },
+
+  ultimoProducto: (req, res) => {
+
+    db.Productos.findAll(req.params.id)
+        .then((autos) =>{
+  
+            let listaAutos = [];
+  
+            for (auto of autos){
+  
+                let ultimoAuto={
+                    id: auto.id, 
+                                
+                }
+                listaAutos.push(ultimoAuto);
+            }
+            let ultimoId = listaAutos.length + 1;
+            
+            
+        db.Productos.findByPk(ultimoId)
+            .then((ultimoAuto) =>{
+                
+                res.json({
+                    datosPedidos: "Último auto: ",
+                    codigo: 200,
+                    data: ultimoAuto})
+            })
+  
+  
+  })
+  },
+
+
+
 
 //----------------------------------  FIN APIS ---------------------------------------- //
     
