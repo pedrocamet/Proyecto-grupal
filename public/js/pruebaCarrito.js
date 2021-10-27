@@ -31,7 +31,9 @@ if (prodComprado.length == 0) {
  
   alert("Usted no puede alquilar más de un Auto por operación")
 }
+window.location.replace("../carrito")
   })
 console.log("ENTRO Y LLEGO ACA ? ")
 console.log(prodComprado)
+
 }
