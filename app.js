@@ -9,7 +9,7 @@ const cors = require("cors");
 const corsOptions ={
    origin:'*', 
    credentials:true,            
-   optionSuccessStatus:200,
+   optionSuccessStatus:200,   
 }
 
 app.use(cors(corsOptions))
@@ -35,11 +35,13 @@ app.use("/", autosRoutes);
 const usuariosRoutes = require("./src/routes/usuariosRoutes");
 app.use("/usuario", usuariosRoutes);
 
+
 const publicPath = path.resolve(__dirname, './public');  
 app.use(express.static(publicPath));
 
 const publicPath2 = path.resolve(__dirname, './views');  
 app.use(express.static(publicPath2));
+
 
 /************************LO QUE PASO JERO PARA RUTAS NO DEFINIDAS */
 

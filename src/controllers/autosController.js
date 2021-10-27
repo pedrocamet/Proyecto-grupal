@@ -61,6 +61,7 @@ const controlador =
     })
 },
 
+//CANTIDAD DE AUTOS 
 count: (req, res) => {
 
     db.Productos.findAll(req.params.id)
@@ -85,6 +86,38 @@ count: (req, res) => {
                 datosPedidos: "Cantidad de autos publicados",
                 codigo: 200,
                 data: listaAutos.length})
+})
+},
+
+// PRECIOS TOTALES
+
+valorTotal: (req, res) => {
+
+    db.Productos.findAll(req.params.id)
+        .then((autos) =>{
+
+            let listaAutos = [];
+            let precioFinal = 0;
+
+            for (auto of autos){
+
+                let objaux={
+                    precio: auto.precioDia,
+                }
+
+                listaAutos.push(objaux);
+            }
+
+
+            for(let i = 0; i < listaAutos.length; i++){
+
+                precioFinal = listaAutos[i].precio + precioFinal
+            }
+
+            res.json({
+                datosPedidos: "Cantidad de autos publicados",
+                codigo: 200,
+                data: "$" + precioFinal})
 })
 },
 
@@ -138,6 +171,40 @@ buscar: (req, res) => {
         }
       })
   },
+
+  ultimoProducto: (req, res) => {
+
+    db.Productos.findAll(req.params.id)
+        .then((autos) =>{
+  
+            let listaAutos = [];
+  
+            for (auto of autos){
+  
+                let ultimoAuto={
+                    id: auto.id, 
+                                
+                }
+                listaAutos.push(ultimoAuto);
+            }
+            let ultimoId = listaAutos.length + 1;
+            
+            
+        db.Productos.findByPk(ultimoId)
+            .then((ultimoAuto) =>{
+                
+                res.json({
+                    datosPedidos: "Último auto: ",
+                    codigo: 200,
+                    data: ultimoAuto})
+            })
+  
+  
+  })
+  },
+
+
+
 
 //----------------------------------  FIN APIS ---------------------------------------- //
     

@@ -231,6 +231,43 @@ clientesAPI: (req, res) => {
                 data: cliente})
         })
 },
+// MUESTRA ULTIMO CLIENTE PARTICULAR 
+ultimoClienteAPI: (req, res) => {
+
+  db.Clientes.findAll(req.params.id)
+      .then((clientes) =>{
+
+          let listaClientes = [];
+
+          for (cliente of clientes){
+
+              let ultimoCliente={
+                  id: cliente.id, 
+                              
+              }
+              listaClientes.push(ultimoCliente);
+          }
+          let ultimoId = listaClientes.length;
+          console.log(ultimoId)
+          console.log(typeof(ultimoId))
+          
+      db.Clientes.findByPk(ultimoId)
+          .then((ultimoCliente) =>{
+              
+              res.json({
+                  datosPedidos: "Ultimo Cliente: ",
+                  codigo: 200,
+                  data: ultimoCliente})
+          })
+})
+},
+// INTENTO FOTO  ULTIMO  CLIENTE PARTICULAR 
+/*fotoUltimoCliente: (req, res) =>{
+
+res.redirect("http://localhost:3005/img/1-Toyota-Sienna.jpg")
+
+},*/
+
 
 // CANTIDAD DE USUARIOS
 count: (req, res) => {
@@ -297,11 +334,6 @@ buscar: (req, res) => {
          }
     })
 },
-
-
-
-
-
 }
 
 module.exports = userControlador;
