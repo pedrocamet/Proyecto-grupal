@@ -255,15 +255,18 @@ ultimoClienteAPI: (req, res) => {
           .then((ultimoCliente) =>{
               
               res.json({
-                  datosPedidos: " Ultimo Cliente: ",
+                  datosPedidos: "Ultimo Cliente: ",
                   codigo: 200,
                   data: ultimoCliente})
           })
-
-
 })
 },
+// INTENTO FOTO  ULTIMO  CLIENTE PARTICULAR 
+/*fotoUltimoCliente: (req, res) =>{
 
+res.redirect("http://localhost:3005/img/1-Toyota-Sienna.jpg")
+
+},*/
 
 
 // CANTIDAD DE USUARIOS
@@ -331,11 +334,6 @@ buscar: (req, res) => {
          }
     })
 },
-
-
-
-
-
 }
 
 module.exports = userControlador;
