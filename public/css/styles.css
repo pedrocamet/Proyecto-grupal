@@ -241,43 +241,45 @@
   padding-bottom:30px;
 }
 
-.datos-footer{
-  display:flex;
-  width:80%;
-  justify-content: space-between;
-  margin-left: 80px;
-  padding-top: 20px;
-}
+@media (min-width:768px){
+  .datos-footer{
+    display:flex;
+    width:80%;
+    justify-content: space-between;
+    margin-left: 80px;
+    padding-top: 20px;
+  }
 
-.texto-nosotros{
-  display:flex;
-  text-align: right;
-}
+  .texto-nosotros{
+    display:flex;
+    text-align: right;
+  }
 
-.footer-bottom {
-  padding: 15px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
-}
+  .footer-bottom {
+    padding: 15px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+  }
 
-.botones-redes{
-  display:flex;
-  justify-content: flex-start;
-}
+  .botones-redes{
+    display:flex;
+    justify-content: flex-start;
+  }
 
-.app-google{
-  display:flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
+  .app-google{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 
-.foto-google{
-  width: 170px;
-  margin-left: 5px;
-}
+  .foto-google{
+    width: 170px;
+    margin-left: 5px;
+  }
 
-#facebook, #twitter, #instagram{
-  font-size: 30px;
+  #facebook, #twitter, #instagram{
+    font-size: 30px;
+  }
 }
 
 
@@ -289,7 +291,8 @@
 
 
   .texto-2{
-    font-size:24px;
+    font-size:30px;
+
   }
 
   .cajas-entrada2{
@@ -678,9 +681,10 @@ h4{
 .producto-reservado{
   display: flex;
   justify-content: center;
+  text-align: justify;
   width: fit-content;
   margin: 0 auto;
-  border-bottom: 2px solid black;
+  border: 2px solid lightgray;
   background-color: lightgray transparent;
 }
 
@@ -1202,49 +1206,50 @@ font-size: 5vw ;
 /********************************  FIN DATOS PERSONALES  ******************************************/
 /********************************  BARRA DE NAVEGACION ******************************************/
 
-.header-detalles{
-  background-color: white; 
-  width: 100%;
-  display: flex;
-}
+@media (min-width: 768px){ 
+  .header-detalles{
+    background-color: white; 
+    width: 100%;
+    display: flex;
+  }
 
-.barra-superior{
-  position: relative;
-  width: 410px;
-  height: 50px;
-  background: #fff;
-  box-shadow: 0 6px 10 px rgba(179, 179, 179, .5);
-}
+  .barra-superior{
+    position: relative;
+    width: 410px;
+    height: 50px;
+    background: #fff;
+    box-shadow: 0 6px 10 px rgba(179, 179, 179, .5);
+  }
 
-.listado-P{
-  display: flex;
-}
+  .listado-P{
+    display: flex;
+  }
 
-.listado-2-P{
-  list-style: none;
-}
+  .listado-2-P{
+    list-style: none;
+  }
 
-.option{
-  display: block;
-  width: calc(410px / 4);
-  height: 50px;
-  text-align: center;
-  line-height: 50px;
-  text-decoration: none;
-  color: #121212;
-  font-family:sans-serif;
-}
+  .option{
+    display: block;
+    width: calc(410px / 4);
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    color: #121212;
+    font-family:sans-serif;
+  }
 
-.slide{
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: calc(410px / 4);
-  height: 4px;
-  background: #3641b7;
-  transition: 1s;
+  .slide{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: calc(410px / 4);
+    height: 4px;
+    background: #3641b7;
+    transition: 4s;
+  }
 }
-
 /********************************  FIN BARRA DE NAVEGACION ******************************************/
 
 /********************************  VISTA CUENTA   ******************************************/
