@@ -523,6 +523,7 @@ h4{
 
 }
 
+
 /* inicio Styles de Log In y registro */
 
 .navbar-P {
@@ -739,7 +740,16 @@ color: #fff;
  justify-content: center;
  font-size: 2vw;
  color: #fff;
- 
+ text-align: center;
+ margin-right: 15px;
+ height: 2em;
+  
+}
+.textocarrito{
+  display: flex;
+  width: 30vw;
+  font-size: 3vw;
+
 }
 
 .aclaracion{
@@ -760,6 +770,7 @@ margin: 0 auto;
   margin: 0px;
   padding: 0px;
   font-weight: 600;
+  
 }
 
 .tildeaclaracion{
@@ -785,12 +796,13 @@ margin: 0 auto;
   font-size: 2vw;
   border-radius: 5px;
   color: #047AC2;
-  height: auto;
+  height: 2,5em;
   width: auto;
   text-align: center;
+  ; 
 }
 .botoncancelarf{
-  border-radius: 3px;
+    border-radius: 3px;
   font-weight: 600;
   color: #C52D07 ;
 }
