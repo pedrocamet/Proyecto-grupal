@@ -25,6 +25,13 @@ window.onload = function (){
   } else {
     modeloCarrito.innerHTML = " ";
   }
+  var cantDias = document.querySelector(".cantDias");
+  if (carrito.length != 0 ) {
+    cantDias.innerHTML = carrito[3]; 
+  } else {
+    modeloCarrito.innerHTML = " ";
+  }
+  
   
 
 
