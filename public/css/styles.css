@@ -1396,3 +1396,9 @@ font-size: 5vw ;
 .agregar-producto{
   font-size: small;
 }
+
+.text-danger{
+  color: white;
+  font-size: 15px;
+  background-color: red;
+}
