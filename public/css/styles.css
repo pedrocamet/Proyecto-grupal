@@ -752,17 +752,16 @@
   text-align: justify;
   width: fit-content;
   margin: 0 auto;
-  border: 2px solid lightgray;
   background-color: lightgray transparent;
 }
 
 .descripcion-producto {
 font-size: 2vw;
 order: 1;
-justify-content: flex-start;
-text-align: left;
+justify-content: center;
+text-align: center;
 margin: 0 auto;
-color: #fff;
+color: black;
 }
 
 .imagenproducto{
