@@ -2,6 +2,7 @@
 
 window.onload = function (){
   var botonCancelar = document.getElementById("botoncancelarf"); 
+  var botonConfirmar = document.getElementById ("botonconfirmarf")
   var carrito =  JSON.parse(localStorage.getItem("carrito"));
   
   var marcaCarrito = document.querySelector(".marcaCarrito");
@@ -39,6 +40,13 @@ window.onload = function (){
     prodComprado = [];
    
     localStorage.setItem("carrito", JSON.stringify(prodComprado));
+
+    window.location.replace("../")
+
+  })
+  botonConfirmar.addEventListener("click", function (){
+       
+    alert("Gracias por su compra, los datos de la operación serán enviados por mail")
 
     window.location.replace("../")
 
