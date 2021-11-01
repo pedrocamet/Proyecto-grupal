@@ -49,7 +49,10 @@
 
                         <div class="form-group-P">
                             <div class="input-group-P" id="username">
-                                <input autofocus class="form-control-P" id="email" name="email" placeholder="Correo electronico" required type="text" value>
+                                <input autofocus class="form-control-P" id="email" name="email" placeholder="Correo electronico" required type="email">
+                                <div class="erroresMail2">
+                                </div>
+                                
                                 <% if(typeof errores != 'undefined'){ %>
                                     <% for(let i = 0; i < errores.length; i++){ %>
                                     <% if(errores[i].param == "email"){ %>
@@ -128,5 +131,6 @@
         </footer> 
 
         <script src="/js/registro.js"></script>
+        <script src="/js/validacionMail2.js"></script>
     </body> 
 </html>

@@ -72,7 +72,10 @@
 }
 
 .banner-T{
-  width: 50%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
 .banner-verde{
@@ -172,6 +175,7 @@
 
 .nombre-marca-T{
   font-size: 25px;
+  color:black;
 }
 
 .por-dia-T{
@@ -181,12 +185,13 @@
 
 .nombre-modelo-T{
   padding-bottom:5px;
+  color:black;
 }
 
 .recuadro-T{
   border-top: solid 1px rgba(0,0,0,.50);
   box-shadow : 0px 0px 10px rgb(100, 100, 100);
-  background-color: rgb(225, 195, 236);
+  background-color: white;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
@@ -1401,4 +1406,216 @@ font-size: 5vw ;
   color: white;
   font-size: 15px;
   background-color: red;
+  display: inline;
+}
+
+.erroresMail2{
+  color: white;
+  font-size: 15px;
+  background-color: red;
+}
+
+/************************************ SLIDER 1 ***********************************************/
+
+.container-total{
+  background-color: lightgrey;
+  font-family: sans-serif;
+}
+
+
+.container2{
+  margin: auto;
+  background-color: white;
+  padding: 30px;
+  box-sizing:border-box;
+}
+
+ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+ul.slider{
+  position: relative;
+  width: 700px;
+  height: 300px;
+  margin: auto;
+}
+
+ul.slider li {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+    width: inherit;
+    height: inherit;
+    transition: opacity .5s;
+    background:#fff;
+}
+
+ul.slider li img{
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 7px;
+  border: 2px solid rgb(50, 135, 205);
+
+}
+
+ul.slider li:first-child {
+    opacity: 1; /*Mostramos el primer <li>*/
+}
+
+ul.slider li:target {
+    opacity: 1; /*Mostramos el <li> del enlace que pulsemos*/
+}
+
+.menu{
+  text-align: center;
+  margin: 20px;
+}
+
+.menu li{
+  display: inline-block;
+  text-align: center;
+}
+
+.menu li a{
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  background-color: rgb(50, 135, 205);
+  width: 20px;
+  height: 20px;
+  font-size: 15px;
+  border-radius: 100%;
+}
+
+/************************************ SLIDER 2 ***********************************************/
+
+#tommy-slider{
+  font-family: sans-serif;
+  margin: auto;
+  background-color: white;
+  width: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+#tommy-slider > ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#tommy-slider > ul.slider{
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  height: 300px;
+  margin:auto;
+}
+
+#tommy-slider > ul.slider h1{
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 10px;
+  left: 50%;
+  top: 100px;
+  transform: translate(-50%, -50%);
+}
+
+#tommy-slider > ul.slider li {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+    width: inherit;
+    height: inherit;
+    transition: opacity .5s;
+    background:#fff;
+}
+
+#tommy-slider > ul.slider li img{
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+#tommy-slider > ul.slider li:first-child {
+    opacity: 1; /*Mostramos el primer <li>*/
+}
+
+#tommy-slider > ul.slider li:target {
+    opacity: 1; /*Mostramos el <li> del enlace que pulsemos*/
+}
+
+#tommy-slider > .menu{
+  text-align: center;
+  margin: 20px;
+}
+
+#tommy-slider > .menu li{
+  display: inline-block;
+  text-align: center;
+}
+
+#tommy-slider > .menu li a{
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  background-color: rgb(50, 135, 205);
+  width: 20px;
+  height: 20px;
+  font-size: 15px;
+  border-radius: 100%;
+}
+
+
+
+.espacio-slider{
+  padding:15px;
+}
+
+.slider{
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.slider ul{
+    display: flex;
+    animation: cambio 20s infinite alternate linear;
+    width: 200%;
+}
+.slider li{
+    width: 100%;
+    
+}
+.slider img{
+    width: 100%;
+    height: 55%;
+    border: 2px solid white;
+
+}
+@keyframes cambio{
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+    
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+    
+    50%{margin-left: -100%;}
+    70%{margin-left: -100%;}
+    
+    75%{margin-left: 0;}
+    100%{margin-left: 0;}
+}
+
+
+@media only screen and (min-width:320px) and (max-width:768px){
+.slider, .slider ul, .slider img{
+    height: 100vh;
+}
 }

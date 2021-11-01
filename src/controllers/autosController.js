@@ -19,6 +19,11 @@ const fotosAutos = path.join(__dirname, '../../public/img');
 
 const controlador =
 {
+
+    slider: (req, res) => {
+        res.render ("slider");
+    },
+
     home: (req, res) => {
 
 
