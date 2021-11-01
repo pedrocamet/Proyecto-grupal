@@ -25,41 +25,44 @@
             <form action="/usuario/datosPersonales/" method="POST" enctype="multipart/form-data" class="DP-formF">
                 <div class="DP-formF">
                 <div class="DP-formInputs-F">
-                <div class="DP-datosF">
-                    <div class="DP-datosinputF" >
-                        <label for="">Nombre: </label>  
-                        <input autofocus class="DP-inputF" id="username" name="nombre" value=<%= usuarioAEditar.nombre%> required type="text" value>
+                <div class="centrarInfo">
+                    <div class="DP-datosF">
+                        <div class="DP-datosinputF" >
+                            <label for="">Nombre: </label>  
+                            <input autofocus class="DP-inputF" id="username" name="nombre" value=<%= usuarioAEditar.nombre%> required type="text" value>
+                        </div>
                     </div>
-                </div>
 
-                <div class="DP-datosF">
-                    <div class="DP-datosinputF" >
-                        <label for="">Apellido:</label>
-                        <input autofocus class="DP-inputF" id="username" name="apellido" value=<%= usuarioAEditar.apellido%> required type="text" value>
+                    <div class="DP-datosF">
+                        <div class="DP-datosinputF" >
+                            <label for="">Apellido:</label>
+                            <input autofocus class="DP-inputF" id="username" name="apellido" value=<%= usuarioAEditar.apellido%> required type="text" value>
+                        </div>
                     </div>
-                </div>
 
-                <div class="DP-datosF">
-                    <div class="DP-datosinputF" >
-                        <label for="">Email: </label>
-                        <input autofocus class="DP-inputF" id="email" name="email" value=<%= usuarioAEditar.mail%> required type="text" value>
+                    <div class="DP-datosF">
+                        <div class="DP-datosinputF" >
+                            <label for="">Email: </label>
+                            <input autofocus class="DP-inputF" id="email" name="email" value=<%= usuarioAEditar.mail%> required type="text" value>
+                        </div>
+                    </div>
+                
+                <!-- <div class="DP-datosF">
+                        <div class="DP-datosinputF" >
+                            <label>Contraseña Anterior : </label>
+                            <input autofocus class="DP-inputF" id="password" name="passwordAnterior" required type="password" value>
+                        </div> 
+                    </div>
+                    -->                    
+                
+                    <div class="DP-datosF">
+                        <div class="DP-datosinputF" >
+                            <label>Contraseña Nueva: </label>
+                            <input autofocus class="DP-inputF" id="password" name="passwordNueva" required type="password" value>
+                        </div> 
                     </div>
                 </div>
-               <!-- <div class="DP-datosF">
-                    <div class="DP-datosinputF" >
-                        <label>Contraseña Anterior : </label>
-                        <input autofocus class="DP-inputF" id="password" name="passwordAnterior" required type="password" value>
-                    </div> 
                 </div>
-                -->                    
-            
-                <div class="DP-datosF">
-                    <div class="DP-datosinputF" >
-                        <label>Contraseña Nueva: </label>
-                        <input autofocus class="DP-inputF" id="password" name="passwordNueva" required type="password" value>
-                    </div> 
-                </div>
-            </div>
                         </div class="ciento5">
                             <label for="imageUser" class="seleccionarImagenF">Seleccionar Imagen:</label>
                             <input type="file" name= "imageUser">
