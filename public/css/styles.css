@@ -483,6 +483,23 @@
 
 .input-entrega{
   margin:10px;
+  font-family: "Nunito Sans", sans-serif;
+  padding:30px;
+}
+
+.elegir-entrega{
+  font-family: "Nunito Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  
+}
+
+.retiro-entrega-T{
+  font-family: "Nunito Sans", sans-serif;
+  font-weight:bold;
+  padding-bottom: 10px;
+
 }
 
 .boton-enviar{
@@ -1010,7 +1027,7 @@ font-size: 5vw ;
 
 .detalle-producto-ano-T{
   font-size: 22px;
-  padding: 20px;
+  padding-bottom: 10px;
 }
 
 .detalle-producto-precio-T{
@@ -1108,8 +1125,8 @@ font-size: 5vw ;
   padding-top: 15px;
   padding-right: 15px;
   padding-left: 15px;
-  font-weight: bold;
   text-align:start;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 .espacio-datos-usuarios-T{
@@ -1122,14 +1139,21 @@ font-size: 5vw ;
   padding-left: 15px;
   text-decoration: underline;
   text-align:start;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 .datos-personales-todo-T{
   display:flex;
 }
 
+.datos-personales-texto-T{
+  border-right: 2px solid rgb(201, 199, 199);
+}
+
 .datos-personales-foto{
   width:50%;
+  padding-top: 10px;
+  padding-bottom: 10px;
   margin:auto;
   display:flex;
 }
@@ -1697,6 +1721,7 @@ ul.slider li:target {
 
 .descuento-cyber-T{
   color: rgb(50, 135, 205);
+  padding-top:20px;
 }
 
 .precio-final-T{
@@ -1706,6 +1731,7 @@ ul.slider li:target {
 .cantidad-dias-T{
   padding-top: 15px;
   font-family: "Nunito Sans", sans-serif;
+  font-weight: bold;
 
 }
 

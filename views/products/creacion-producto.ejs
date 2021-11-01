@@ -13,9 +13,12 @@
         <link rel="stylesheet" href="/public/css/normalize.css">
 
     </head>
+    
     <body>
+    
       <header class="bodyheaderf">
         <%- include("../partials/header")  %>
+        
       </header>
       <div class="todocargarprod">
         <div class="reservaspendientesdiv">
@@ -44,7 +47,15 @@
             <input type="number" name="ano" id="anio-creacion-F">
           </div>
           <div class="imagenvehiculof">
-            <label for="imageProduct" class="form-label">Seleccionar Imagen:</label>
+            <label for="imageProduct" class="form-label" name="fotoProducto">Seleccionar Imagen:</label>
+            <% if(typeof errores != 'undefined'){ %>
+              <% for(let i = 0; i < errores.length; i++){ %>
+              <% if(errores[i].param == "fotoProducto"){ %>
+              <small class="text-danger"> <%= errores[i].msg%> </small>
+              
+      <% } %>
+      <% } %>
+      <% } %>
             <input type="file" name= "imageProduct">
           </div>
   

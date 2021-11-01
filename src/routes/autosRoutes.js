@@ -33,8 +33,22 @@ router.get("/producto", autosController.producto);
 
 
 /***********CREATE ONE PRODUCT  ************/
+const validaciones =[
+  body("marca").notEmpty().isLength({min:3}).withMessage("Completar el campo").bail(),
+  body("modelo").notEmpty().isLength({min:3}).withMessage("Completar el campo").bail(),
+  body("ano").notEmpty().isLength({min:4}).withMessage("Complete el campo con un año válido").bail(),
+  body("precioPorDia").notEmpty().isLength({min:3}).withMessage("Completar el campo"),
+  body("fotoProducto").custom((value, {req}) => {
+    let file = req.file;
+    if(!file){
+      throw new Error ("Tenés que subir una foto del producto");
+    }
+    return true;
+  })
+];
+
 router.get("/creacion-producto", autosController.creacionProducto); 
-router.post("/creacion-producto", uploadFile.single("imageProduct"),  autosController.store); 
+router.post("/creacion-producto", uploadFile.single("imageProduct"), validaciones, autosController.store); 
 
 
 /*********** DETALLE DE UN PRODUCTO ************/

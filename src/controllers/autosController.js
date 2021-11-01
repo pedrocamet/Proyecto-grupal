@@ -5,6 +5,7 @@ const { DefaultDeserializer } = require('v8');
 const {validationResult} = require("express-validator");
 const User = require("../models/User");
 const bcryptjs = require("bcryptjs");
+const {body} = require ("express-validator");
 
 //BASE DE DATOS
 const db = require("../../database/models");
@@ -344,6 +345,10 @@ buscar: (req, res) => {
     },  
     store: (req, res) => {
         //let nombreImagen =req.file.filename;
+        const resultadoValidacion = validationResult(req);
+
+        if(resultadoValidacion.isEmpty()){
+
             db.Productos.create({            
             marca: req.body.marca,
             modelo: req.body.modelo,
@@ -355,13 +360,20 @@ buscar: (req, res) => {
             fechaFinDisp: req.body.fechaFinDisp,
             foto: req.file.filename
         }) 
+
         .then(function(data){
             res.redirect('/')
         })
         .catch(function(e){
             res.send(e)
         })
-        
+
+    } else {
+
+        res.render("./products/creacion-producto", {errores: resultadoValidacion.errors});  
+    }
+    
+    
 
 
 
