@@ -20,12 +20,44 @@
         </header> 
         <main class="main-detalles">
                     <div class="banners-T">
-                        <img src="/img/banner5.jpg" class="banner-T-2">
-                        <img src="/img/banner4.jpg" class="banner-T">
-                        <img src="/img/banner5.jpg" class="banner-T-2">
+                        <img src="/img/cmok.png" class="banner-T">
                     </div>
                     <img src="/img/banner6.jpg" class="banner-verde">
-            </div>
+
+                                 <!--  SLIDER  -->
+
+        <p class="texto-4-T"> ¡Una nueva manera de alquilar autos! </p>
+
+        <div class="espacio-slider"></div>
+        <div class="slider">
+            <ul>
+                <li>
+                    <a href="https://www.google.com.ar">
+                        <img src="/img/Cybereditado.jpg">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/detalle-producto/9>">
+                        <img src="/img/Mondeo-CM.jpg">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/detalle-producto/7">
+                        <img src="/img/Fiesta-CM.jpg">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/detalle-producto/12">
+                        <img src="/img/Focus-CM.jpg">
+                </li>
+            </ul>
+          </div>
+
+                                 <!-- FINAL SLIDER  -->
+
             <p class="texto-2"> Nuevos modelos este mes </p>
             <br>
             <section class="flex-container">
@@ -45,9 +77,18 @@
                                     <p class="nombre-modelo-T"><%=producto.modelo %></p>
                                 </div>
                                 <div class="precio-dia-T">
-                                    <h2>$<%=producto.precioDia %></h2>
-                                    <p class="por-dia-T"> Por día </p>
+                                    <% if(producto.id == 9 || producto.id == 7) { %>
+                                        <div class="descuento-home-cyber-T">
+                                             <h2 class="precio-producto-descuento-T">$<%=producto.precioDia %></h2>
+                                                <h2>$<%=producto.precioDia / 2 %> <small class="por-dia-T"> /día </small></h2>
+                                        </div>
+
+                                        <% } else { %>
+                                            <h2>$<%=producto.precioDia %> <small class="por-dia-T"> /día </small></h2>
+                                    <% } %>
+                                    
                                 </div>
+                               
                             </div>
                         </article>
                         <div class="espacio-recuadros"></div>
@@ -57,7 +98,10 @@
                 <% } %>
                 <div class="espacio-recuadros"></div> 
             </section>
+
+            
         </main>
+
         <footer>  
             <%- include("./partials/footer") %>
         </footer> 

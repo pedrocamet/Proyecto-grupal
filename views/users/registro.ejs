@@ -8,6 +8,7 @@
             <%- include("../partials/header") %>
         </header>   
         <div class="foto-fondo-registro-P">
+            <img src="/img/banner6.jpg" class="banner-verde">
             <div class="container-P"></div>
             <br>
             <div class="container-P mt-3-P">
@@ -20,23 +21,56 @@
                             </div>
                             <div class="input-group-P" id="username">
                                 <input class="form-control-P" id="nombre" name="nombre" placeholder="Nombre" required type="text">
-                            </div>
+                                <% if(typeof errores != 'undefined'){ %>
+                                    <% for(let i = 0; i < errores.length; i++){ %>
+                                    <% if(errores[i].param == "nombre"){ %>
+                                    <small class="text-danger"> <%= errores[i].msg%> </small>
+                                    
+                            <% } %>
+                            <% } %>
+                            <% } %>
+                        </div>
+
                         </div>
                         <div class="form-group-P">
                             <div class="input-group-P" id="username">
                                 <input autofocus class="form-control-P" id="apellido" name="apellido" placeholder="Apellido" required type="text" value>
+                                <% if(typeof errores != 'undefined'){ %>
+                                    <% for(let i = 0; i < errores.length; i++){ %>
+                                    <% if(errores[i].param == "apellido"){ %>
+                                    <small class="text-danger"> <%= errores[i].msg%> </small>
+                                    
+                            <% } %>
+                            <% } %>
+                            <% } %>
+                            
                             </div>
                         </div>
+
+
                         <div class="form-group-P">
                             <div class="input-group-P" id="username">
-                                <input autofocus class="form-control-P" id="email" name="email" placeholder="Correo electronico" required type="text" value>
+                                <input autofocus class="form-control-P" id="email" name="email" placeholder="Correo electronico" required type="email">
+                                <div class="erroresMail2">
+                                </div>
+                                
+                                <% if(typeof errores != 'undefined'){ %>
+                                    <% for(let i = 0; i < errores.length; i++){ %>
+                                    <% if(errores[i].param == "email"){ %>
+                                    
+                                    <div class="text-danger"> <%= errores[i].msg%> </div>
+                                    
+                                        <% } %>
+                                        <% } %>
+                                        <% } %>
                             </div>
                         </div>
 
                         
-                        <div class="form-group-P">
+                        
+                         <!--<div class="form-group-P">
 
-                            <!--
+                
                             <div class="input-group-P" id="username">
                                 <input autofocus class="form-control-P" id="cuit" name="cuit" placeholder="Cuit/DNI" required type="text" value>
                             </div>
@@ -45,17 +79,36 @@
                             <div class="input-group-P" id="username">
                                 <input autofocus class="form-control-P" id="cel" name="celular" placeholder="Número de celular" required type="text" value>
                             </div>
-  --> 
+ 
                         
                         </div>
+ --> 
+
                         <div class="form-group-P">
                             <div class="input-group-P" id="show_hide_password">
                                 <input autofocus class="form-control-P" id="password" name="password" placeholder="Contraseña" required type="password" value>
+                                <% if(typeof errores != 'undefined'){ %>
+                                    <% for(let i = 0; i < errores.length; i++){ %>
+                                    <% if(errores[i].param == "password"){ %>
+                                    <small class="text-danger"> <%= errores[i].msg%> </small>
+                                    
+                            <% } %>
+                            <% } %>
+                            <% } %>
+                            
                             </div> 
                         </div>
-                        <label> Subir foto de perfil
-                        <input type="file" name="fotoPerfil">
-                        </label>
+                        <label> Subir foto de perfil </label>
+                            <input type="file" name="fotoPerfil">
+                            <% if(typeof errores != 'undefined'){ %>
+                                <% for(let i = 0; i < errores.length; i++){ %>
+                                <% if(errores[i].param == "fotoPerfil"){ %>
+                                <small class="text-danger"> <%= errores[i].msg%> </small>
+                                
+                        <% } %>
+                        <% } %>
+                        <% } %>
+
                         <div class="footer-P">
                             <div>
                                 <button class="btn-login" type="submit" id="botonRegistro"> Crear cuenta </button>
@@ -73,11 +126,16 @@
             <p class="texto-alineado-P"> ¿Ya tienes una cuenta? 
                 <a href="login" class="hipervinculo-p"> Inicia sesion </a>
             </p>
+
+            
         </div>  
+
+        
         <footer>  
             <%- include("../partials/footer") %>
         </footer> 
 
         <script src="/js/registro.js"></script>
+        <script src="/js/validacionMail2.js"></script>
     </body> 
 </html>

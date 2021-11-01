@@ -36,11 +36,44 @@
         </p>
 
         <p class="detalle-producto-ano-T">
-            <%=productoDetalle.año%>
+            <%=productoDetalle.año%>    
         </p>
 
+        <p class="retiro-entrega-T"> Elegir Retiro / Entrega del vehículo </p>
+        <label class="elegir-entrega"> 
+            <input type="radio" name="entrega" checked class="input-entrega"> Planta de RentalCar 
+            <input type="radio" name="entrega" class="input-entrega"> A coordinar con el dueño
+        </label>
+
         <p class="detalle-producto-precio-T">
-            $ <%=productoDetalle.precioDia%>
+            <% if(productoDetalle.id == 9 || productoDetalle.id == 7 || productoDetalle.id == 12) { %>
+                <h2 class="descuento-cyber-T"> Descuento CyberMonday </h2>
+                <h2 class="precio-producto-descuento-T">$ <%=productoDetalle.precioDia%> </h2>
+                <h2 class ="precioCarritof">$<%=productoDetalle.precioDia / 2 %></h2>
+                <% } else { %>
+           <h2 class="precioCarritof" class="precio-final-T" > $ <%=productoDetalle.precioDia%> </h2>
+            <% } %> 
+            <div>
+
+               
+
+
+                <div>
+                    <p class="cantidad-dias-T"> Elegir cantidad de Días</p>
+                </div>
+
+                    <select name="Dias" id="diasAuto">
+                            <option value="1">1</option>
+                            <option value="2">2</option> 
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option> 
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option> 
+                            <option value="9">9</option>
+                    </select>
+            </div>
         </p>
 
         <div class="detalle-producto-boton-T">

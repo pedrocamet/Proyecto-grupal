@@ -127,24 +127,32 @@ const userControlador =
         },
 */
   procesarRegistro: (req,res) => {
+
     
-      //let nombreImagen =req.file.filename;
+const resultadoValidacion = validationResult(req);
+
+ if(resultadoValidacion.isEmpty()){
+      
           db.Clientes.create({            
           nombre: req.body.nombre,
           apellido: req.body.apellido,
           cuit: req.body.cuit,
           celular: req.body.celular,
           mail: req.body.email,
-          foto: req.file.filename,
+          foto: req.file,
           contraseña: bcryptjs.hashSync(req.body.password, 10)          
-      }) 
-      .then(function(data){
+   }) 
+      .then(function(){
           res.redirect('/')
       })
       .catch(function(e){
           res.send(e)
       })
       
+    } else {
+       res.render("./users/registro", {errores: resultadoValidacion.errors});  
+
+    }
 
     /*
     const resultValidation = validationResult(req);
