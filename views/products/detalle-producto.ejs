@@ -36,17 +36,17 @@
         </p>
 
         <p class="detalle-producto-ano-T">
-            <%=productoDetalle.año%>
+            <%=productoDetalle.año%>    
         </p>
 
         <p class="detalle-producto-precio-T">
             <% if(productoDetalle.id == 9 || productoDetalle.id == 7 || productoDetalle.id == 12) { %>
                 <h2 class="descuento-cyber-T"> Descuento CyberMonday </h2>
                 <h2 class="precio-producto-descuento-T">$ <%=productoDetalle.precioDia%> </h2>
-                <h2>$<%=productoDetalle.precioDia / 2 %></h2>
+                <h2 class ="precioCarritof">$<%=productoDetalle.precioDia / 2 %></h2>
                 <% } else { %>
-           <h2 class="precio-final-T"> $ <%=productoDetalle.precioDia%> </h2>
-            <% } %>
+           <h2 class="precioCarritof" class="precio-final-T" > $ <%=productoDetalle.precioDia%> </h2>
+            <% } %> 
             <div>
                 <div>
                     <p class="cantidad-dias-T"> Cantidad de Días</p>

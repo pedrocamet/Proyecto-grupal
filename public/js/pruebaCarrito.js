@@ -6,7 +6,7 @@ var botonAlqAhora = document.getElementById("boton-alquilar-ahora-T");
 
 var prodCompMarca= document.querySelector(".detalle-producto-marca-T").innerHTML
 var prodCompModelo= document.querySelector(".detalle-producto-modelo-T").innerHTML
-var St =document.querySelector(".detalle-producto-precio-T").innerHTML
+var St =document.querySelector(".precioCarritof").innerHTML
 var i$= St.indexOf("$");
 var prodCompPrecio = Number(St.slice([(i$+1)]))
 
@@ -26,7 +26,7 @@ let prodComprado = [];
 botonAlqAhora.addEventListener("click", function(){
   var cantDias = document.getElementById("diasAuto").value;
 console.log("A VER SI ENTRA ")
-console.log("cant dias" + prodCompPrecio+ "aca" )
+console.log("cant dias" + cantDias+ "aca" )
 console.log(typeof(prodCompPrecio))
 console.log(prodCompPrecio+5)
   
