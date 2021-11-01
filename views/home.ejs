@@ -26,7 +26,7 @@
 
                                  <!--  SLIDER  -->
 
-        <p class="texto-2"> ¡Una nueva manera de alquilar autos! </p>
+        <p class="texto-4-T"> ¡Una nueva manera de alquilar autos! </p>
 
         <div class="espacio-slider"></div>
         <div class="slider">
@@ -39,23 +39,21 @@
 
                 <li>
                     <a href="/detalle-producto/9>">
-                        <img src="/img/9-Ford-Mondeo.jpg">
+                        <img src="/img/Mondeo-CM.jpg">
                     </a>
                 </li>
 
                 <li>
                     <a href="/detalle-producto/5">
-                        <img src="/img/7-Ford-Fiesta.jpg">
+                        <img src="/img/Fiesta-CM.jpg">
                     </a>
                 </li>
 
                 <li>
-                    <a href="/detalle-producto/2">
-                        <img src="/img/2-Fiat-Variant.jpg">
+                    <a href="/detalle-producto/12">
+                        <img src="/img/Focus-CM.jpg">
                 </li>
-                
             </ul>
-
           </div>
 
                                  <!-- FINAL SLIDER  -->
@@ -79,7 +77,11 @@
                                     <p class="nombre-modelo-T"><%=producto.modelo %></p>
                                 </div>
                                 <div class="precio-dia-T">
+                                    <% if(producto.id == 10 || producto.id == 5) { %>
+                                    <h2>$<%=producto.precioDia / 2 %></h2>
+                                    <% } else { %>
                                     <h2>$<%=producto.precioDia %></h2>
+                                    <% } %>
                                     <p class="por-dia-T"> Por día </p>
                                 </div>
                             </div>
