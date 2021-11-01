@@ -1108,8 +1108,8 @@ font-size: 5vw ;
   padding-top: 15px;
   padding-right: 15px;
   padding-left: 15px;
-  font-weight: bold;
   text-align:start;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 .espacio-datos-usuarios-T{
@@ -1122,14 +1122,21 @@ font-size: 5vw ;
   padding-left: 15px;
   text-decoration: underline;
   text-align:start;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 .datos-personales-todo-T{
   display:flex;
 }
 
+.datos-personales-texto-T{
+  border-right: 2px solid rgb(201, 199, 199);
+}
+
 .datos-personales-foto{
   width:50%;
+  padding-top: 10px;
+  padding-bottom: 10px;
   margin:auto;
   display:flex;
 }
