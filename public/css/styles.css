@@ -188,7 +188,7 @@
 }
 
 .por-dia-T{
-  font-size: 10px;
+  font-size: 15px;
   text-decoration: none;
 }
 
@@ -215,13 +215,15 @@
   display:flex;
   flex-direction: column;
   align-items: center;
+  flex-grow: 35;
 }
 
 .precio-dia-T{
   display:flex;
-  flex-direction: column;
   padding-top:5px;
+  padding-left:10px;
   align-items:center;
+  flex-grow: 25;
 }
 
 .caja1-home-t{
@@ -1651,4 +1653,12 @@ ul.slider li:target {
 
 .cantidad-dias-T{
   padding-top: 15px;
+}
+
+.descuento-home-cyber-T{
+  display: flex;
+  justify-content: space-evenly;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  flex-grow: 2;
 }

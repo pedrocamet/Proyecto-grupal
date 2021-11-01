@@ -44,7 +44,7 @@
                 </li>
 
                 <li>
-                    <a href="/detalle-producto/5">
+                    <a href="/detalle-producto/7">
                         <img src="/img/Fiesta-CM.jpg">
                     </a>
                 </li>
@@ -77,13 +77,18 @@
                                     <p class="nombre-modelo-T"><%=producto.modelo %></p>
                                 </div>
                                 <div class="precio-dia-T">
-                                    <% if(producto.id == 10 || producto.id == 5) { %>
-                                    <h2>$<%=producto.precioDia / 2 %></h2>
-                                    <% } else { %>
-                                    <h2>$<%=producto.precioDia %></h2>
+                                    <% if(producto.id == 9 || producto.id == 7) { %>
+                                        <div class="descuento-home-cyber-T">
+                                             <h2 class="precio-producto-descuento-T">$<%=producto.precioDia %></h2>
+                                                <h2>$<%=producto.precioDia / 2 %> <small class="por-dia-T"> /día </small></h2>
+                                        </div>
+
+                                        <% } else { %>
+                                            <h2>$<%=producto.precioDia %> <small class="por-dia-T"> /día </small></h2>
                                     <% } %>
-                                    <p class="por-dia-T"> Por día </p>
+                                    
                                 </div>
+                               
                             </div>
                         </article>
                         <div class="espacio-recuadros"></div>
