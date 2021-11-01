@@ -489,7 +489,9 @@
 
 .elegir-entrega{
   font-family: "Nunito Sans", sans-serif;
-  display:flex;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   
 }
 
