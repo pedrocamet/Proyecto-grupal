@@ -40,6 +40,8 @@ window.onload = function (){
    
     localStorage.setItem("carrito", JSON.stringify(prodComprado));
 
+    window.location.replace("../")
+
   })
 
 
