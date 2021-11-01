@@ -483,6 +483,21 @@
 
 .input-entrega{
   margin:10px;
+  font-family: "Nunito Sans", sans-serif;
+  padding:30px;
+}
+
+.elegir-entrega{
+  font-family: "Nunito Sans", sans-serif;
+  display:flex;
+  
+}
+
+.retiro-entrega-T{
+  font-family: "Nunito Sans", sans-serif;
+  font-weight:bold;
+  padding-bottom: 10px;
+
 }
 
 .boton-enviar{
@@ -1010,7 +1025,7 @@ font-size: 5vw ;
 
 .detalle-producto-ano-T{
   font-size: 22px;
-  padding: 20px;
+  padding-bottom: 10px;
 }
 
 .detalle-producto-precio-T{
@@ -1684,6 +1699,7 @@ ul.slider li:target {
 
 .descuento-cyber-T{
   color: rgb(50, 135, 205);
+  padding-top:20px;
 }
 
 .precio-final-T{
@@ -1693,6 +1709,7 @@ ul.slider li:target {
 .cantidad-dias-T{
   padding-top: 15px;
   font-family: "Nunito Sans", sans-serif;
+  font-weight: bold;
 
 }
 
