@@ -212,7 +212,7 @@
 }
 
 .recuadro-T:hover{
-  /*background-color: rgb(95, 128, 236);*/
+  background-color: rgb(144,220,84);
   box-shadow : 0px 0px 15px rgb(77, 6, 243);
   
 }
@@ -1037,6 +1037,7 @@ font-size: 5vw ;
 
 #boton-alquilar-ahora-T:hover{
   box-shadow: 0px 0px 10px rgb(100,100,100);
+
 }
 
 
